@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home - Blend's Portfolio</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Contact</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+
+    </header>
+
+    <div class="container-fluid content">
+
+        <!-- Background -->
+        <div id="particles-js"></div>
+
+        <div class="profile-card">
+            <div class="container profile-card-container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center text-monospace">Blend Hamiti</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <img id="profile-img" src="img/IMG_1767_cropped_2-min.png"></img>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                    </div>
+                    <div class="col-sm d-flex justify-content-center">
+                        <a class="profile-link" href="https://www.instagram.com/blendhamiti/"><i
+                                class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                    <div class="col-sm d-flex justify-content-center">
+                        <a class="profile-link" href="https://github.com/blendhamiti/"><i
+                                class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    <div class="col-sm d-flex justify-content-center">
+                        <a class="profile-link" href="https://www.linkedin.com/in/blend-hamiti-b87a22115/"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume">
+            <div class="container p-5">
+                <div data-aos="fade-in">
+                    <h2>Education</h2>
+                </div>
+                <div class="text-entry" data-aos="fade-right">
+                    <div class="row">
+                        <div class="col-2 my-auto">
+                            <h6>2017-2020</h6>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <h4>Bachelor of Science in Engineering Technology (w/ specialisation in ICT)</h4>
+                            </div>
+                            <div class="row">
+                                <h6>KU Leuven, Belgium</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-in">
+                    <h2>Projects</h2>
+                </div>
+                <div class="project-entry" data-aos="fade-in">
+                    <div class="row">
+                        <div class="col my-auto" data-aos="fade-right">
+                            <img class="project-img" src="img/robot_cropped.png"></img>
+                        </div>
+                        <div class="col my-auto" data-aos="fade-left">
+                            <div class="row">
+                                <h3>TIPO - Area measurement device</h3>
+                            </div>
+                            <div class="row">
+                                <h5><a class="resume-link"
+                                        href="https://drive.google.com/file/d/1hTRListaz7EQGW6MBUSROIGjuf84z5Zm/view?usp=sharing">Documentation
+                                        <i class="fas fa-external-link-alt"></i></a>
+                                </h5>
+                            </div>
+                            <div class="row">
+                                <h5>Infomatrix 2016 - Hardware Control</h5>
+                            </div>
+                            <div class="row">
+                                <h6>Bucharest, Romania</h6>
+                            </div>
+                            <div class="row">
+                                <h6>26-30 May, 2016
+                                </h6>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer">
+            <p>Blend Hamiti &#169 2020</p>
+        </div>
+
+        <script src="node_modules/particles.js/particles.js"></script>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function () {
+                console.log('callback - particles-js config loaded');
+            });
+        </script>
+
+        <script src="node_modules/aos/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+        <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+
+    </footer>
+</body>
+
+</html>
