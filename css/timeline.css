@@ -68,7 +68,7 @@
 
 .flag {
     position: relative;
-    display: inline;
+    display: inline-block;
     background: var(--secondaryColor);
     padding: 6px 10px;
     border-radius: 5px;
@@ -154,7 +154,7 @@
 }
 
 .time-wrapper {
-    display: inline;
+    display: block;
 
     line-height: 1em;
     font-size: 0.66666em;
@@ -165,10 +165,12 @@
 
 .direction-l .time-wrapper {
     float: left;
+    margin-top: 3px;
 }
 
 .direction-r .time-wrapper {
     float: right;
+    margin-top: 3px;
 }
 
 .time {
@@ -189,7 +191,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 766px) {
 
     .timeline {
         width: 100%;
@@ -245,7 +247,7 @@
     .time-wrapper {
         display: block;
         position: relative;
-        margin: 4px 0 0 0;
+        margin: 0 0 0 0;
         z-index: 14;
     }
 
