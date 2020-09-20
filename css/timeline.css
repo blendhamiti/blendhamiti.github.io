@@ -12,7 +12,7 @@
     position: absolute;
     left: 50%;
     top: 0;
-    content: ' ';
+    content: '';
     display: block;
     width: 6px;
     height: 100%;
@@ -75,10 +75,11 @@
 
     font-size: medium;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 
 .flag-wrapper .small {
+    background: var(--secondaryColorLight);
     font-size: small;
 }
 
@@ -159,6 +160,7 @@
     font-size: 0.66666em;
     color: var(--accentColor);
     vertical-align: middle;
+    border-radius: 5px;
 }
 
 .direction-l .time-wrapper {
@@ -177,7 +179,6 @@
 
 .desc {
     margin: 1em 40px 0 0;
-
     font-size: 0.77777em;
     font-style: italic;
     line-height: 1.5em;
@@ -188,7 +189,7 @@
 }
 
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1200px) {
 
     .timeline {
         width: 100%;
@@ -223,7 +224,7 @@
         left: 50%;
         right: 50%;
         margin-left: -6px;
-        margin-top: -30px;
+        margin-top: -45px;
     }
 
     .direction-l .flag:after,
