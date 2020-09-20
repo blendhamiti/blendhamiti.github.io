@@ -1,5 +1,4 @@
 .timeline-container {
-
 }
 
 .timeline {
@@ -18,13 +17,13 @@
     width: 6px;
     height: 100%;
     margin-left: -3px;
-    background: rgb(80,80,80);
-    background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: rgb(31, 62, 90);
+    background: -moz-linear-gradient(top, rgba(31, 62, 90,0) 0%, rgb(31, 62, 90) 8%, rgb(31, 62, 90) 92%, rgba(31, 62, 90,0) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-    background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-    background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-    background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-    background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(31, 62, 90,0) 0%, rgb(31, 62, 90) 8%, rgb(31, 62, 90) 92%, rgba(31, 62, 90,0) 100%);
+    background: -o-linear-gradient(top, rgba(31, 62, 90,0) 0%, rgb(31, 62, 90) 8%, rgb(31, 62, 90) 92%, rgba(31, 62, 90,0) 100%);
+    background: -ms-linear-gradient(top, rgba(31, 62, 90,0) 0%, rgb(31, 62, 90) 8%, rgb(31, 62, 90) 92%, rgba(31, 62, 90,0) 100%);
+    background: linear-gradient(to bottom, rgba(31, 62, 90,0) 0%, rgb(31, 62, 90) 8%, rgb(31, 62, 90) 92%, rgba(31, 62, 90,0) 100%);
     
     z-index: 5;
 }
@@ -70,7 +69,7 @@
 .flag {
     position: relative;
     display: inline;
-    background: rgb(248,248,248);
+    background: var(--secondaryColor);
     padding: 6px 10px;
     border-radius: 5px;
 
@@ -95,13 +94,13 @@
     position: absolute;
     margin-top: 6px;
 
-    content: ' ';
+    content: '';
     display: block;
     width: 12px;
     height: 12px;
-    background: #fff;
+    background: white;
     border-radius: 10px;
-    border: 4px solid rgb(255,80,80);
+    border: 2px solid var(--accentColor);
     z-index: 10;
 }
 
@@ -124,7 +123,7 @@
     width: 0;
     margin-top: -8px;
     border: solid transparent;
-    border-left-color: rgb(248,248,248);
+    border-left-color: var(--secondaryColor);
     border-width: 8px;
     pointer-events: none;
 }
@@ -138,7 +137,7 @@
     width: 0;
     margin-top: -8px;
     border: solid transparent;
-    border-right-color: rgb(248,248,248);
+    border-right-color: var(--secondaryColor);
     border-width: 8px;
     pointer-events: none;
 }
@@ -148,7 +147,7 @@
 
     line-height: 1em;
     font-size: 0.66666em;
-    color: rgb(250,80,80);
+    color: var(--accentColor);
     vertical-align: middle;
 }
 
@@ -163,11 +162,11 @@
 .time {
     display: inline-block;
     padding: 4px 6px;
-    background: rgb(248,248,248);
+    background: whitesmoke;
 }
 
 .desc {
-    margin: 1em 0.75em 0 0;
+    margin: 1em 40px 0 0;
 
     font-size: 0.77777em;
     font-style: italic;
@@ -175,11 +174,11 @@
 }
 
 .direction-r .desc {
-    margin: 1em 0 0 0.75em;
+    margin: 1em 0 0 40px;
 }
 
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 766px) {
 
     .timeline {
         width: 100%;
@@ -205,7 +204,6 @@
     }
 
     .flag {
-        background: rgb(255,255,255);
         z-index: 15;
     }
 
@@ -216,14 +214,6 @@
         right: 50%;
         margin-left: -6px;
         margin-top: -30px;
-        
-        content: '';
-        width: 12px;
-        height: 12px;
-        background: #fff;
-        border-radius: 10px;
-        border: 4px solid rgb(255,80,80);
-        z-index: 10;
     }
 
     .direction-l .flag:after,
@@ -236,7 +226,7 @@
         width: 0;
         margin-left: -8px;
         border: solid transparent;
-        border-bottom-color: rgb(255,255,255);
+        border-bottom-color: var(--secondaryColor);
         border-width: 8px;
         pointer-events: none;
     }
@@ -260,7 +250,8 @@
         position: relative;
         margin: 1em 0 0 0;
         padding: 1em;
-        background: rgb(245,245,245);
+        color: white;
+        background: var(--primaryColor);
         -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
         -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
         box-shadow: 0 0 1px rgba(0,0,0,0.20);

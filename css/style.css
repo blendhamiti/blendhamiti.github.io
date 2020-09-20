@@ -1,3 +1,10 @@
+:root {
+    --primaryColor: #1f3e5a;
+    --secondaryColor: #145051;
+    --backgroundColor: #1C253C;
+    --accentColor: #A63D40;
+}
+
 body {
     font-family: 'Raleway', sans-serif !important;
     z-index: 1;
