@@ -11,6 +11,14 @@ body {
     z-index: 1;
 }
 
+.navbar {
+    background-color: var(--primaryColor);
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
 .content {
     background-color: #1c253c;
     color: white;
@@ -51,9 +59,8 @@ body {
 }
 
 .footer {
-    height: 5%;
-    width: 100%;
     text-align: center;
+    height: fit-content;
     color: white;
     background-color: #141A2A;
 }
