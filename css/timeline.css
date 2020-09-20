@@ -161,10 +161,9 @@
     display: inline;
 
     line-height: 1em;
-    font-size: 0.66666em;
+    font-size: 0.7em;
     color: var(--accentColor);
     border-radius: 5px;
-
 }
 
 .time {
