@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Blend's Portfolio</title>
+    <title>Timeline - Blend's Portfolio</title>
 
     <link rel="icon" type="image/png" href="assets/favicon.png" />
 
@@ -24,25 +24,37 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="timeline.html">Timeline<span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/favicon.png" width="30" height="30" alt="">
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="timeline.html">Timeline<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </nav>
     </header>
 
     <div class="content">
+
+        <!-- Background -->
+        <div id="particles-js"></div>
+
         <div class="container pt-3">
             <ul class="timeline pt-3">
 
@@ -89,7 +101,7 @@
                             <span class="flag">Competition: Infomatrix 2016</span>
                             <span class="time-wrapper"><span class="time">May 26-30, 2016</span></span>
                         </div>
-                        <div class="desc"><a class="resume-link"
+                        <div class="desc"><a class="lightblue-link"
                                 href="https://drive.google.com/file/d/1hTRListaz7EQGW6MBUSROIGjuf84z5Zm/view?usp=sharing">TIPO
                                 (Hardware Control) - Silver Medal
                                 <i class="fas fa-external-link-alt"></i></a><br>
@@ -104,7 +116,7 @@
                             <span class="flag">Competition: NASA Space Apps Challenge</span>
                             <span class="time-wrapper"><span class="time">April 22-24, 2016</span></span>
                         </div>
-                        <div class="desc"><a class="resume-link"
+                        <div class="desc"><a class="lightblue-link"
                                 href="https://drive.google.com/file/d/1kowhvHGNX1MDDX5lA2Jr-GwSngIGZI3O/view?usp=sharingx">Journey
                                 to Mars: Space Recreation - 1st Prize
                                 <i class="fas fa-external-link-alt"></i></a><br>
@@ -210,7 +222,7 @@
 
 
         <div class="container py-2 text-center small">
-            <a href="https://codepen.io/NilsWe" class="resume-link">Template by Nils Wittles <i
+            <a href="https://codepen.io/NilsWe" class="lightblue-link">Template by Nils Wittles <i
                     class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
@@ -221,13 +233,13 @@
             Blend Hamiti &#169 2020
         </div>
 
-        <!-- <script src="node_modules/particles.js/particles.js"></script>
+        <script src="node_modules/particles.js/particles.js"></script>
         <script>
             /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
             particlesJS.load('particles-js', 'assets/particles.json', function () {
                 console.log('callback - particles-js config loaded');
             });
-        </script> -->
+        </script>
 
         <script src="node_modules/aos/dist/aos.js"></script>
         <script>
