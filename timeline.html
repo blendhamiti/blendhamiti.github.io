@@ -46,9 +46,9 @@
         <div class="container pt-3">
             <ul class="timeline pt-3">
 
-                <li>
+                <li class="size-medium">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper medium-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Freelancer</span>
                             <span class="time-wrapper"><span class="time">2020 - present</span></span>
                         </div>
@@ -56,9 +56,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-large">
                     <div class="direction-l" data-aos="fade-right" data-aos-once="true">
-                        <div class="flag-wrapper large-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Bachelor of Science</span>
                             <span class="time-wrapper"><span class="time">2017 - 2020</span></span>
                         </div>
@@ -68,22 +68,24 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-large">
                     <div class="direction-l" data-aos="fade-right" data-aos-once="true">
-                        <div class="flag-wrapper large-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Matura Graduation</span>
                             <span class="time-wrapper"><span class="time">2013 - 2017</span></span>
                         </div>
                         <div class="desc">
                             Secondary School w/ Matura Exit Exam<br>
-                            Yahya Kemal College, North Macedonia
+                            Yahya Kemal College, North Macedonia<br>
+                            <button class="btn btn-light" id="toggle-small-elements"><i
+                                    class="fas fa-angle-down"></i></button>
                         </div>
                     </div>
                 </li>
 
-                <li>
-                    <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                <li class="size-small">
+                    <div class="direction-r" id="list-1" data-aos="fade-left" data-aos-once="true">
+                        <div class="flag-wrapper">
                             <span class="flag">Competition: Infomatrix 2016</span>
                             <span class="time-wrapper"><span class="time">May 26-30, 2016</span></span>
                         </div>
@@ -96,9 +98,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Competition: NASA Space Apps Challenge</span>
                             <span class="time-wrapper"><span class="time">April 22-24, 2016</span></span>
                         </div>
@@ -111,9 +113,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Experience: "Youth Transforming Conflict Online and Offline"</span>
                             <span class="time-wrapper"><span class="time">September 19-23, 2015</span></span>
                         </div>
@@ -125,9 +127,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Experience: Youth Academy - Youth Informing"</span>
                             <span class="time-wrapper"><span class="time">August 26-31, 2015</span></span>
                         </div>
@@ -139,9 +141,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Experience: "Project and Finance Management"</span>
                             <span class="time-wrapper"><span class="time">June 19-21, 2015</span></span>
                         </div>
@@ -153,9 +155,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Competition: Physics</span>
                             <span class="time-wrapper"><span class="time">April 25, 2015</span></span>
                         </div>
@@ -167,9 +169,9 @@
                     </div>
                 </li>
 
-                <li>
+                <li class="size-small">
                     <div class="direction-r" data-aos="fade-left" data-aos-once="true">
-                        <div class="flag-wrapper small-title">
+                        <div class="flag-wrapper">
                             <span class="flag">Competition: Physics</span>
                             <span class="time-wrapper"><span class="time">April 4, 2015</span></span>
                         </div>
@@ -184,6 +186,29 @@
             </ul>
         </div>
 
+        <script>
+            let elements = document.getElementsByClassName("size-small");
+            let button = document.getElementById("toggle-small-elements");
+            let elementsShown = true;
+            button.onclick = function () {
+                if (!elementsShown) {
+                    for (i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "list-item";
+                    }
+                    elementsShown = true;
+                    // button.innerHTML = <i class="fas fa-angle-up"></i>;
+                }
+                else {
+                    for (i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "none";
+                    }
+                    elementsShown = false;
+                    // button.innerHTML = <i class="fas fa-angle-down"></i>;
+                }
+            }
+        </script>
+
+
         <div class="container py-2 text-center small">
             <a href="https://codepen.io/NilsWe" class="resume-link">Template by Nils Wittles <i
                     class="fas fa-external-link-alt"></i></a>
@@ -196,13 +221,13 @@
             Blend Hamiti &#169 2020
         </div>
 
-        <script src="node_modules/particles.js/particles.js"></script>
+        <!-- <script src="node_modules/particles.js/particles.js"></script>
         <script>
             /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
             particlesJS.load('particles-js', 'assets/particles.json', function () {
                 console.log('callback - particles-js config loaded');
             });
-        </script>
+        </script> -->
 
         <script src="node_modules/aos/dist/aos.js"></script>
         <script>

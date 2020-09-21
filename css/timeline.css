@@ -75,17 +75,16 @@
     text-align: center;
 }
 
-.small-title .flag {
+.size-small .flag {
     background: var(--secondaryColorLight);
     font-size: small;
 }
 
-.medium-title .flag {
-    background: var(--secondaryColorLight);
+.size-medium .flag {
     font-size: medium;
 }
 
-.large-title .flag {
+.size-large .flag {
     font-size: x-large;
 }
 
@@ -219,7 +218,18 @@
         left: 50%;
         right: 50%;
         margin-left: -6px;
+    }
+
+    .size-small .flag:before {
         margin-top: -45px;
+    }
+    
+    .size-medium .flag:before {
+        margin-top: -50px;
+    }
+    
+    .size-large .flag:before {
+        margin-top: -55px;
     }
 
     .direction-l .flag:after,

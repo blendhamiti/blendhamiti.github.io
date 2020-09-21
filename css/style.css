@@ -25,9 +25,9 @@ body {
 }
 
 .profile-card {
-    padding: 10vw 0vw;
     width: 100%;
     height: 100%;
+    padding: 200px 0px;
 }
 
 .profile-card-container {
