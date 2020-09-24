@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/style.css">
-
     <link rel="stylesheet" href="./css/timeline.css">
 
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
@@ -23,7 +21,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -54,12 +52,14 @@
         </nav>
     </header>
 
-    <div class="content">
+    <main>
 
         <!-- Background -->
-        <div id="particles-js"></div>
+        <div class="page-bg">
+            <div id="particles-js"></div>
+        </div>
 
-        <div class="container pt-3">
+        <div class="timeline-container">
             <ul class="timeline pt-3" data-aos="fade-in" data-aos-once="true">
 
                 <li class="size-medium">
@@ -93,7 +93,8 @@
                         <div class="desc">
                             Secondary School w/ Matura Exit Exam<br>
                             Yahya Kemal College, North Macedonia<br>
-                            <button class="btn" id="toggle-small-elements"><i class="fas fa-angle-down"></i></button>
+                            <button class="btn btn-primary" id="toggle-small-elements"><i
+                                    class="fas fa-angle-down"></i></button>
                         </div>
                     </div>
                 </li>
@@ -228,7 +229,7 @@
             <a href="https://codepen.io/NilsWe" class="lightblue-link">Template by Nils Wittles <i
                     class="fas fa-external-link-alt"></i></a>
         </div>
-    </div>
+    </main>
 
     <footer>
 
