@@ -10812,6 +10812,22 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 0.1;
 }
 
+.navbar-brand-img {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.navbar-brand-img:hover {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-box-shadow: 0px 0px 5px #1e787a;
+          box-shadow: 0px 0px 5px #1e787a;
+}
+
 .profile-card {
   border-radius: 10px;
   background-color: rgba(31, 62, 90, 0.5);
@@ -10819,15 +10835,44 @@ a.text-dark:hover, a.text-dark:focus {
 
 .profile-card a {
   color: #e9ecef;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.profile-card a:hover {
+  color: #3972A7;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
 }
 
 .profile-card .profile-img {
   height: 160px;
   width: 160px;
-  border-radius: 50%;
   border: #145051;
+  border-radius: 50%;
   border-style: solid;
   border-width: 5px;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.profile-card .profile-img:hover {
+  border: #1e787a;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-box-shadow: 0px 0px 10px #e9ecef;
+          box-shadow: 0px 0px 10px #e9ecef;
 }
 
 .resume .block-entry {
