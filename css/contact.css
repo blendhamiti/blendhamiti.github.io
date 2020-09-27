@@ -2,6 +2,22 @@ main {
   min-height: calc(100vh - 58px - 24px);
 }
 
+.navbar-brand-img {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.navbar-brand-img:hover {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-box-shadow: 0px 0px 5px #1e787a;
+          box-shadow: 0px 0px 5px #1e787a;
+}
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

@@ -4,54 +4,52 @@
 
 @import "./page-bg.scss";
 
-.navbar-brand-img {
-    transition: ease-out;
-    transition-duration: .2s;
-}
+.profile-card-container {
+    padding: 160px 0px;
 
-.navbar-brand-img:hover {
-    transition: ease-out;
-    transition-duration: .2s;
-    box-shadow: 0px 0px 5px lighten($secondary, 10%);
-}
+    .profile-card {
+        border-radius: 10px;
+        background-color: rgba(31, 62, 90, 0.5);
 
-.profile-card {
-    border-radius: 10px;
-    background-color: rgba(31, 62, 90, 0.5);
+        a {
+            color: $gray-200;
+            transition: ease-out;
+            transition-duration: .2s
+        }
 
-    a {
-        color: $gray-200;
-        transition: ease-out;
-        transition-duration: .2s
-    }
+        a:hover {
+            color: #3972A7;
+            transition: ease-out;
+            transition-duration: .2s
+        }
 
-    a:hover {
-        color: #3972A7;
-        transition: ease-out;
-        transition-duration: .2s
-    }
+        p {
+            font-size: larger;
+        }
 
-    .profile-img {
-        height: 160px; 
-        width: 160px;
-        border: $secondary;
-        border-radius: 50%;
-        border-style: solid;
-        border-width: 5px;
-        transition: ease-out;
-        transition-duration: .2s;
-    }
+        .profile-img {
+            height: 160px; 
+            width: 160px;
+            border: $secondary;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 5px;
+            transition: ease-out;
+            transition-duration: .2s;
+        }
 
-    .profile-img:hover {
-        border: lighten($secondary, 10%);
-        border-radius: 50%;
-        border-style: solid;
-        border-width: 5px;
-        transition: ease-out;
-        transition-duration: .2s;
-        box-shadow: 0px 0px 10px $gray-200;
+        .profile-img:hover {
+            border: lighten($secondary, 10%);
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 5px;
+            transition: ease-out;
+            transition-duration: .2s;
+        }
     }
 }
+
+
 
 .resume {
     @extend .container;
@@ -100,6 +98,25 @@
         }
     }
 }
+
+
+
+.icon {
+
+    .icon-imported {
+        height: 27.99px;
+    }
+    
+    .android {
+        color: #a4c639;
+    }
+    
+    .js {
+        color: #F0DB4F;
+    }
+    
+}
+
 
 @import "./footer.scss";
 

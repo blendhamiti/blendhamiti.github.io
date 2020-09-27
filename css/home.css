@@ -2,6 +2,22 @@ main {
   min-height: calc(100vh - 58px - 24px);
 }
 
+.navbar-brand-img {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.navbar-brand-img:hover {
+  -webkit-transition: ease-out;
+  transition: ease-out;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-box-shadow: 0px 0px 5px #1e787a;
+          box-shadow: 0px 0px 5px #1e787a;
+}
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10812,28 +10828,16 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 0.1;
 }
 
-.navbar-brand-img {
-  -webkit-transition: ease-out;
-  transition: ease-out;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+.profile-card-container {
+  padding: 160px 0px;
 }
 
-.navbar-brand-img:hover {
-  -webkit-transition: ease-out;
-  transition: ease-out;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
-  -webkit-box-shadow: 0px 0px 5px #1e787a;
-          box-shadow: 0px 0px 5px #1e787a;
-}
-
-.profile-card {
+.profile-card-container .profile-card {
   border-radius: 10px;
   background-color: rgba(31, 62, 90, 0.5);
 }
 
-.profile-card a {
+.profile-card-container .profile-card a {
   color: #e9ecef;
   -webkit-transition: ease-out;
   transition: ease-out;
@@ -10841,7 +10845,7 @@ a.text-dark:hover, a.text-dark:focus {
           transition-duration: .2s;
 }
 
-.profile-card a:hover {
+.profile-card-container .profile-card a:hover {
   color: #3972A7;
   -webkit-transition: ease-out;
   transition: ease-out;
@@ -10849,7 +10853,11 @@ a.text-dark:hover, a.text-dark:focus {
           transition-duration: .2s;
 }
 
-.profile-card .profile-img {
+.profile-card-container .profile-card p {
+  font-size: larger;
+}
+
+.profile-card-container .profile-card .profile-img {
   height: 160px;
   width: 160px;
   border: #145051;
@@ -10862,7 +10870,7 @@ a.text-dark:hover, a.text-dark:focus {
           transition-duration: .2s;
 }
 
-.profile-card .profile-img:hover {
+.profile-card-container .profile-card .profile-img:hover {
   border: #1e787a;
   border-radius: 50%;
   border-style: solid;
@@ -10871,8 +10879,6 @@ a.text-dark:hover, a.text-dark:focus {
   transition: ease-out;
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
-  -webkit-box-shadow: 0px 0px 10px #e9ecef;
-          box-shadow: 0px 0px 10px #e9ecef;
 }
 
 .resume .block-entry {
@@ -10891,6 +10897,18 @@ a.text-dark:hover, a.text-dark:focus {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+}
+
+.icon .icon-imported {
+  height: 27.99px;
+}
+
+.icon .android {
+  color: #a4c639;
+}
+
+.icon .js {
+  color: #F0DB4F;
 }
 
 .footer {

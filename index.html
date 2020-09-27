@@ -58,36 +58,49 @@
             <div id="particles-js"></div>
         </div>
 
-        <div class="container">
-            <div class="row justify-content-center py-5" data-aos="fade-in" data-aos-once="true">
-                <div class="col-6 profile-card pt-3 pb-3">
+        <div class="container profile-card-container">
+            <div class="row justify-content-center" data-aos="fade-in" data-aos-once="true">
+                <div class="col-xl-6 profile-card p-3">
                     <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <img class="profile-img" src="/img/profile_img_big_cropped_2.JPG"></img>
+                        <div class="col-auto my-auto">
+                            <img class="profile-img" src="./assets/img/profile_img_big_cropped_2.JPG"></img>
                         </div>
-                    </div>
-                    <div class="row justify-content-center pt-3">
-                        <div class="col-auto">
-                            <h1>Hi, I am Blend.</h1>
-                            <p>Hi, I am Blend. I am an Engineering Technology graduate who has an interest in
-                                programming. This webiste is meant to showcase my web-developing sklills, but
-                                not
-                                only.</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center pt-3">
-                        <div class="col-auto">
-                            <a href="https://www.instagram.com/blendhamiti/"><i class="fab fa-instagram fa-2x"></i></a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="https://github.com/blendhamiti/"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="https://www.linkedin.com/in/blend-hamiti-b87a22115/"><i
-                                    class="fab fa-linkedin fa-2x"></i></a>
+                        <div class="col-md">
+                            <div class="row justify-content-center">
+                                <div class="col-auto text-center text-md-left">
+                                    <h1>Hi, I am Blend</h1>
+                                    <p>I am an Engineering Technology graduate who has an interest in
+                                        programming. This webiste is meant to showcase my skills and experience.</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <a href="https://www.instagram.com/blendhamiti/"><i
+                                            class="fab fa-instagram fa-2x"></i></a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="https://github.com/blendhamiti/"><i class="fab fa-github fa-2x"></i></a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="https://www.linkedin.com/in/blend-hamiti-b87a22115/"><i
+                                            class="fab fa-linkedin fa-2x"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+
+                </div>
+            </div>
+            <div class="row justify-content-center pt-5">
+                <div class="col-auto">
+                    Scroll down to see more
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button class="btn" onclick="inititalScrollDown('resume')"><i
+                            class="fas fa-angle-down fa-2x"></i></button>
                 </div>
             </div>
         </div>
@@ -96,76 +109,172 @@
             <div class="row">
                 <div class="col">
 
-
-                    <!-- Education -->
-                    <div class="row resume-section-title" data-aos="fade-in" data-aos-once="true">
-                        <div class="col">
-                            <h2>Education</h2>
-                        </div>
-                    </div>
-
-                    <!-- SASS Example -->
-                    <div class="block-entry" data-aos="fade-right" data-aos-once="true">
-                        <div class="date-block">
-                            <div class="date">2017-2020</div>
-                        </div>
-                        <div class="text-block">
-                            <div class="title">Bachelor of Science in Engineering Technology (w/ specialisation in ICT)
+                    <div class="resume-education">
+                        <div class="row resume-section-title" id="education-section-title" data-aos="fade-in"
+                            data-aos-once="true" data-aos-anchor=".profile-card-container"
+                            data-aos-anchor-placement="center-top">
+                            <div class="col">
+                                <h2>Education</h2>
                             </div>
-                            <div class="subtitle">Leuven, Belgium</div>
                         </div>
-                    </div>
 
-                    <div class="row block-entry" data-aos="fade-right" data-aos-once="true">
-                        <div class="col-sm-2 text-center my-auto">
-                            <h6>2013-2017</h6>
+                        <!-- SASS Example -->
+                        <div class="block-entry" data-aos="fade-right" data-aos-once="true"
+                            data-aos-anchor=".profile-card-container" data-aos-anchor-placement="center-top">
+                            <div class="date-block">
+                                <div class="date">2017-2020</div>
+                            </div>
+                            <div class="text-block">
+                                <div class="title">Bachelor of Science in Engineering Technology (w/ specialisation in
+                                    ICT)
+                                </div>
+                                <div class="subtitle">Leuven, Belgium</div>
+                            </div>
                         </div>
-                        <div class="col-sm-10 text-center text-sm-left">
-                            <h4>Secondary School w/ Matura Exam</h4>
-                            <h6>Yahya Kemal College, North Macedonia</h6>
+
+                        <div class="row block-entry" data-aos="fade-right" data-aos-once="true"
+                            data-aos-anchor=".profile-card-container" data-aos-anchor-placement="center-top">
+                            <div class="col-sm-2 text-center my-auto">
+                                <h6>2013-2017</h6>
+                            </div>
+                            <div class="col-sm-10 text-center text-sm-left">
+                                <h4>Secondary School w/ Matura Exam</h4>
+                                <h6>Yahya Kemal College, North Macedonia</h6>
+                            </div>
                         </div>
                     </div>
 
                     <br>
 
-                    <!-- Projects -->
-                    <div class="row resume-section-title" data-aos="fade-in" data-aos-once="true">
-                        <div class="col">
-                            <h2>Projects</h2>
+                    <div class="resume-projects">
+                        <div class="row resume-section-title" data-aos="fade-in" data-aos-once="true">
+                            <div class="col">
+                                <h2>Projects</h2>
+                            </div>
+                        </div>
+
+                        <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
+                            <div class="col-sm my-auto block-img" data-aos="fade-right" data-aos-once="true">
+                                <img class="img-fluid" src="./assets/img/timers-collage-2.png"></img>
+                            </div>
+                            <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left"
+                                data-aos-once="true">
+                                <h3>
+                                    <span class="icon"><i class="fab fa-android android" title="Android"></i></span>
+                                </h3>
+                                <h3>
+                                    <span>Timers</span>
+                                    <span><button class="btn btn-secondary"
+                                            onclick="window.location.href='https://github.com/blendhamiti/Timers';">View
+                                            in
+                                            GitHub <i class="fab fa-github"></i></button></span>
+                                </h3>
+                                <p>Timers is an android app that let's you create different timers and connect them “in
+                                    series”. You are notified as each timer finishes and the next one starts, so you can
+                                    do your tasks continuously without stopping to set the timer again and again between
+                                    tasks. It also supports timers templates that can saved and restored easily.</p>
+                            </div>
+                        </div>
+
+                        <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
+                            <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left"
+                                data-aos-once="true">
+                                <h3>
+                                    <span class="icon"><i class="fab fa-android android" title="Android"></i></span>
+                                </h3>
+                                <h3>
+                                    <span>Timers</span>
+                                    <span><button class="btn btn-secondary"
+                                            onclick="window.location.href='https://github.com/blendhamiti/Timers';">View
+                                            in
+                                            GitHub <i class="fab fa-github"></i></button></span>
+                                </h3>
+                                <p>Timers is an android app that let's you create different timers and connect them “in
+                                    series”. You are notified as each timer finishes and the next one starts, so you can
+                                    do your tasks continuously without stopping to set the timer again and again between
+                                    tasks. It also supports timers templates that can saved and restored easily.</p>
+                            </div>
+                        </div>
+
+                        <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
+                            <div class="col-sm my-auto block-img" data-aos="fade-right" data-aos-once="true">
+                                <img class="img-fluid" src="./assets/img/robot_cropped.png"></img>
+                            </div>
+                            <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left"
+                                data-aos-once="true">
+                                <h3>TIPO - Area measurement device</h3>
+                                <h5><a class="lightblue-link"
+                                        href="https://drive.google.com/file/d/1hTRListaz7EQGW6MBUSROIGjuf84z5Zm/view?usp=sharing">Documentation
+                                        <i class="fas fa-external-link-alt"></i></a>
+                                </h5>
+                                <h5>Infomatrix 2016 - Hardware Control</h5>
+                                <h6>Bucharest, Romania</h6>
+                                <h6>26-30 May, 2016
+                                </h6>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
-                        <div class="col-sm my-auto block-img" data-aos="fade-right" data-aos-once="true">
-                            <img class="img-fluid" src="/img/robot_cropped.png"></img>
-                        </div>
-                        <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left" data-aos-once="true">
-                            <h3>TIPO - Area measurement device</h3>
-                            <h5><a class="lightblue-link"
-                                    href="https://drive.google.com/file/d/1hTRListaz7EQGW6MBUSROIGjuf84z5Zm/view?usp=sharing">Documentation
-                                    <i class="fas fa-external-link-alt"></i></a>
-                            </h5>
-                            <h5>Infomatrix 2016 - Hardware Control</h5>
-                            <h6>Bucharest, Romania</h6>
-                            <h6>26-30 May, 2016
-                            </h6>
-                        </div>
-                    </div>
+                    <br>
 
-                    <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
-                        <div class="col-sm my-auto block-img" data-aos="fade-right" data-aos-once="true">
-                            <img class="img-fluid" src="/img/robot_cropped.png"></img>
+                    <div class="resume-experience">
+                        <div class="row resume-section-title" data-aos="fade-in" data-aos-once="true">
+                            <div class="col">
+                                <h2>Experience</h2>
+                            </div>
                         </div>
-                        <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left" data-aos-once="true">
-                            <h3>TIPO - Area measurement device</h3>
-                            <h5><a class="lightblue-link"
-                                    href="https://drive.google.com/file/d/1hTRListaz7EQGW6MBUSROIGjuf84z5Zm/view?usp=sharing">Documentation
-                                    <i class="fas fa-external-link-alt"></i></a>
-                            </h5>
-                            <h5>Infomatrix 2016 - Hardware Control</h5>
-                            <h6>Bucharest, Romania</h6>
-                            <h6>26-30 May, 2016
-                            </h6>
+
+                        <div class="row block-entry" data-aos="fade-in" data-aos-once="true">
+                            <div class="col-sm text-center text-sm-left my-auto" data-aos="fade-left"
+                                data-aos-once="true">
+                                <h2>Web-development</h2>
+
+                                <br>
+
+                                <h3>
+                                    <span class="icon"><i class="fab fa-html5 html5"></i></span>
+                                    <span class="icon"><i class="fab fa-css3-alt css3"></i></span>
+                                    <span class="icon"><i class="fab fa-js js"></i></span>
+                                    <span class="icon"><i class="fab fa-bootstrap bootstrap"></i></span>
+                                    <span class="icon"><i class="fab fa-sass sass"></i></span>
+                                    <span class="icon"><img src="./assets/icons/b_.svg"
+                                            class="icon-imported bem"></img></span>
+                                </h3>
+                                <h3>
+                                    <span class="icon"><img src="./assets/icons/mysql.svg" class="icon-imported"></span>
+                                    <span class="icon"><i class="fab fa-node-js node-js"></i></span>
+                                    <span class="icon"><i class="fab fa-npm npm"></i></span>
+                                    <span class="icon"><i class="fab fa-php php"></i></span>
+                                    <span class="icon"><img src="./assets/icons/ci-icon.png"
+                                            class="icon-imported ci"></span>
+                                </h3>
+
+                                <br>
+
+                                <p>Project - Digital Planning Board: UI for users to organise their schedule in a
+                                    calendar and divide tasks in the building.</p>
+                                <p>Server: Apache & MySQL </p>
+                                <p>Backend: PHP (with CodeIgniter)</p>
+                                <p>Frontend: Bootstrap + SASS + BEM</p>
+                                <p>JS libs: jQuery, Popper.js, FullCalendar, Moment.js, Muuri.js. </p>
+
+                                <br>
+
+                                <p>Project - Blend's Portfolio</p>
+                                <p>Backend: NodeJS + npm</p>
+                                <p>Frontend: Bootstrap + SASS</p>
+                                <p>JS libs: AOS, Particles.js </p>
+
+                                <br>
+
+                                <ul>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>C + Assembly</li>
+                                    <li>Python</li>
+                                    <li>Matlab</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -173,6 +282,13 @@
             </div>
         </div>
 
+        <script>
+            function inititalScrollDown(elementId) {
+                let element = document.getElementsByClassName(elementId);
+                console.log(element.item(0))
+                element.item(0).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
+        </script>
 
     </main>
 
