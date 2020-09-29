@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blend's Portfolio</title>
+
+    <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+</head>
+
+<body>
+
+    @@include('./header.html')
+
+    @@include('./navbar.html')
+
+    <main>
+
+        @@if (page === 'timeline') {
+        @@include('./timeline.html')
+        }
+        @@if (page === 'contact') {
+        @@include('./contact.html')
+        }
+        @@if (page === 'certificates') {
+        @@include('./certificates.html')
+        }
+
+    </main>
+
+    @@include('./footer.html')
+
+</body>
+
+</html>

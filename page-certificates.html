@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./src/css/contact.css">
+    <link rel="stylesheet" href="./src/css/main.css">
 
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
 
@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <header>
 
     <!-- Background -->
@@ -28,7 +29,7 @@
 
 </header>
 
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,51 +43,43 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" name="index" href="./index.html">Home</a>
+                    <a class="nav-link" name="index" href="#profile-card">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" name="timeline" href="./timeline.html">Timeline</a>
+                    <a class="nav-link" name="timeline" href="#timeline">Timeline</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" name="certificates" href="./certificates.html">Certificates</a>
+                    <a class="nav-link" name="resume" href="#resume">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" name="contact" href="./contact.html">Contact</a>
+                    <a class="nav-link" name="certificates" href="#certificates">Certificates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" name="contact" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 
-    <script>
-        let str = window.location.pathname;
-        let element = document.getElementsByName(str.split("/")[1].split(".")[0]).item(0);
-        if (element === null)
-            document.getElementsByName("index").item(0).classList.add("active");
-        else
-            element.classList.add("active");
-    </script>
 
 </nav>
 
     <main>
-        <div class="container p-5" data-aos="fade-in" data-aos-once="true">
-            <div class="row justify-content-center pb-3">
-                <div class="col-auto">
-                    <h1>Contact me</h1>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <button class="btn btn-secondary" onclick="window.open('mailto:b.hamiti.9@gmail.com');">Shoot me an
-                        email</button>
-                </div>
-            </div>
-        </div>
+
+        
+        
+        
+        <div class="certificates container">
+</div>
+        
+
     </main>
 
     <footer>
 
     <div class="footer">Blend Hamiti &#169 2020</div>
+
+    <script src="./src/js/main.js"></script>
 
     <script src="/node_modules/particles.js/particles.js"></script>
     <script>
@@ -114,6 +107,7 @@
     <script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
 </footer>
+
 </body>
 
 </html>

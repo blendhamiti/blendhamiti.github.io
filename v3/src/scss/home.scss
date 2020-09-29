@@ -1,6 +1,6 @@
 @import "./main.scss";
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 @import "./page-bg.scss";
 
@@ -53,6 +53,7 @@
 
 .resume {
     @extend .container;
+    @extend .pt-3;
 
     .block-entry {
         @extend .row;

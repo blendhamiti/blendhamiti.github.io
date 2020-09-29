@@ -1,0 +1,18 @@
+nav {
+    @extend .position-fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: $primary-dark;
+    box-shadow: 0px 0px 10px 5px $primary-dark;
+
+    .navbar-brand-img {
+        transition: ease-out;
+        transition-duration: .2s;
+    }
+
+    .navbar-brand-img:hover {
+        transition: ease-out;
+        transition-duration: .2s;
+        box-shadow: 0px 0px 5px lighten($secondary, 10%);
+    }
+}

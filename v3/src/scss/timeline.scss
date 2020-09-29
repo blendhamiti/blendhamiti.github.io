@@ -1,15 +1,21 @@
-.timeline {
+@import "./main.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "./page-bg.scss";
+
+.timeline-container {
     @extend .container;
     @extend .pt-3;
     
-    .line {
+    .timeline {
         position: relative;
         padding-inline-start: 0px;
         margin-bottom: 0px;
         list-style-type: none; /* Remove bullet point */
     }
     
-    .line:before {
+    .timeline:before {
         position: absolute;
         left: 50%;
         top: 0;
@@ -29,11 +35,11 @@
         z-index: 0.2;
     }
     
-    .line li {
+    .timeline li {
         padding: 1em 0;
     }
     
-    .line li:after {
+    .timeline li:after {
         content: "";
         display: block;
         height: 0;
@@ -188,12 +194,12 @@
     
     @media screen and (max-width: 766px) {
     
-        .line {
+        .timeline {
             width: 100%;
             padding: 16px 0px;
         }
     
-        .line li {
+        .timeline li {
             padding: 32px 0px;
         }
     
@@ -288,3 +294,5 @@
         }
     }
 }
+
+@import "./footer.scss";

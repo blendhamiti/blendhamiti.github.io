@@ -1,0 +1,47 @@
+.resume {
+    @extend .container;
+
+    .block-entry {
+        @extend .row;
+        padding: 2%;
+        margin: 2%;
+        background-color: $primary;
+        border-radius: 5px;
+    
+        .date-block {
+            @extend .col-sm-2;
+            @extend .text-center;
+            @extend .my-auto;
+    
+            .date {
+                @extend h6;
+            }
+        }
+
+        .text-block {
+            @extend .col-sm-10; 
+            @extend .text-center; 
+            @extend .text-sm-left;
+
+            .title {
+                @extend h4;
+            }
+
+            .subtitle {
+                @extend h6;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {     
+        .block-entry {
+            margin-top: 4.5%;
+            margin-bottom: 4.5%;
+        }
+    
+        .block-img {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/contact.css">
 
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
 
@@ -19,51 +19,27 @@
 </head>
 
 <body>
-
     @@include('./header.html')
 
     @@include('./navbar.html')
 
     <main>
-
-        <div class="component" id="profile-card">
-            @@include('./profile-card.html')
-        </div>
-
-        <div class="container">
-            <div class="row justify-content-center pt-5">
+        <div class="container p-5" data-aos="fade-in" data-aos-once="true">
+            <div class="row justify-content-center pb-3">
                 <div class="col-auto">
-                    Scroll down to see more
+                    <h1>Contact me</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button class="btn" onclick="inititalScrollDown('timeline')"><i
-                            class="fas fa-angle-down fa-2x"></i></button>
+                    <button class="btn btn-secondary" onclick="window.open('mailto:b.hamiti.9@gmail.com');">Shoot me an
+                        email</button>
                 </div>
             </div>
         </div>
-
-        <div class="component" id="timeline">
-            @@include('./timeline.html')
-        </div>
-
-        <div class="component" id="resume">
-            @@include('./resume.html')
-        </div>
-
-        <div class="component" id="certificates">
-            @@include('./certificates.html')
-        </div>
-
-        <div class="component" id="contact">
-            @@include('./contact.html')
-        </div>
-
     </main>
 
     @@include('./footer.html')
-
 </body>
 
 </html>

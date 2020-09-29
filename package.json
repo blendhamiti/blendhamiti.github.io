@@ -16,8 +16,11 @@
     },
     "devDependencies": {
         "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
         "gulp-file-include": "^2.2.2",
-        "lite-server": "^2.5.4"
+        "gulp-sass": "^4.1.0",
+        "lite-server": "^2.5.4",
+        "node-sass": "^4.14.1"
     },
     "browserslist": [
         "defaults"
