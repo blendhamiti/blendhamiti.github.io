@@ -19,54 +19,47 @@
 </head>
 
 <body>
-
     <header>
 
-    <!-- Background -->
-    <div class="page-bg">
-        <div id="particles-js"></div>
-    </div>
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-</header>
+                <a class="navbar-brand" href="./index.html">
+                    <img class="navbar-brand-img" src="/assets/favicon.png" width="30" height="30" alt="">
+                </a>
 
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./timeline.html">Timeline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./certificates.html">Certificates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
-        <a class="navbar-brand" href="./index.html">
-            <img class="navbar-brand-img" src="./assets/favicon.png" width="30" height="30" alt="">
-        </a>
+            </div>
+        </nav>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" name="index" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" name="timeline" href="./timeline.html">Timeline</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" name="certificates" href="./certificates.html">Certificates</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" name="contact" href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        let str = window.location.pathname;
-        let element = document.getElementsByName(str.split("/")[1].split(".")[0]).item(0);
-        element.classList.add("active");
-    </script>
-
-</nav>
+    </header>
 
     <main>
+        <!-- Background -->
+        <div class="page-bg">
+            <div id="particles-js"></div>
+        </div>
 
         <div class="container profile-card-container">
             <div class="row justify-content-center" data-aos="fade-in" data-aos-once="true">
@@ -304,37 +297,37 @@
 
     </main>
 
+
     <footer>
 
-    <div class="footer">Blend Hamiti &#169 2020</div>
+        <div class="footer">Blend Hamiti &#169 2020</div>
 
-    <script src="/node_modules/particles.js/particles.js"></script>
-    <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', '/assets/particles.json', function () {
-            console.log('callback - particles-js config loaded');
-        });
-    </script>
+        <script src="/node_modules/particles.js/particles.js"></script>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', '/assets/particles.json', function () {
+                console.log('callback - particles-js config loaded');
+            });
+        </script>
 
-    <script src="/node_modules/aos/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+        <script src="/node_modules/aos/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
 
-    <script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+        <script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
-</footer>
-
+    </footer>
 </body>
 
 </html>
