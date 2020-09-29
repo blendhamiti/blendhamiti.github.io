@@ -45,6 +45,8 @@ const fileinclude = require('gulp-file-include');
 
 // exports.default = includeHTML;
 
+
+// You need to save any file under watch() in order for the includeHTML() to run.
 exports.default = function () {
     watch([
         './src/*.html',

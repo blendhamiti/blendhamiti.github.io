@@ -30,7 +30,10 @@
     <script>
         let str = window.location.pathname;
         let element = document.getElementsByName(str.split("/")[1].split(".")[0]).item(0);
-        element.classList.add("active");
+        if (element === null)
+            document.getElementsByName("index").item(0).classList.add("active");
+        else
+            element.classList.add("active");
     </script>
 
 </nav>
