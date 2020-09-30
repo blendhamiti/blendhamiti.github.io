@@ -1,3 +1,9 @@
+$('.certificates-thumbnail').on('click', function () {
+    $('#certificates-overlay')
+        .css({ backgroundImage: `url(${this.src})` })
+        .addClass('open')
+        .one('click', function () { $(this).removeClass('open'); });
+});
 function inititalScrollDown(elementId) {
     let element = document.getElementById(elementId);
     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
