@@ -7158,7 +7158,8 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .component {
-  padding: 100px 0px; }
+  padding: 100px 0px;
+  min-height: 100vh; }
 
 .icon .icon-imported {
   height: 27.99px; }
