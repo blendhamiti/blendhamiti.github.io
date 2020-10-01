@@ -79,6 +79,10 @@
         text-align: center;
     }
     
+    .size-small {
+        display: none;
+    }
+
     .size-small .flag {
         background: $secondary;
         font-size: small;
@@ -172,6 +176,7 @@
     .time {
         display: inline-block;
         padding: 4px 6px;
+        font-size: small;
         background: $gray-200;
     }
     

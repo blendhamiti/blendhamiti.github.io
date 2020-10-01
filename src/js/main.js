@@ -82,6 +82,28 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+var timelineExpanded = false;
+
+function shrinkTimeline() {
+    let button = document.getElementById("btn-shrink-timeline");
+    let timelineEntries = document.querySelectorAll(".timeline .size-small");
+
+    if (!timelineExpanded) {
+        timelineEntries.forEach(entry => {
+            entry.style.display = "list-item";
+        });
+        timelineExpanded = true;
+        button.innerHTML = 'Hide <i class="fas fa-angle-up"></i>';
+    }
+    else {
+        timelineEntries.forEach(entry => {
+            entry.style.display = "none";
+        });
+        timelineExpanded = false;
+        button.innerHTML = 'Show all <i class="fas fa-angle-down"></i>';
+    }
+
+}
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -91,23 +113,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-let elements = document.getElementsByClassName("size-small");
-let button = document.getElementById("toggle-small-elements");
-let elementsShown = true;
-
-button.onclick = function () {
-    if (!elementsShown) {
-        for (i = 0; i < elements.length;) {
-            elements[i].style.display = "list-item";
-        }
-        elementsShown = true;
-        // button.innerHTML = <i class="fas fa-angle-up"></i>;
-    }
-    else {
-        for (i = 0; i < elements.length;) {
-            elements[i].style.display = "none";
-        }
-        elementsShown = false;
-        // button.innerHTML = <i class="fas fa-angle-down"></i>;
-    }
-}

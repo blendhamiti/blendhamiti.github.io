@@ -1,4 +1,11 @@
 <div class="timeline container">
+
+    <div class="row">
+        <div class="col">
+            <h2>Timeline</h2>
+        </div>
+    </div>
+
     <ul class="line" data-aos="fade-in" data-aos-once="true">
 
         <li class="size-medium">
@@ -32,11 +39,17 @@
                 <div class="desc">
                     Secondary School w/ Matura Exit Exam<br>
                     Yahya Kemal College, North Macedonia<br>
-                    <button class="btn btn-primary" id="toggle-small-elements"><i
-                            class="fas fa-angle-down"></i></button>
                 </div>
             </div>
         </li>
+
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary" id="btn-shrink-timeline" onclick="shrinkTimeline()">
+                    Show all <i class="fas fa-angle-down"></i>
+                </button>
+            </div>
+        </div>
 
         <li class="size-small">
             <div class="direction-r" id="list-1" data-aos="fade-left" data-aos-once="true">
@@ -137,7 +150,6 @@
                 </div>
             </div>
         </li>
-
     </ul>
 
     <div class="row">
