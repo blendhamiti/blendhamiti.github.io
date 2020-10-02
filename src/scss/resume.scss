@@ -8,27 +8,29 @@
         background-color: $primary;
         border-radius: 5px;
     
-        .date-block {
-            @extend .col-sm-2;
-            @extend .text-center;
-            @extend .my-auto;
-    
-            .date {
-                @extend h6;
-            }
-        }
-
-        .text-block {
-            @extend .col-sm-10; 
+        .block-entry-content {
+            @extend .col-sm; 
             @extend .text-center; 
             @extend .text-sm-left;
+            @extend .my-auto;
 
-            .title {
-                @extend h4;
+            .icon-block {
+                @extend h3;
             }
 
-            .subtitle {
-                @extend h6;
+            .text-block {
+
+                button {
+                    @extend .btn; 
+                    @extend .btn-secondary;
+                }
+
+                .title {
+                    @extend h3;
+                }
+
+                .description {
+                }
             }
         }
     }

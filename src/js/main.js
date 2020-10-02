@@ -44,12 +44,22 @@ $('.certificates-thumbnail').on('click', function () {
         .addClass('open')
         .one('click', function () { $(this).removeClass('open'); });
 });
+var resumeIcons = document.querySelectorAll(".icon-block i")
+
+resumeIcons.forEach(icon => {
+    icon.classList.add("colored");
+});
 function inititalScrollDown(elementId) {
     let element = document.getElementById(elementId);
     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
 
+var resumeIconsContainers = document.querySelectorAll(".icon-block span")
+
+resumeIconsContainers.forEach(container => {
+    container.title = container.childNodes.item(0).classList[0].split("-", "2")[1];
+});
 // let str = window.location.pathname;
 // let element = document.getElementsByName(str.split("/")[1].split(".")[0]).item(0);
 // if (element === null)

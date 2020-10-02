@@ -66,7 +66,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, .resume .block-entry .text-block .title, h5, h6, .resume .block-entry .date-block .date, .resume .block-entry .text-block .subtitle {
+h1, h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -292,7 +292,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, .resume .block-entry .text-block .title, h5, h6, .resume .block-entry .date-block .date, .resume .block-entry .text-block .subtitle,
+h1, h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -304,16 +304,16 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2rem; }
 
-h3, .h3 {
+h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, .h3 {
   font-size: 1.75rem; }
 
-h4, .resume .block-entry .text-block .title, .h4 {
+h4, .h4 {
   font-size: 1.5rem; }
 
 h5, .h5 {
   font-size: 1.25rem; }
 
-h6, .resume .block-entry .date-block .date, .resume .block-entry .text-block .subtitle, .h6 {
+h6, .h6 {
   font-size: 1rem; }
 
 .lead {
@@ -481,7 +481,7 @@ pre {
     padding-left: 0; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .resume .block-entry .date-block, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .resume .block-entry .text-block, .col-sm-11, .col-sm-12, .col-sm, .certificates .img-container,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .resume .block-entry .block-entry-content, .certificates .img-container,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
@@ -652,7 +652,7 @@ pre {
   margin-left: 91.66667%; }
 
 @media (min-width: 576px) {
-  .col-sm, .certificates .img-container {
+  .col-sm, .resume .block-entry .block-entry-content, .certificates .img-container {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%; }
@@ -681,7 +681,7 @@ pre {
   .col-sm-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-  .col-sm-2, .resume .block-entry .date-block {
+  .col-sm-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
   .col-sm-3 {
@@ -705,7 +705,7 @@ pre {
   .col-sm-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-  .col-sm-10, .resume .block-entry .text-block {
+  .col-sm-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
   .col-sm-11 {
@@ -1736,7 +1736,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .resume .block-entry .block-entry-content .text-block button {
   display: inline-block;
   font-weight: 400;
   color: #e9ecef;
@@ -1751,17 +1751,17 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, .resume .block-entry .block-entry-content .text-block button {
       transition: none; } }
-  .btn:hover {
+  .btn:hover, .resume .block-entry .block-entry-content .text-block button:hover {
     color: #e9ecef;
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .resume .block-entry .block-entry-content .text-block button:focus, .btn.focus, .resume .block-entry .block-entry-content .text-block button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(31, 62, 90, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .resume .block-entry .block-entry-content .text-block button.disabled, .btn:disabled, .resume .block-entry .block-entry-content .text-block button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
 a.btn.disabled,
@@ -1794,30 +1794,32 @@ fieldset:disabled a.btn {
     .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(65, 91, 115, 0.5); }
 
-.btn-secondary {
+.btn-secondary, .resume .block-entry .block-entry-content .text-block button {
   color: #fff;
   background-color: #145051;
   border-color: #145051; }
-  .btn-secondary:hover {
+  .btn-secondary:hover, .resume .block-entry .block-entry-content .text-block button:hover {
     color: #fff;
     background-color: #0c3232;
     border-color: #0a2828; }
-  .btn-secondary:focus, .btn-secondary.focus {
+  .btn-secondary:focus, .resume .block-entry .block-entry-content .text-block button:focus, .btn-secondary.focus, .resume .block-entry .block-entry-content .text-block button.focus {
     color: #fff;
     background-color: #0c3232;
     border-color: #0a2828;
     box-shadow: 0 0 0 0.2rem rgba(55, 106, 107, 0.5); }
-  .btn-secondary.disabled, .btn-secondary:disabled {
+  .btn-secondary.disabled, .resume .block-entry .block-entry-content .text-block button.disabled, .btn-secondary:disabled, .resume .block-entry .block-entry-content .text-block button:disabled {
     color: #fff;
     background-color: #145051;
     border-color: #145051; }
-  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
-  .show > .btn-secondary.dropdown-toggle {
+  .btn-secondary:not(:disabled):not(.disabled):active, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active,
+  .show > .btn-secondary.dropdown-toggle,
+  .resume .block-entry .block-entry-content .text-block .show > button.dropdown-toggle {
     color: #fff;
     background-color: #0a2828;
     border-color: #071e1e; }
-    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-secondary.dropdown-toggle:focus {
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-secondary.dropdown-toggle:focus,
+    .resume .block-entry .block-entry-content .text-block .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(55, 106, 107, 0.5); }
 
 .btn-success {
@@ -2157,13 +2159,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-lg > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2407,17 +2409,22 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .resume .block-entry .block-entry-content .text-block .btn-group > button,
+  .btn-group-vertical > .btn,
+  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .resume .block-entry .block-entry-content .text-block .btn-group > button:hover,
+    .btn-group-vertical > .btn:hover,
+    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, .resume .block-entry .block-entry-content .text-block .btn-group > button:focus, .btn-group > .btn:active, .resume .block-entry .block-entry-content .text-block .btn-group > button:active, .btn-group > .btn.active, .resume .block-entry .block-entry-content .text-block .btn-group > button.active,
     .btn-group-vertical > .btn:focus,
+    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:active,
+    .btn-group-vertical > .btn.active,
+    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2427,17 +2434,19 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.resume .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.resume .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2451,11 +2460,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .resume .block-entry .block-entry-content .text-block .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .resume .block-entry .block-entry-content .text-block .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2463,28 +2472,36 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
+  
   .btn-group-vertical > .btn,
+  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:last-child) > button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:first-child) > button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button,
+.btn-group-toggle > .btn-group > .btn,
+.resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2545,21 +2562,39 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block button, .resume .block-entry .block-entry-content .text-block .input-group-prepend button,
+  .input-group-append .btn,
+  .input-group-append .resume .block-entry .block-entry-content .text-block button,
+  .resume .block-entry .block-entry-content .text-block .input-group-append button {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
+    .input-group-prepend .btn:focus, .input-group-prepend .resume .block-entry .block-entry-content .text-block button:focus, .resume .block-entry .block-entry-content .text-block .input-group-prepend button:focus,
+    .input-group-append .btn:focus,
+    .input-group-append .resume .block-entry .block-entry-content .text-block button:focus,
+    .resume .block-entry .block-entry-content .text-block .input-group-append button:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block button + .btn, .resume .block-entry .block-entry-content .text-block .input-group-prepend button + .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block .btn + button, .resume .block-entry .block-entry-content .text-block .input-group-prepend .btn + button, .input-group-prepend .resume .block-entry .block-entry-content .text-block button + button, .resume .block-entry .block-entry-content .text-block .input-group-prepend button + button,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .resume .block-entry .block-entry-content .text-block button + .input-group-text,
+  .resume .block-entry .block-entry-content .text-block .input-group-prepend button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .resume .block-entry .block-entry-content .text-block .input-group-text + button,
+  .resume .block-entry .block-entry-content .text-block .input-group-prepend .input-group-text + button,
   .input-group-append .btn + .btn,
+  .input-group-append .resume .block-entry .block-entry-content .text-block button + .btn,
+  .resume .block-entry .block-entry-content .text-block .input-group-append button + .btn,
+  .input-group-append .resume .block-entry .block-entry-content .text-block .btn + button,
+  .resume .block-entry .block-entry-content .text-block .input-group-append .btn + button,
+  .input-group-append .resume .block-entry .block-entry-content .text-block button + button,
+  .resume .block-entry .block-entry-content .text-block .input-group-append button + button,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .resume .block-entry .block-entry-content .text-block button + .input-group-text,
+  .resume .block-entry .block-entry-content .text-block .input-group-append button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .resume .block-entry .block-entry-content .text-block .input-group-text + button,
+  .resume .block-entry .block-entry-content .text-block .input-group-append .input-group-text + button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2595,7 +2630,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.resume .block-entry .block-entry-content .text-block .input-group-lg > .input-group-prepend > button,
+.input-group-lg > .input-group-append > .btn,
+.resume .block-entry .block-entry-content .text-block .input-group-lg > .input-group-append > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2610,7 +2647,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.resume .block-entry .block-entry-content .text-block .input-group-sm > .input-group-prepend > button,
+.input-group-sm > .input-group-append > .btn,
+.resume .block-entry .block-entry-content .text-block .input-group-sm > .input-group-append > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2620,20 +2659,24 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend > button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.resume .block-entry .block-entry-content .text-block .input-group > .input-group-append:not(:last-child) > button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.resume .block-entry .block-entry-content .text-block .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .resume .block-entry .block-entry-content .text-block .input-group > .input-group-append > button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:not(:first-child) > button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:first-child > button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3580,7 +3623,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .resume .block-entry .block-entry-content .text-block button .badge {
   position: relative;
   top: -1px; }
 
@@ -5885,7 +5928,7 @@ button.bg-dark:focus {
 
 .mt-auto,
 .my-auto,
-.resume .block-entry .date-block {
+.resume .block-entry .block-entry-content {
   margin-top: auto !important; }
 
 .mr-auto,
@@ -5894,7 +5937,7 @@ button.bg-dark:focus {
 
 .mb-auto,
 .my-auto,
-.resume .block-entry .date-block {
+.resume .block-entry .block-entry-content {
   margin-bottom: auto !important; }
 
 .ml-auto,
@@ -6951,11 +6994,11 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, .resume .block-entry .date-block, .resume .block-entry .text-block {
+.text-center, .resume .block-entry .block-entry-content {
   text-align: center !important; }
 
 @media (min-width: 576px) {
-  .text-sm-left, .resume .block-entry .text-block {
+  .text-sm-left, .resume .block-entry .block-entry-content {
     text-align: left !important; }
   .text-sm-right {
     text-align: right !important; }
@@ -7121,12 +7164,10 @@ a.text-dark:hover, a.text-dark:focus {
   img {
     page-break-inside: avoid; }
   p,
-  h2,
-  h3 {
+  h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title {
     orphans: 3;
     widows: 3; }
-  h2,
-  h3 {
+  h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title {
     page-break-after: avoid; }
   @page {
     size: a3; }
@@ -7160,15 +7201,6 @@ a.text-dark:hover, a.text-dark:focus {
 .component {
   padding: 100px 0px;
   min-height: 100vh; }
-
-.icon .icon-imported {
-  height: 27.99px; }
-
-.icon .android {
-  color: #a4c639; }
-
-.icon .js {
-  color: #F0DB4F; }
 
 .page-bg {
   position: fixed;
