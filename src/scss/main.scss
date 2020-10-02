@@ -2,9 +2,14 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .component {
     padding: 100px 0px;
-    min-height: 100vh;
+    min-height: 700px;
 }
 
 @import "./page-bg.scss";
