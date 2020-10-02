@@ -6994,7 +6994,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, .resume .block-entry .block-entry-content {
+.text-center, .resume .block-entry .block-entry-content, .resume .block-entry .block-entry-content table .xp {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -7254,6 +7254,21 @@ nav {
   margin: 2%;
   background-color: #1f3e5a;
   border-radius: 5px; }
+  .resume .block-entry .block-entry-content table {
+    border: 0; }
+    .resume .block-entry .block-entry-content table th, .resume .block-entry .block-entry-content table td {
+      border-color: #122434;
+      vertical-align: middle; }
+    .resume .block-entry .block-entry-content table th {
+      background-color: #122434; }
+    .resume .block-entry .block-entry-content table .xp .invisible {
+      color: transparent; }
+    .resume .block-entry .block-entry-content table .skill-group-entry {
+      background-color: #183147; }
+    .resume .block-entry .block-entry-content table .skill-padded {
+      padding-left: 2em; }
+    .resume .block-entry .block-entry-content table .skill-double-padded {
+      padding-left: 4em; }
 
 @media (max-width: 576px) {
   .resume .block-entry {

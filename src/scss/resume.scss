@@ -32,6 +32,39 @@
                 .description {
                 }
             }
+
+            table {
+                border: 0;
+
+                th, td {
+                    border-color: darken($primary, 10%);
+                    vertical-align: middle;
+                }
+
+                th {
+                    background-color: darken($primary, 10%);
+                }
+
+                .xp {
+                    @extend .text-center;
+
+                    .invisible {
+                        color: transparent;
+                    }
+                }
+
+                .skill-group-entry {
+                    background-color: darken($primary, 5%);
+                }
+
+                .skill-padded {
+                    padding-left: 2em;
+                }
+
+                .skill-double-padded {
+                    padding-left: 4em;
+                }
+            }
         }
     }
 
