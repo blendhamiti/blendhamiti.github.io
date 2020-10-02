@@ -31,7 +31,7 @@
 
 </header>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,16 +85,16 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <a href="https://www.instagram.com/blendhamiti/"><i class="fab fa-instagram fa-2x"></i></a>
-                        </div>
+                    <div class="row justify-content-center justify-content-md-left">
                         <div class="col-auto">
                             <a href="https://github.com/blendhamiti/"><i class="fab fa-github fa-2x"></i></a>
                         </div>
                         <div class="col-auto">
                             <a href="https://www.linkedin.com/in/blend-hamiti-b87a22115/"><i
                                     class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://www.instagram.com/blendhamiti/"><i class="fab fa-instagram fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,8 @@
 
     <div class="row">
         <div class="col">
-            <h2>Timeline (right: completed; left: in progress)</h2>
+            <h2>Timeline</h2>
+            <!-- <h2>(right: completed; left: in progress)</h2> -->
         </div>
     </div>
 
@@ -338,9 +339,11 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Skill</th>
-                                    <th colspan="5">Experience (1: Beginner -> 5:
-                                        Expert)</th>
+                                    <th class="pl-sm-3">Skill</th>
+                                    <th class="text-center" colspan="5"><a
+                                            href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">
+                                            Experience <i class="fas fa-external-link-alt"></i>
+                                        </a></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -430,8 +433,13 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Skill</th>
-                                    <th colspan="5">Experience (1: Beginner -> 5: Expert)</th>
+                                    <th class="pl-sm-3">Skill</th>
+                                    <th class="text-center" colspan="5">
+                                        <a
+                                            href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">
+                                            Experience <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -506,7 +514,6 @@
                                         <span class="xp-star"><i class="fas fa-star"></i></span>
                                     </td>
                                     <td class="xp">
-                                        <span class="xp-star"><i class="fas fa-star"></i></span>
                                     </td>
                                 </tr>
                                 <tr class="skill-entry">
@@ -629,7 +636,7 @@
                 </div>
             </div>
 
-            <div class="block-entry" data-aos="fade-up" data-aos-once="true">
+            <!-- <div class="block-entry" data-aos="fade-up" data-aos-once="true">
                 <div class="block-entry-content">
                     <div class="text-block">
                         <div class="title">
@@ -645,9 +652,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  -->
 
-            <div class="block-entry" data-aos="fade-up" data-aos-once="true">
+            <!-- <div class="block-entry" data-aos="fade-up" data-aos-once="true">
                 <div class="block-entry-content">
                     <div class="text-block">
                         <div class="title">
@@ -664,7 +671,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <br>
 
@@ -715,8 +722,8 @@
                             Digital Planning Board
                         </div>
                         <div class="description">
-                            <p>UI for users to organise their schedule in a
-                                calendar and divide tasks in the building.</p>
+                            <p>An interactive web app for users to organise their schedule in a
+                                calendar and divide tasks via a tasks board.</p>
                             <li>Server & DB: Apache, MySQL </li>
                             <li>Backend: PHP with CodeIgniter framework</li>
                             <li>Frontend: Bootstrap (Sass)</li>
@@ -744,7 +751,10 @@
                                 GitHub <i class="fab fa-github"></i></button></span>
                         </div>
                         <div class="description">
-                            <p>Static page</p>
+                            <p>
+                                Static page.
+                                <a href="#profile-card"><i>Current website.</i></a>
+                            </p>
                             <li>Backend: Node.js</li>
                             <li>Frontend: Bootstrap (Sass), npm, Gulp</li>
                             <li>JS libs: jQuery, AOS, Particles.js</li>

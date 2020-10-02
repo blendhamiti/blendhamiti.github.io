@@ -33,6 +33,10 @@
                 }
             }
 
+            button {
+                vertical-align: top !important;
+            }
+
             table {
                 border: 0;
 
@@ -43,6 +47,20 @@
 
                 th {
                     background-color: darken($primary, 10%);
+                    width: 50%;
+
+                    a {
+                        color: $gray-200;
+
+                        svg {
+                            color: $link-color;
+                        }
+                    }
+
+                    a:hover {
+                        color: $link-color;
+                        text-decoration: none;
+                    }
                 }
 
                 .xp {

@@ -1,3 +1,4 @@
+@import 'https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css';
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -31,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "rawline", "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -50,7 +51,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "rawline", "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4311,7 +4312,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "rawline", "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4396,7 +4397,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "rawline", "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7201,6 +7202,12 @@ a.text-dark:hover, a.text-dark:focus {
 html, body {
   max-width: 100%;
   overflow-x: hidden; }
+  html a, body a {
+    transition: ease-out;
+    transition-duration: .1s; }
+  html a:hover, body a:hover {
+    transition: ease-out;
+    transition-duration: .1s; }
 
 .component {
   padding: 100px 0px;
@@ -7209,6 +7216,7 @@ html, body {
 .page-bg {
   position: fixed;
   height: 100%;
+  width: 100%;
   z-index: 0.1; }
 
 nav {
@@ -7257,13 +7265,23 @@ nav {
   margin: 2%;
   background-color: #1f3e5a;
   border-radius: 5px; }
+  .resume .block-entry .block-entry-content button {
+    vertical-align: top !important; }
   .resume .block-entry .block-entry-content table {
     border: 0; }
     .resume .block-entry .block-entry-content table th, .resume .block-entry .block-entry-content table td {
       border-color: #122434;
       vertical-align: middle; }
     .resume .block-entry .block-entry-content table th {
-      background-color: #122434; }
+      background-color: #122434;
+      width: 50%; }
+      .resume .block-entry .block-entry-content table th a {
+        color: #e9ecef; }
+        .resume .block-entry .block-entry-content table th a svg {
+          color: #3972A7; }
+      .resume .block-entry .block-entry-content table th a:hover {
+        color: #3972A7;
+        text-decoration: none; }
     .resume .block-entry .block-entry-content table .xp .invisible {
       color: transparent; }
     .resume .block-entry .block-entry-content table .skill-group-entry {
@@ -7525,7 +7543,7 @@ nav {
   transition: 0.3s;
   visibility: hidden;
   opacity: 0;
-  z-index: 105; }
+  z-index: 1050; }
 
 .certificates #certificates-overlay.open {
   visibility: visible;
