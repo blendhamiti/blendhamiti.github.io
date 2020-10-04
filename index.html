@@ -22,7 +22,8 @@
 
 <body>
 
-    <header>
+    <div>
+        <header>
 
     <!-- Background -->
     <div class="page-bg">
@@ -30,19 +31,24 @@
     </div>
 
 </header>
+    </div>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="#profile-card">
-            <img class="navbar-brand-img" src="./src/assets/favicon.png" width="30" height="30" alt="">
-        </a>
+        <div data-aos="fade-down" data-aos-once="true">
+            <a class="navbar-brand" href="#profile-card">
+                <img class="navbar-brand-img" src="./src/assets/favicon.png" width="30" height="30" alt="">
+            </a>
+        </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" data-aos="fade-down" data-aos-once="true"
+            data-aos-delay="100">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" name="profile-card" href="#profile-card">Introduction</a>
@@ -65,12 +71,13 @@
 
 
 </nav>
+    </div>
 
     <main>
 
         <div class="component" id="profile-card">
             <div class="profile-card container">
-    <div class="row justify-content-center" data-aos="fade-in" data-aos-once="true">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
         <div class="col-xl-6 profile-card-container p-3">
             <div class="row justify-content-center">
                 <div class="col-auto my-auto">
@@ -120,13 +127,12 @@
             </div>
         </div> -->
 
-
         <div class="component" id="timeline">
             <div class="timeline container">
 
     <div class="row">
         <div class="col">
-            <h2>Timeline</h2>
+            <h2 data-aos="fade-in" data-aos-once="true">Timeline</h2>
             <!-- <h2>(right: completed; left: in progress)</h2> -->
         </div>
     </div>
@@ -291,7 +297,7 @@
         </li>
     </ul>
 
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-once="true">
         <div class="col py-2 text-center small">
             <a href="https://codepen.io/NilsWe" class="lightblue-link">Inspired by Nils Wittles <i
                     class="fas fa-external-link-alt"></i></a>
@@ -860,22 +866,10 @@
 
     </main>
 
-    <footer>
+    <div>
+        <footer>
 
     <div class="footer">Blend Hamiti &#169 2020</div>
-
-    <script src="/node_modules/particles.js/particles.js"></script>
-    <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', '/src/assets/particles.json', function () {
-            console.log('callback - particles-js config loaded');
-        });
-    </script>
-
-    <script src="/node_modules/aos/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -887,11 +881,27 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
+    <script src="/node_modules/particles.js/particles.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', '/src/assets/particles.json', function () {
+            console.log('callback - particles-js config loaded');
+        });
+    </script>
+
     <script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
     <script src="./src/js/main.js"></script>
 
+    <script src="/node_modules/aos/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        })
+    </script>
+
 </footer>
+    </div>
 
 </body>
 
