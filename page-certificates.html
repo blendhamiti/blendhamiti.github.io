@@ -81,23 +81,27 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script src="/node_modules/particles.js/particles.js"></script>
-    <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', '/src/assets/particles.json', function () {
-            console.log('callback - particles-js config loaded');
-        });
-    </script>
-
     <script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
     <script src="./src/js/main.js"></script>
 
+    <script src="/node_modules/particles.js/particles.js"></script>
     <script src="/node_modules/aos/dist/aos.js"></script>
     <script>
-        $(document).ready(function () {
-            AOS.init();
-        })
+        particlesJS.load('particles-js', '/src/assets/particles.json', function () {
+            // callback function
+            console.log('callback - particles-js config loaded');
+            $(document).ready(function () {
+                AOS.init();
+            })
+            console.log('callback - particles-js config loaded2');
+        });
+    </script>
+
+    <script>
+        // $(document).ready(function () {
+        //     AOS.init();
+        // })
     </script>
 
 </footer>

@@ -56,6 +56,6 @@ exports.default = function () {
         '!./src/js/main.js'
     ],
         { ignoreInitial: false },
-        gulp.series('pages', 'styles', 'scripts', 'dev-pages')
+        gulp.series('pages', 'styles', 'scripts', 'dev-pages', 'pages')
     );
 };
