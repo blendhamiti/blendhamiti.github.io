@@ -46,7 +46,7 @@ gulp.task('styles', function () {
 });
 
 
-// You need to save any file under watch() in order for the includeHTML() to run.
+// You need to save changes in any file under watch() in order for the includeHTML() to run automatically.
 
 exports.default = function () {
     gulp.watch([
@@ -56,6 +56,6 @@ exports.default = function () {
         '!./src/js/main.js'
     ],
         { ignoreInitial: false },
-        gulp.series('pages', 'styles', 'scripts', 'dev-pages', 'pages')
+        gulp.series('styles', 'scripts', 'dev-pages', 'pages')
     );
 };

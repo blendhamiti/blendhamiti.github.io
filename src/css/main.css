@@ -67,7 +67,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, h4, h5, h6 {
+h1, h2, h3, .skills .block-entry .block-entry-content .icon-block, .skills .block-entry .block-entry-content .text-block .title, .projects .block-entry .block-entry-content .icon-block, .projects .block-entry .block-entry-content .text-block .title, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -293,7 +293,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, h4, h5, h6,
+h1, h2, h3, .skills .block-entry .block-entry-content .icon-block, .skills .block-entry .block-entry-content .text-block .title, .projects .block-entry .block-entry-content .icon-block, .projects .block-entry .block-entry-content .text-block .title, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -305,7 +305,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2rem; }
 
-h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title, .h3 {
+h3, .skills .block-entry .block-entry-content .icon-block, .skills .block-entry .block-entry-content .text-block .title, .projects .block-entry .block-entry-content .icon-block, .projects .block-entry .block-entry-content .text-block .title, .h3 {
   font-size: 1.75rem; }
 
 h4, .h4 {
@@ -439,7 +439,7 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .resume, .timeline,
+.container, .timeline, .skills, .projects,
 .container-fluid,
 .container-sm,
 .container-md,
@@ -452,22 +452,22 @@ pre {
   margin-left: auto; }
 
 @media (min-width: 576px) {
-  .container, .resume, .timeline, .container-sm {
+  .container, .timeline, .skills, .projects, .container-sm {
     max-width: 540px; } }
 
 @media (min-width: 768px) {
-  .container, .resume, .timeline, .container-sm, .container-md {
+  .container, .timeline, .skills, .projects, .container-sm, .container-md {
     max-width: 720px; } }
 
 @media (min-width: 992px) {
-  .container, .resume, .timeline, .container-sm, .container-md, .container-lg {
+  .container, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg {
     max-width: 960px; } }
 
 @media (min-width: 1200px) {
-  .container, .resume, .timeline, .container-sm, .container-md, .container-lg, .container-xl {
+  .container, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
 
-.row, .resume .block-entry {
+.row, .skills .block-entry, .projects .block-entry {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -482,7 +482,7 @@ pre {
     padding-left: 0; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .resume .block-entry .block-entry-content, .certificates .img-container,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .skills .block-entry .block-entry-content, .projects .block-entry .block-entry-content, .certificates .img-container,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
@@ -653,7 +653,7 @@ pre {
   margin-left: 91.66667%; }
 
 @media (min-width: 576px) {
-  .col-sm, .resume .block-entry .block-entry-content, .certificates .img-container {
+  .col-sm, .skills .block-entry .block-entry-content, .projects .block-entry .block-entry-content, .certificates .img-container {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%; }
@@ -1737,7 +1737,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .resume .block-entry .block-entry-content .text-block button {
+.btn, nav button, .skills .block-entry .block-entry-content .text-block button, .projects .block-entry .block-entry-content .text-block button {
   display: inline-block;
   font-weight: 400;
   color: #e9ecef;
@@ -1752,75 +1752,79 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .resume .block-entry .block-entry-content .text-block button {
+    .btn, nav button, .skills .block-entry .block-entry-content .text-block button, .projects .block-entry .block-entry-content .text-block button {
       transition: none; } }
-  .btn:hover, .resume .block-entry .block-entry-content .text-block button:hover {
+  .btn:hover, nav button:hover, .skills .block-entry .block-entry-content .text-block button:hover, .projects .block-entry .block-entry-content .text-block button:hover {
     color: #e9ecef;
     text-decoration: none; }
-  .btn:focus, .resume .block-entry .block-entry-content .text-block button:focus, .btn.focus, .resume .block-entry .block-entry-content .text-block button.focus {
+  .btn:focus, nav button:focus, .skills .block-entry .block-entry-content .text-block button:focus, .projects .block-entry .block-entry-content .text-block button:focus, .btn.focus, nav button.focus, .skills .block-entry .block-entry-content .text-block button.focus, .projects .block-entry .block-entry-content .text-block button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(31, 62, 90, 0.25); }
-  .btn.disabled, .resume .block-entry .block-entry-content .text-block button.disabled, .btn:disabled, .resume .block-entry .block-entry-content .text-block button:disabled {
+  .btn.disabled, nav button.disabled, .skills .block-entry .block-entry-content .text-block button.disabled, .projects .block-entry .block-entry-content .text-block button.disabled, .btn:disabled, nav button:disabled, .skills .block-entry .block-entry-content .text-block button:disabled, .projects .block-entry .block-entry-content .text-block button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), nav button:not(:disabled):not(.disabled), .skills .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled), .projects .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, nav button {
   color: #fff;
   background-color: #1f3e5a;
   border-color: #1f3e5a; }
-  .btn-primary:hover {
+  .btn-primary:hover, nav button:hover {
     color: #fff;
     background-color: #152a3e;
     border-color: #122434; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, nav button:focus, .btn-primary.focus, nav button.focus {
     color: #fff;
     background-color: #152a3e;
     border-color: #122434;
     box-shadow: 0 0 0 0.2rem rgba(65, 91, 115, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, nav button.disabled, .btn-primary:disabled, nav button:disabled {
     color: #fff;
     background-color: #1f3e5a;
     border-color: #1f3e5a; }
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:not(:disabled):not(.disabled):active, nav button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, nav button:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle,
+  nav .show > button.dropdown-toggle {
     color: #fff;
     background-color: #122434;
     border-color: #0f1d2b; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, nav button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, nav button:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    nav .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(65, 91, 115, 0.5); }
 
-.btn-secondary, .resume .block-entry .block-entry-content .text-block button {
+.btn-secondary, .skills .block-entry .block-entry-content .text-block button, .projects .block-entry .block-entry-content .text-block button {
   color: #fff;
   background-color: #145051;
   border-color: #145051; }
-  .btn-secondary:hover, .resume .block-entry .block-entry-content .text-block button:hover {
+  .btn-secondary:hover, .skills .block-entry .block-entry-content .text-block button:hover, .projects .block-entry .block-entry-content .text-block button:hover {
     color: #fff;
     background-color: #0c3232;
     border-color: #0a2828; }
-  .btn-secondary:focus, .resume .block-entry .block-entry-content .text-block button:focus, .btn-secondary.focus, .resume .block-entry .block-entry-content .text-block button.focus {
+  .btn-secondary:focus, .skills .block-entry .block-entry-content .text-block button:focus, .projects .block-entry .block-entry-content .text-block button:focus, .btn-secondary.focus, .skills .block-entry .block-entry-content .text-block button.focus, .projects .block-entry .block-entry-content .text-block button.focus {
     color: #fff;
     background-color: #0c3232;
     border-color: #0a2828;
     box-shadow: 0 0 0 0.2rem rgba(55, 106, 107, 0.5); }
-  .btn-secondary.disabled, .resume .block-entry .block-entry-content .text-block button.disabled, .btn-secondary:disabled, .resume .block-entry .block-entry-content .text-block button:disabled {
+  .btn-secondary.disabled, .skills .block-entry .block-entry-content .text-block button.disabled, .projects .block-entry .block-entry-content .text-block button.disabled, .btn-secondary:disabled, .skills .block-entry .block-entry-content .text-block button:disabled, .projects .block-entry .block-entry-content .text-block button:disabled {
     color: #fff;
     background-color: #145051;
     border-color: #145051; }
-  .btn-secondary:not(:disabled):not(.disabled):active, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active, .skills .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active, .projects .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .skills .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active, .projects .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active,
   .show > .btn-secondary.dropdown-toggle,
-  .resume .block-entry .block-entry-content .text-block .show > button.dropdown-toggle {
+  .skills .block-entry .block-entry-content .text-block .show > button.dropdown-toggle,
+  .projects .block-entry .block-entry-content .text-block .show > button.dropdown-toggle {
     color: #fff;
     background-color: #0a2828;
     border-color: #071e1e; }
-    .btn-secondary:not(:disabled):not(.disabled):active:focus, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .resume .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active:focus,
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .skills .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active:focus, .projects .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .skills .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active:focus, .projects .block-entry .block-entry-content .text-block button:not(:disabled):not(.disabled).active:focus,
     .show > .btn-secondary.dropdown-toggle:focus,
-    .resume .block-entry .block-entry-content .text-block .show > button.dropdown-toggle:focus {
+    .skills .block-entry .block-entry-content .text-block .show > button.dropdown-toggle:focus,
+    .projects .block-entry .block-entry-content .text-block .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(55, 106, 107, 0.5); }
 
 .btn-success {
@@ -2160,13 +2164,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, nav .btn-group-lg > button, .skills .block-entry .block-entry-content .text-block .btn-group-lg > button, .projects .block-entry .block-entry-content .text-block .btn-group-lg > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, nav .btn-group-sm > button, .skills .block-entry .block-entry-content .text-block .btn-group-sm > button, .projects .block-entry .block-entry-content .text-block .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2410,22 +2414,32 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .resume .block-entry .block-entry-content .text-block .btn-group > button,
+  .btn-group > .btn, nav .btn-group > button, .skills .block-entry .block-entry-content .text-block .btn-group > button, .projects .block-entry .block-entry-content .text-block .btn-group > button,
   .btn-group-vertical > .btn,
-  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button {
+  nav .btn-group-vertical > button,
+  .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button,
+  .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, .resume .block-entry .block-entry-content .text-block .btn-group > button:hover,
+    .btn-group > .btn:hover, nav .btn-group > button:hover, .skills .block-entry .block-entry-content .text-block .btn-group > button:hover, .projects .block-entry .block-entry-content .text-block .btn-group > button:hover,
     .btn-group-vertical > .btn:hover,
-    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:hover {
+    nav .btn-group-vertical > button:hover,
+    .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:hover,
+    .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .resume .block-entry .block-entry-content .text-block .btn-group > button:focus, .btn-group > .btn:active, .resume .block-entry .block-entry-content .text-block .btn-group > button:active, .btn-group > .btn.active, .resume .block-entry .block-entry-content .text-block .btn-group > button.active,
+    .btn-group > .btn:focus, nav .btn-group > button:focus, .skills .block-entry .block-entry-content .text-block .btn-group > button:focus, .projects .block-entry .block-entry-content .text-block .btn-group > button:focus, .btn-group > .btn:active, nav .btn-group > button:active, .skills .block-entry .block-entry-content .text-block .btn-group > button:active, .projects .block-entry .block-entry-content .text-block .btn-group > button:active, .btn-group > .btn.active, nav .btn-group > button.active, .skills .block-entry .block-entry-content .text-block .btn-group > button.active, .projects .block-entry .block-entry-content .text-block .btn-group > button.active,
     .btn-group-vertical > .btn:focus,
-    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:focus,
+    nav .btn-group-vertical > button:focus,
+    .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:focus,
+    .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
-    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:active,
+    nav .btn-group-vertical > button:active,
+    .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:active,
+    .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:active,
     .btn-group-vertical > .btn.active,
-    .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button.active {
+    nav .btn-group-vertical > button.active,
+    .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button.active,
+    .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2435,19 +2449,23 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
+.btn-group > .btn:not(:first-child), nav .btn-group > button:not(:first-child), .skills .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child), .projects .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), nav .btn-group > button:not(:last-child):not(.dropdown-toggle), .skills .block-entry .block-entry-content .text-block .btn-group > button:not(:last-child):not(.dropdown-toggle), .projects .block-entry .block-entry-content .text-block .btn-group > button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.resume .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:last-child) > button {
+nav .btn-group > .btn-group:not(:last-child) > button,
+.skills .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:last-child) > button,
+.projects .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
+.btn-group > .btn:not(:first-child), nav .btn-group > button:not(:first-child), .skills .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child), .projects .block-entry .block-entry-content .text-block .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
-.resume .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:first-child) > button {
+nav .btn-group > .btn-group:not(:first-child) > button,
+.skills .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:first-child) > button,
+.projects .block-entry .block-entry-content .text-block .btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2461,11 +2479,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .resume .block-entry .block-entry-content .text-block .btn-group-sm > button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, nav .btn-group-sm > button + .dropdown-toggle-split, .skills .block-entry .block-entry-content .text-block .btn-group-sm > button + .dropdown-toggle-split, .projects .block-entry .block-entry-content .text-block .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .resume .block-entry .block-entry-content .text-block .btn-group-lg > button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, nav .btn-group-lg > button + .dropdown-toggle-split, .skills .block-entry .block-entry-content .text-block .btn-group-lg > button + .dropdown-toggle-split, .projects .block-entry .block-entry-content .text-block .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2475,34 +2493,48 @@ input[type="button"].btn-block {
   justify-content: center; }
   
   .btn-group-vertical > .btn,
-  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button,
+  nav .btn-group-vertical > button,
+  .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button,
+  .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), nav .btn-group-vertical > button:not(:first-child), .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child), .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), nav .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:last-child) > button {
+  nav .btn-group-vertical > .btn-group:not(:last-child) > button,
+  .skills .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:last-child) > button,
+  .projects .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:last-child) > button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .resume .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), nav .btn-group-vertical > button:not(:first-child), .skills .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child), .projects .block-entry .block-entry-content .text-block .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  .resume .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:first-child) > button {
+  nav .btn-group-vertical > .btn-group:not(:first-child) > button,
+  .skills .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:first-child) > button,
+  .projects .block-entry .block-entry-content .text-block .btn-group-vertical > .btn-group:not(:first-child) > button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button,
+.btn-group-toggle > .btn, nav .btn-group-toggle > button, .skills .block-entry .block-entry-content .text-block .btn-group-toggle > button, .projects .block-entry .block-entry-content .text-block .btn-group-toggle > button,
 .btn-group-toggle > .btn-group > .btn,
-.resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button {
+nav .btn-group-toggle > .btn-group > button,
+.skills .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button,
+.projects .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], nav .btn-group-toggle > button input[type="radio"], .skills .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="radio"], .projects .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
-  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="checkbox"],
+  nav .btn-group-toggle > button input[type="checkbox"],
+  .skills .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="checkbox"],
+  .projects .block-entry .block-entry-content .text-block .btn-group-toggle > button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="radio"],
+  nav .btn-group-toggle > .btn-group > button input[type="radio"],
+  .skills .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="radio"],
+  .projects .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-  .resume .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="checkbox"] {
+  nav .btn-group-toggle > .btn-group > button input[type="checkbox"],
+  .skills .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="checkbox"],
+  .projects .block-entry .block-entry-content .text-block .btn-group-toggle > .btn-group > button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2563,39 +2595,79 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block button, .resume .block-entry .block-entry-content .text-block .input-group-prepend button,
+  .input-group-prepend .btn, .input-group-prepend nav button, nav .input-group-prepend button, .input-group-prepend .skills .block-entry .block-entry-content .text-block button, .skills .block-entry .block-entry-content .text-block .input-group-prepend button, .input-group-prepend .projects .block-entry .block-entry-content .text-block button, .projects .block-entry .block-entry-content .text-block .input-group-prepend button,
   .input-group-append .btn,
-  .input-group-append .resume .block-entry .block-entry-content .text-block button,
-  .resume .block-entry .block-entry-content .text-block .input-group-append button {
+  .input-group-append nav button,
+  nav .input-group-append button,
+  .input-group-append .skills .block-entry .block-entry-content .text-block button,
+  .skills .block-entry .block-entry-content .text-block .input-group-append button,
+  .input-group-append .projects .block-entry .block-entry-content .text-block button,
+  .projects .block-entry .block-entry-content .text-block .input-group-append button {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .resume .block-entry .block-entry-content .text-block button:focus, .resume .block-entry .block-entry-content .text-block .input-group-prepend button:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend nav button:focus, nav .input-group-prepend button:focus, .input-group-prepend .skills .block-entry .block-entry-content .text-block button:focus, .skills .block-entry .block-entry-content .text-block .input-group-prepend button:focus, .input-group-prepend .projects .block-entry .block-entry-content .text-block button:focus, .projects .block-entry .block-entry-content .text-block .input-group-prepend button:focus,
     .input-group-append .btn:focus,
-    .input-group-append .resume .block-entry .block-entry-content .text-block button:focus,
-    .resume .block-entry .block-entry-content .text-block .input-group-append button:focus {
+    .input-group-append nav button:focus,
+    nav .input-group-append button:focus,
+    .input-group-append .skills .block-entry .block-entry-content .text-block button:focus,
+    .skills .block-entry .block-entry-content .text-block .input-group-append button:focus,
+    .input-group-append .projects .block-entry .block-entry-content .text-block button:focus,
+    .projects .block-entry .block-entry-content .text-block .input-group-append button:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block button + .btn, .resume .block-entry .block-entry-content .text-block .input-group-prepend button + .btn, .input-group-prepend .resume .block-entry .block-entry-content .text-block .btn + button, .resume .block-entry .block-entry-content .text-block .input-group-prepend .btn + button, .input-group-prepend .resume .block-entry .block-entry-content .text-block button + button, .resume .block-entry .block-entry-content .text-block .input-group-prepend button + button,
+  .input-group-prepend .btn + .btn, .input-group-prepend nav button + .btn, nav .input-group-prepend button + .btn, .input-group-prepend .skills .block-entry .block-entry-content .text-block button + .btn, .skills .block-entry .block-entry-content .text-block .input-group-prepend button + .btn, .input-group-prepend .projects .block-entry .block-entry-content .text-block button + .btn, .projects .block-entry .block-entry-content .text-block .input-group-prepend button + .btn, .input-group-prepend nav .btn + button, nav .input-group-prepend .btn + button, .input-group-prepend nav button + button, nav .input-group-prepend button + button, .input-group-prepend .skills .block-entry .block-entry-content .text-block nav button + button, .input-group-prepend .projects .block-entry .block-entry-content .text-block nav button + button, .input-group-prepend .skills .block-entry .block-entry-content .text-block .btn + button, .skills .block-entry .block-entry-content .text-block .input-group-prepend .btn + button, .skills .block-entry .block-entry-content .text-block .input-group-prepend nav button + button, .input-group-prepend .skills .block-entry .block-entry-content .text-block button + button, .skills .block-entry .block-entry-content .text-block .input-group-prepend button + button, .input-group-prepend .projects .block-entry .block-entry-content .text-block .btn + button, .projects .block-entry .block-entry-content .text-block .input-group-prepend .btn + button, .projects .block-entry .block-entry-content .text-block .input-group-prepend nav button + button, .input-group-prepend .projects .block-entry .block-entry-content .text-block button + button, .projects .block-entry .block-entry-content .text-block .input-group-prepend button + button,
   .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .resume .block-entry .block-entry-content .text-block button + .input-group-text,
-  .resume .block-entry .block-entry-content .text-block .input-group-prepend button + .input-group-text,
+  .input-group-prepend nav button + .input-group-text,
+  nav .input-group-prepend button + .input-group-text,
+  .input-group-prepend .skills .block-entry .block-entry-content .text-block button + .input-group-text,
+  .skills .block-entry .block-entry-content .text-block .input-group-prepend button + .input-group-text,
+  .input-group-prepend .projects .block-entry .block-entry-content .text-block button + .input-group-text,
+  .projects .block-entry .block-entry-content .text-block .input-group-prepend button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend .resume .block-entry .block-entry-content .text-block .input-group-text + button,
-  .resume .block-entry .block-entry-content .text-block .input-group-prepend .input-group-text + button,
+  .input-group-prepend nav .input-group-text + button,
+  nav .input-group-prepend .input-group-text + button,
+  .input-group-prepend .skills .block-entry .block-entry-content .text-block .input-group-text + button,
+  .skills .block-entry .block-entry-content .text-block .input-group-prepend .input-group-text + button,
+  .input-group-prepend .projects .block-entry .block-entry-content .text-block .input-group-text + button,
+  .projects .block-entry .block-entry-content .text-block .input-group-prepend .input-group-text + button,
   .input-group-append .btn + .btn,
-  .input-group-append .resume .block-entry .block-entry-content .text-block button + .btn,
-  .resume .block-entry .block-entry-content .text-block .input-group-append button + .btn,
-  .input-group-append .resume .block-entry .block-entry-content .text-block .btn + button,
-  .resume .block-entry .block-entry-content .text-block .input-group-append .btn + button,
-  .input-group-append .resume .block-entry .block-entry-content .text-block button + button,
-  .resume .block-entry .block-entry-content .text-block .input-group-append button + button,
+  .input-group-append nav button + .btn,
+  nav .input-group-append button + .btn,
+  .input-group-append .skills .block-entry .block-entry-content .text-block button + .btn,
+  .skills .block-entry .block-entry-content .text-block .input-group-append button + .btn,
+  .input-group-append .projects .block-entry .block-entry-content .text-block button + .btn,
+  .projects .block-entry .block-entry-content .text-block .input-group-append button + .btn,
+  .input-group-append nav .btn + button,
+  nav .input-group-append .btn + button,
+  .input-group-append nav button + button,
+  nav .input-group-append button + button,
+  .input-group-append .skills .block-entry .block-entry-content .text-block nav button + button,
+  .input-group-append .projects .block-entry .block-entry-content .text-block nav button + button,
+  .input-group-append .skills .block-entry .block-entry-content .text-block .btn + button,
+  .skills .block-entry .block-entry-content .text-block .input-group-append .btn + button,
+  .skills .block-entry .block-entry-content .text-block .input-group-append nav button + button,
+  .input-group-append .skills .block-entry .block-entry-content .text-block button + button,
+  .skills .block-entry .block-entry-content .text-block .input-group-append button + button,
+  .input-group-append .projects .block-entry .block-entry-content .text-block .btn + button,
+  .projects .block-entry .block-entry-content .text-block .input-group-append .btn + button,
+  .projects .block-entry .block-entry-content .text-block .input-group-append nav button + button,
+  .input-group-append .projects .block-entry .block-entry-content .text-block button + button,
+  .projects .block-entry .block-entry-content .text-block .input-group-append button + button,
   .input-group-append .btn + .input-group-text,
-  .input-group-append .resume .block-entry .block-entry-content .text-block button + .input-group-text,
-  .resume .block-entry .block-entry-content .text-block .input-group-append button + .input-group-text,
+  .input-group-append nav button + .input-group-text,
+  nav .input-group-append button + .input-group-text,
+  .input-group-append .skills .block-entry .block-entry-content .text-block button + .input-group-text,
+  .skills .block-entry .block-entry-content .text-block .input-group-append button + .input-group-text,
+  .input-group-append .projects .block-entry .block-entry-content .text-block button + .input-group-text,
+  .projects .block-entry .block-entry-content .text-block .input-group-append button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
-  .input-group-append .resume .block-entry .block-entry-content .text-block .input-group-text + button,
-  .resume .block-entry .block-entry-content .text-block .input-group-append .input-group-text + button {
+  .input-group-append nav .input-group-text + button,
+  nav .input-group-append .input-group-text + button,
+  .input-group-append .skills .block-entry .block-entry-content .text-block .input-group-text + button,
+  .skills .block-entry .block-entry-content .text-block .input-group-append .input-group-text + button,
+  .input-group-append .projects .block-entry .block-entry-content .text-block .input-group-text + button,
+  .projects .block-entry .block-entry-content .text-block .input-group-append .input-group-text + button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2631,9 +2703,13 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group-lg > .input-group-prepend > button,
+nav .input-group-lg > .input-group-prepend > button,
+.skills .block-entry .block-entry-content .text-block .input-group-lg > .input-group-prepend > button,
+.projects .block-entry .block-entry-content .text-block .input-group-lg > .input-group-prepend > button,
 .input-group-lg > .input-group-append > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group-lg > .input-group-append > button {
+nav .input-group-lg > .input-group-append > button,
+.skills .block-entry .block-entry-content .text-block .input-group-lg > .input-group-append > button,
+.projects .block-entry .block-entry-content .text-block .input-group-lg > .input-group-append > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2648,9 +2724,13 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group-sm > .input-group-prepend > button,
+nav .input-group-sm > .input-group-prepend > button,
+.skills .block-entry .block-entry-content .text-block .input-group-sm > .input-group-prepend > button,
+.projects .block-entry .block-entry-content .text-block .input-group-sm > .input-group-prepend > button,
 .input-group-sm > .input-group-append > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group-sm > .input-group-append > button {
+nav .input-group-sm > .input-group-append > button,
+.skills .block-entry .block-entry-content .text-block .input-group-sm > .input-group-append > button,
+.projects .block-entry .block-entry-content .text-block .input-group-sm > .input-group-append > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2660,24 +2740,32 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend > button,
+.input-group > .input-group-prepend > .btn, nav .input-group > .input-group-prepend > button, .skills .block-entry .block-entry-content .text-block .input-group > .input-group-prepend > button, .projects .block-entry .block-entry-content .text-block .input-group > .input-group-prepend > button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group > .input-group-append:not(:last-child) > button,
+nav .input-group > .input-group-append:not(:last-child) > button,
+.skills .block-entry .block-entry-content .text-block .input-group > .input-group-append:not(:last-child) > button,
+.projects .block-entry .block-entry-content .text-block .input-group > .input-group-append:not(:last-child) > button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.resume .block-entry .block-entry-content .text-block .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
+nav .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
+.skills .block-entry .block-entry-content .text-block .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
+.projects .block-entry .block-entry-content .text-block .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .resume .block-entry .block-entry-content .text-block .input-group > .input-group-append > button,
+.input-group > .input-group-append > .btn, nav .input-group > .input-group-append > button, .skills .block-entry .block-entry-content .text-block .input-group > .input-group-append > button, .projects .block-entry .block-entry-content .text-block .input-group > .input-group-append > button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:not(:first-child) > button,
+nav .input-group > .input-group-prepend:not(:first-child) > button,
+.skills .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:not(:first-child) > button,
+.projects .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:not(:first-child) > button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.resume .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:first-child > button:not(:first-child),
+nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
+.skills .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:first-child > button:not(:first-child),
+.projects .block-entry .block-entry-content .text-block .input-group > .input-group-prepend:first-child > button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3081,7 +3169,7 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar .container, .navbar .resume, .navbar .timeline,
+  .navbar .container, .navbar .timeline, .navbar .skills, .navbar .projects,
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
     display: flex;
     flex-wrap: wrap;
@@ -3142,7 +3230,7 @@ input[type="button"].btn-block {
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container, .navbar-expand-sm > .resume, .navbar-expand-sm > .timeline,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3158,7 +3246,7 @@ input[type="button"].btn-block {
       .navbar-expand-sm .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container, .navbar-expand-sm > .resume, .navbar-expand-sm > .timeline,
+    .navbar-expand-sm > .container, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
     .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -3168,7 +3256,7 @@ input[type="button"].btn-block {
       display: none; } }
 
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container, .navbar-expand-md > .resume, .navbar-expand-md > .timeline,
+  .navbar-expand-md > .container, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3184,7 +3272,7 @@ input[type="button"].btn-block {
       .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container, .navbar-expand-md > .resume, .navbar-expand-md > .timeline,
+    .navbar-expand-md > .container, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
     .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -3194,7 +3282,7 @@ input[type="button"].btn-block {
       display: none; } }
 
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container, .navbar-expand-lg > .resume, .navbar-expand-lg > .timeline,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
   .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3210,7 +3298,7 @@ input[type="button"].btn-block {
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container, .navbar-expand-lg > .resume, .navbar-expand-lg > .timeline,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
     .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -3220,7 +3308,7 @@ input[type="button"].btn-block {
       display: none; } }
 
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container, .navbar-expand-xl > .resume, .navbar-expand-xl > .timeline,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
   .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3236,7 +3324,7 @@ input[type="button"].btn-block {
       .navbar-expand-xl .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container, .navbar-expand-xl > .resume, .navbar-expand-xl > .timeline,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
     .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -3248,7 +3336,7 @@ input[type="button"].btn-block {
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container, .navbar-expand > .resume, .navbar-expand > .timeline,
+  .navbar-expand > .container, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
   .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
     padding-right: 0;
     padding-left: 0; }
@@ -3259,7 +3347,7 @@ input[type="button"].btn-block {
     .navbar-expand .navbar-nav .nav-link {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container, .navbar-expand > .resume, .navbar-expand > .timeline,
+  .navbar-expand > .container, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
   .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -3624,7 +3712,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .resume .block-entry .block-entry-content .text-block button .badge {
+.btn .badge, nav button .badge, .skills .block-entry .block-entry-content .text-block button .badge, .projects .block-entry .block-entry-content .text-block button .badge {
   position: relative;
   top: -1px; }
 
@@ -5929,7 +6017,8 @@ button.bg-dark:focus {
 
 .mt-auto,
 .my-auto,
-.resume .block-entry .block-entry-content {
+.skills .block-entry .block-entry-content,
+.projects .block-entry .block-entry-content {
   margin-top: auto !important; }
 
 .mr-auto,
@@ -5938,7 +6027,8 @@ button.bg-dark:focus {
 
 .mb-auto,
 .my-auto,
-.resume .block-entry .block-entry-content {
+.skills .block-entry .block-entry-content,
+.projects .block-entry .block-entry-content {
   margin-bottom: auto !important; }
 
 .ml-auto,
@@ -6995,11 +7085,11 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, .resume .block-entry .block-entry-content, .resume .block-entry .block-entry-content table .xp {
+.text-center, .skills .block-entry .block-entry-content, .skills .block-entry .block-entry-content table .xp, .projects .block-entry .block-entry-content, .projects .block-entry .block-entry-content table .xp {
   text-align: center !important; }
 
 @media (min-width: 576px) {
-  .text-sm-left, .resume .block-entry .block-entry-content {
+  .text-sm-left, .skills .block-entry .block-entry-content, .projects .block-entry .block-entry-content {
     text-align: left !important; }
   .text-sm-right {
     text-align: right !important; }
@@ -7165,16 +7255,16 @@ a.text-dark:hover, a.text-dark:focus {
   img {
     page-break-inside: avoid; }
   p,
-  h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title {
+  h2, h3, .skills .block-entry .block-entry-content .icon-block, .skills .block-entry .block-entry-content .text-block .title, .projects .block-entry .block-entry-content .icon-block, .projects .block-entry .block-entry-content .text-block .title {
     orphans: 3;
     widows: 3; }
-  h2, h3, .resume .block-entry .block-entry-content .icon-block, .resume .block-entry .block-entry-content .text-block .title {
+  h2, h3, .skills .block-entry .block-entry-content .icon-block, .skills .block-entry .block-entry-content .text-block .title, .projects .block-entry .block-entry-content .icon-block, .projects .block-entry .block-entry-content .text-block .title {
     page-break-after: avoid; }
   @page {
     size: a3; }
   body {
     min-width: 992px !important; }
-  .container, .resume, .timeline {
+  .container, .timeline, .skills, .projects {
     min-width: 992px !important; }
   .navbar {
     display: none; }
@@ -7229,6 +7319,17 @@ nav {
     transition: ease-out;
     transition-duration: .2s;
     box-shadow: 0px 0px 5px #1e787a; }
+  nav button {
+    vertical-align: top !important; }
+  nav .external-link {
+    transition: ease-out;
+    transition-duration: .2s;
+    color: #1e787a !important;
+    font-weight: bold; }
+  nav .external-link:hover {
+    transition: ease-out;
+    transition-duration: .2s;
+    color: #28a1a3 !important; }
 
 .profile-card .profile-card-container {
   border-radius: 10px;
@@ -7259,45 +7360,6 @@ nav {
     border-width: 5px;
     transition: ease-out;
     transition-duration: .2s; }
-
-.resume .block-entry {
-  padding: 2%;
-  margin: 2%;
-  background-color: #1f3e5a;
-  border-radius: 5px; }
-  .resume .block-entry .block-entry-content button {
-    vertical-align: top !important; }
-  .resume .block-entry .block-entry-content table {
-    border: 0; }
-    .resume .block-entry .block-entry-content table th, .resume .block-entry .block-entry-content table td {
-      border-color: #122434;
-      vertical-align: middle; }
-    .resume .block-entry .block-entry-content table th {
-      background-color: #122434;
-      width: 50%; }
-      .resume .block-entry .block-entry-content table th a {
-        color: #e9ecef; }
-        .resume .block-entry .block-entry-content table th a svg {
-          color: #3972A7; }
-      .resume .block-entry .block-entry-content table th a:hover {
-        color: #3972A7;
-        text-decoration: none; }
-    .resume .block-entry .block-entry-content table .xp .invisible {
-      color: transparent; }
-    .resume .block-entry .block-entry-content table .skill-group-entry {
-      background-color: #183147; }
-    .resume .block-entry .block-entry-content table .skill-padded {
-      padding-left: 2em; }
-    .resume .block-entry .block-entry-content table .skill-double-padded {
-      padding-left: 4em; }
-
-@media (max-width: 576px) {
-  .resume .block-entry {
-    margin-top: 4.5%;
-    margin-bottom: 4.5%; }
-  .resume .block-img {
-    padding-top: 15px;
-    padding-bottom: 15px; } }
 
 .timeline .line {
   position: relative;
@@ -7528,6 +7590,85 @@ nav {
     margin: 1em 1em 0 1em;
     padding: 1em;
     z-index: 15; } }
+
+.skills {
+  padding: 0px 100px; }
+  .skills .block-entry {
+    padding: 2%;
+    margin: 2%;
+    background-color: #1f3e5a;
+    border-radius: 5px; }
+    .skills .block-entry .block-entry-content button {
+      vertical-align: top !important; }
+    .skills .block-entry .block-entry-content table {
+      border: 0; }
+      .skills .block-entry .block-entry-content table th, .skills .block-entry .block-entry-content table td {
+        border-color: #122434;
+        vertical-align: middle; }
+      .skills .block-entry .block-entry-content table th {
+        background-color: #122434;
+        width: 50%; }
+        .skills .block-entry .block-entry-content table th a {
+          color: #e9ecef; }
+          .skills .block-entry .block-entry-content table th a svg {
+            color: #3972A7; }
+        .skills .block-entry .block-entry-content table th a:hover {
+          color: #3972A7;
+          text-decoration: none; }
+      .skills .block-entry .block-entry-content table .xp .invisible {
+        color: transparent; }
+      .skills .block-entry .block-entry-content table .skill-group-entry {
+        background-color: #183147; }
+      .skills .block-entry .block-entry-content table .skill-padded {
+        padding-left: 2em; }
+      .skills .block-entry .block-entry-content table .skill-double-padded {
+        padding-left: 4em; }
+  @media (max-width: 576px) {
+    .skills .block-entry {
+      margin-top: 4.5%;
+      margin-bottom: 4.5%; }
+    .skills .block-img {
+      padding-top: 15px;
+      padding-bottom: 15px; } }
+
+.projects .block-entry {
+  padding: 2%;
+  margin: 2%;
+  background-color: #1f3e5a;
+  border-radius: 5px; }
+  .projects .block-entry .block-entry-content button {
+    vertical-align: top !important; }
+  .projects .block-entry .block-entry-content table {
+    border: 0; }
+    .projects .block-entry .block-entry-content table th, .projects .block-entry .block-entry-content table td {
+      border-color: #122434;
+      vertical-align: middle; }
+    .projects .block-entry .block-entry-content table th {
+      background-color: #122434;
+      width: 50%; }
+      .projects .block-entry .block-entry-content table th a {
+        color: #e9ecef; }
+        .projects .block-entry .block-entry-content table th a svg {
+          color: #3972A7; }
+      .projects .block-entry .block-entry-content table th a:hover {
+        color: #3972A7;
+        text-decoration: none; }
+    .projects .block-entry .block-entry-content table .xp .invisible {
+      color: transparent; }
+    .projects .block-entry .block-entry-content table .skill-group-entry {
+      background-color: #183147; }
+    .projects .block-entry .block-entry-content table .skill-padded {
+      padding-left: 2em; }
+    .projects .block-entry .block-entry-content table .skill-double-padded {
+      padding-left: 4em; }
+
+@media (max-width: 576px) {
+  .projects .block-entry {
+    margin-top: 4.5%;
+    margin-bottom: 4.5%; }
+  .projects .block-img {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
 
 .certificates .img-container {
   cursor: pointer; }

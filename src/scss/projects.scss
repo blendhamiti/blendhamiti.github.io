@@ -1,5 +1,5 @@
-.resume {
-    @extend .container;
+.projects {
+ @extend .container;
 
     .block-entry {
         @extend .row;
@@ -84,6 +84,9 @@
                 }
             }
         }
+    }
+
+    .block-entry-skills {
     }
 
     @media (max-width: 576px) {     

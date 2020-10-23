@@ -49,23 +49,11 @@ var resumeIcons = document.querySelectorAll(".icon-block i")
 resumeIcons.forEach(icon => {
     icon.classList.add("colored");
 });
-function inititalScrollDown(elementId) {
-    let element = document.getElementById(elementId);
-    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-}
-
-
 var resumeIconsContainers = document.querySelectorAll(".icon-block span")
 
 resumeIconsContainers.forEach(container => {
     container.title = container.childNodes.item(0).classList[0].split("-", "2")[1];
 });
-// let str = window.location.pathname;
-// let element = document.getElementsByName(str.split("/")[1].split(".")[0]).item(0);
-// if (element === null)
-//     document.getElementsByName("index").item(0).classList.add("active");
-// else
-//     element.classList.add("active");
 window.addEventListener('scroll', function () {
     var components = document.querySelectorAll('.component');
     var navLinks = document.querySelectorAll(".nav-link");
@@ -92,6 +80,12 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+function scrollToElement(elementId) {
+    let element = document.getElementById(elementId);
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+}
+
+
 var timelineExpanded = false;
 
 function shrinkTimeline() {
