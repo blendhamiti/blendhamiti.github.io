@@ -20,14 +20,14 @@ nav {
         vertical-align: top !important;
     }
 
-    .external-link {
+    .nav-link-external {
         transition: ease-out;
         transition-duration: .2s;
         color: lighten($secondary, 10%) !important;
         font-weight: bold;
     }
 
-    .external-link:hover {
+    .nav-link-external:hover {
         transition: ease-out;
         transition-duration: .2s;
         color: lighten($secondary, 20%) !important;

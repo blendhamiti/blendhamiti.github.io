@@ -10,6 +10,7 @@
     
         .block-entry-content {
             @extend .col-sm; 
+            // @extend .col-sm-4; 
             @extend .text-center; 
             @extend .text-sm-left;
             @extend .my-auto;

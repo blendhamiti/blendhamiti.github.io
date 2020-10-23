@@ -6196,13 +6196,15 @@ button.bg-dark:focus {
   .py-sm-5 {
     padding-top: 3rem !important; }
   .pr-sm-5,
-  .px-sm-5 {
+  .px-sm-5,
+  .skills .entry-skills {
     padding-right: 3rem !important; }
   .pb-sm-5,
   .py-sm-5 {
     padding-bottom: 3rem !important; }
   .pl-sm-5,
-  .px-sm-5 {
+  .px-sm-5,
+  .skills .entry-skills {
     padding-left: 3rem !important; }
   .m-sm-n1 {
     margin: -0.25rem !important; }
@@ -7321,12 +7323,12 @@ nav {
     box-shadow: 0px 0px 5px #1e787a; }
   nav button {
     vertical-align: top !important; }
-  nav .external-link {
+  nav .nav-link-external {
     transition: ease-out;
     transition-duration: .2s;
     color: #1e787a !important;
     font-weight: bold; }
-  nav .external-link:hover {
+  nav .nav-link-external:hover {
     transition: ease-out;
     transition-duration: .2s;
     color: #28a1a3 !important; }
@@ -7591,45 +7593,44 @@ nav {
     padding: 1em;
     z-index: 15; } }
 
-.skills {
-  padding: 0px 100px; }
+.skills .block-entry {
+  padding: 2%;
+  margin: 2%;
+  background-color: #1f3e5a;
+  border-radius: 5px; }
+  .skills .block-entry .block-entry-content button {
+    vertical-align: top !important; }
+  .skills .block-entry .block-entry-content table {
+    border: 0; }
+    .skills .block-entry .block-entry-content table th, .skills .block-entry .block-entry-content table td {
+      border-color: #122434;
+      vertical-align: middle; }
+    .skills .block-entry .block-entry-content table th {
+      background-color: #122434;
+      width: 50%; }
+      .skills .block-entry .block-entry-content table th a {
+        color: #e9ecef; }
+        .skills .block-entry .block-entry-content table th a svg {
+          color: #3972A7; }
+      .skills .block-entry .block-entry-content table th a:hover {
+        color: #3972A7;
+        text-decoration: none; }
+    .skills .block-entry .block-entry-content table .xp .invisible {
+      color: transparent; }
+    .skills .block-entry .block-entry-content table .skill-group-entry {
+      background-color: #183147; }
+    .skills .block-entry .block-entry-content table .skill-padded {
+      padding-left: 2em; }
+    .skills .block-entry .block-entry-content table .skill-double-padded {
+      padding-left: 4em; }
+
+@media (max-width: 576px) {
   .skills .block-entry {
-    padding: 2%;
-    margin: 2%;
-    background-color: #1f3e5a;
-    border-radius: 5px; }
-    .skills .block-entry .block-entry-content button {
-      vertical-align: top !important; }
-    .skills .block-entry .block-entry-content table {
-      border: 0; }
-      .skills .block-entry .block-entry-content table th, .skills .block-entry .block-entry-content table td {
-        border-color: #122434;
-        vertical-align: middle; }
-      .skills .block-entry .block-entry-content table th {
-        background-color: #122434;
-        width: 50%; }
-        .skills .block-entry .block-entry-content table th a {
-          color: #e9ecef; }
-          .skills .block-entry .block-entry-content table th a svg {
-            color: #3972A7; }
-        .skills .block-entry .block-entry-content table th a:hover {
-          color: #3972A7;
-          text-decoration: none; }
-      .skills .block-entry .block-entry-content table .xp .invisible {
-        color: transparent; }
-      .skills .block-entry .block-entry-content table .skill-group-entry {
-        background-color: #183147; }
-      .skills .block-entry .block-entry-content table .skill-padded {
-        padding-left: 2em; }
-      .skills .block-entry .block-entry-content table .skill-double-padded {
-        padding-left: 4em; }
-  @media (max-width: 576px) {
-    .skills .block-entry {
-      margin-top: 4.5%;
-      margin-bottom: 4.5%; }
-    .skills .block-img {
-      padding-top: 15px;
-      padding-bottom: 15px; } }
+    margin-top: 4.5%;
+    margin-bottom: 4.5%; }
+  .skills .block-img {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
 
 .projects .block-entry {
   padding: 2%;

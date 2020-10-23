@@ -1,7 +1,9 @@
 .skills {
     @extend .container;
 
-    padding: 0px 100px;
+    .entry-skills {
+        @extend .px-sm-5;
+    }
 
     .block-entry {
         @extend .row;
