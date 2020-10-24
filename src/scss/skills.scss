@@ -23,6 +23,8 @@
             }
 
             .text-block {
+                @extend .row;
+                // @extend .px-sm-0.5;
 
                 button {
                     @extend .btn; 
@@ -30,10 +32,21 @@
                 }
 
                 .title {
+                    @extend .col;
                     @extend h3;
+                    @extend .pb-2;
                 }
 
                 .description {
+                }
+
+                .footnote {
+                    @extend .col;
+
+                    a {
+                        font-size: small;
+                        // color: $gray-200;
+                    }
                 }
             }
 
@@ -64,6 +77,10 @@
                     a:hover {
                         color: $link-color;
                         text-decoration: none;
+                    }
+
+                    .link-text {
+                        // text-decoration: underline;
                     }
                 }
 
