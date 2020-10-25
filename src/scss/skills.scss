@@ -2,7 +2,7 @@
     @extend .container;
 
     .entry-skills {
-        @extend .px-sm-5;
+        // @extend .px-md-5;
     }
 
     .block-entry {
@@ -24,7 +24,6 @@
 
             .text-block {
                 @extend .row;
-                // @extend .px-sm-0.5;
 
                 button {
                     @extend .btn; 
@@ -35,6 +34,7 @@
                     @extend .col;
                     @extend h3;
                     @extend .pb-2;
+                    @extend .pl-sm-4;
                 }
 
                 .description {
@@ -42,10 +42,16 @@
 
                 .footnote {
                     @extend .col;
+                    @extend .pl-4;
 
                     a {
                         font-size: small;
-                        // color: $gray-200;
+                        color: $gray-200;
+                    }
+
+                    a:hover {
+                        color: $link-color;
+                        text-decoration: none;
                     }
                 }
             }

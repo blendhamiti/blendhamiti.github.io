@@ -439,7 +439,7 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .timeline, .skills, .projects,
+.container, .profile-card, .timeline, .skills, .projects,
 .container-fluid,
 .container-sm,
 .container-md,
@@ -452,22 +452,22 @@ pre {
   margin-left: auto; }
 
 @media (min-width: 576px) {
-  .container, .timeline, .skills, .projects, .container-sm {
+  .container, .profile-card, .timeline, .skills, .projects, .container-sm {
     max-width: 540px; } }
 
 @media (min-width: 768px) {
-  .container, .timeline, .skills, .projects, .container-sm, .container-md {
+  .container, .profile-card, .timeline, .skills, .projects, .container-sm, .container-md {
     max-width: 720px; } }
 
 @media (min-width: 992px) {
-  .container, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg {
+  .container, .profile-card, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg {
     max-width: 960px; } }
 
 @media (min-width: 1200px) {
-  .container, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg, .container-xl {
+  .container, .profile-card, .timeline, .skills, .projects, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
 
-.row, .skills .block-entry, .skills .block-entry .block-entry-content .text-block, .projects .block-entry {
+.row, .profile-card .profile-card-container .profile-card-content, .skills .block-entry, .skills .block-entry .block-entry-content .text-block, .projects .block-entry {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -485,7 +485,7 @@ pre {
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .skills .block-entry .block-entry-content, .projects .block-entry .block-entry-content, .certificates .img-container,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .profile-card .profile-card-container, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
   position: relative;
   width: 100%;
@@ -1048,7 +1048,7 @@ pre {
   .col-xl-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-xl-6 {
+  .col-xl-6, .profile-card .profile-card-container {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-xl-7 {
@@ -3169,7 +3169,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar .container, .navbar .timeline, .navbar .skills, .navbar .projects,
+  .navbar .container, .navbar .profile-card, .navbar .timeline, .navbar .skills, .navbar .projects,
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
     display: flex;
     flex-wrap: wrap;
@@ -3230,7 +3230,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .profile-card, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3246,7 +3246,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       .navbar-expand-sm .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
+    .navbar-expand-sm > .container, .navbar-expand-sm > .profile-card, .navbar-expand-sm > .timeline, .navbar-expand-sm > .skills, .navbar-expand-sm > .projects,
     .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -3256,7 +3256,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       display: none; } }
 
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
+  .navbar-expand-md > .container, .navbar-expand-md > .profile-card, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3272,7 +3272,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
+    .navbar-expand-md > .container, .navbar-expand-md > .profile-card, .navbar-expand-md > .timeline, .navbar-expand-md > .skills, .navbar-expand-md > .projects,
     .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -3282,7 +3282,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       display: none; } }
 
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .profile-card, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
   .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3298,7 +3298,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .profile-card, .navbar-expand-lg > .timeline, .navbar-expand-lg > .skills, .navbar-expand-lg > .projects,
     .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -3308,7 +3308,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       display: none; } }
 
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .profile-card, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
   .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
@@ -3324,7 +3324,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
       .navbar-expand-xl .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .profile-card, .navbar-expand-xl > .timeline, .navbar-expand-xl > .skills, .navbar-expand-xl > .projects,
     .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -3336,7 +3336,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
+  .navbar-expand > .container, .navbar-expand > .profile-card, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
   .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
     padding-right: 0;
     padding-left: 0; }
@@ -3347,7 +3347,7 @@ nav .input-group > .input-group-prepend:first-child > button:not(:first-child),
     .navbar-expand .navbar-nav .nav-link {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
+  .navbar-expand > .container, .navbar-expand > .profile-card, .navbar-expand > .timeline, .navbar-expand > .skills, .navbar-expand > .projects,
   .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -5177,7 +5177,7 @@ button.bg-dark:focus {
 .justify-content-end {
   justify-content: flex-end !important; }
 
-.justify-content-center {
+.justify-content-center, .profile-card .profile-card-container .profile-card-content {
   justify-content: center !important; }
 
 .justify-content-between {
@@ -5860,7 +5860,7 @@ button.bg-dark:focus {
 .px-2 {
   padding-left: 0.5rem !important; }
 
-.p-3 {
+.p-3, .profile-card .profile-card-container {
   padding: 1rem !important; }
 
 .pt-3, .timeline,
@@ -5894,7 +5894,7 @@ button.bg-dark:focus {
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
-.pl-4,
+.pl-4, .skills .block-entry .block-entry-content .text-block .footnote,
 .px-4 {
   padding-left: 1.5rem !important; }
 
@@ -6187,7 +6187,7 @@ button.bg-dark:focus {
   .pb-sm-4,
   .py-sm-4 {
     padding-bottom: 1.5rem !important; }
-  .pl-sm-4,
+  .pl-sm-4, .skills .block-entry .block-entry-content .text-block .title,
   .px-sm-4 {
     padding-left: 1.5rem !important; }
   .p-sm-5 {
@@ -6196,15 +6196,13 @@ button.bg-dark:focus {
   .py-sm-5 {
     padding-top: 3rem !important; }
   .pr-sm-5,
-  .px-sm-5,
-  .skills .entry-skills {
+  .px-sm-5 {
     padding-right: 3rem !important; }
   .pb-sm-5,
   .py-sm-5 {
     padding-bottom: 3rem !important; }
   .pl-sm-5,
-  .px-sm-5,
-  .skills .entry-skills {
+  .px-sm-5 {
     padding-left: 3rem !important; }
   .m-sm-n1 {
     margin: -0.25rem !important; }
@@ -7266,7 +7264,7 @@ a.text-dark:hover, a.text-dark:focus {
     size: a3; }
   body {
     min-width: 992px !important; }
-  .container, .timeline, .skills, .projects {
+  .container, .profile-card, .timeline, .skills, .projects {
     min-width: 992px !important; }
   .navbar {
     display: none; }
@@ -7309,7 +7307,7 @@ html, body {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 0.1; }
+  z-index: 0.5; }
 
 nav {
   background-color: #1C253C;
@@ -7333,35 +7331,39 @@ nav {
     transition-duration: .2s;
     color: #28a1a3 !important; }
 
-.profile-card .profile-card-container {
-  border-radius: 10px;
-  background-color: rgba(31, 62, 90, 0.5); }
-  .profile-card .profile-card-container a {
-    color: #e9ecef;
-    transition: ease-out;
-    transition-duration: .2s; }
-  .profile-card .profile-card-container a:hover {
-    color: #3972A7;
-    transition: ease-out;
-    transition-duration: .2s; }
-  .profile-card .profile-card-container p {
-    font-size: larger; }
-  .profile-card .profile-card-container .profile-img {
-    height: 160px;
-    width: 160px;
-    border: #145051;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 5px;
-    transition: ease-out;
-    transition-duration: .2s; }
-  .profile-card .profile-card-container .profile-img:hover {
-    border: #1e787a;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 5px;
-    transition: ease-out;
-    transition-duration: .2s; }
+.profile-card {
+  z-index: 0.1; }
+  .profile-card .profile-card-container {
+    border-radius: 10px;
+    background-color: rgba(31, 62, 90, 0.5); }
+    .profile-card .profile-card-container .profile-card-content {
+      z-index: 1; }
+      .profile-card .profile-card-container .profile-card-content a {
+        color: #e9ecef;
+        transition: ease-out;
+        transition-duration: .2s; }
+      .profile-card .profile-card-container .profile-card-content a:hover {
+        color: #3972A7;
+        transition: ease-out;
+        transition-duration: .2s; }
+      .profile-card .profile-card-container .profile-card-content p {
+        font-size: larger; }
+      .profile-card .profile-card-container .profile-card-content .profile-img {
+        height: 160px;
+        width: 160px;
+        border: #145051;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 5px;
+        transition: ease-out;
+        transition-duration: .2s; }
+      .profile-card .profile-card-container .profile-card-content .profile-img:hover {
+        border: #1e787a;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 5px;
+        transition: ease-out;
+        transition-duration: .2s; }
 
 .timeline .line {
   position: relative;
@@ -7599,7 +7601,11 @@ nav {
   background-color: #1f3e5a;
   border-radius: 5px; }
   .skills .block-entry .block-entry-content .text-block .footnote a {
-    font-size: small; }
+    font-size: small;
+    color: #e9ecef; }
+  .skills .block-entry .block-entry-content .text-block .footnote a:hover {
+    color: #3972A7;
+    text-decoration: none; }
   .skills .block-entry .block-entry-content button {
     vertical-align: top !important; }
   .skills .block-entry .block-entry-content table {
