@@ -5,6 +5,7 @@
 
     .profile-card-container {
         @extend .col-xl-6;
+        @extend .col-md-9;
         @extend .p-3;
 
         border-radius: 10px;
