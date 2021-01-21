@@ -1,0 +1,13 @@
+{
+    "events": [
+        {
+            "size": "small",
+            "title": "Internship",
+            "date": "01.01.2020"
+        }, 
+        {
+            "size": "medium",
+            "title": "Internship"
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-var resumeIcons = document.querySelectorAll(".icon-block i")
-
-resumeIcons.forEach(icon => {
+document.querySelectorAll(".icon-block i").forEach(icon => {
     icon.classList.add("colored");
 });

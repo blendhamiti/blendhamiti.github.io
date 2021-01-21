@@ -27,17 +27,6 @@ gulp.task('pages', function () {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('dev-pages', function () {
-    return gulp.src([
-        './src/page-*.html',
-        '!./src/page-template.html'
-    ])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
-        .pipe(gulp.dest('./'));
-});
 
 gulp.task('styles', function () {
     return gulp.src('./src/scss/main.scss')
@@ -56,6 +45,6 @@ exports.default = function () {
         '!./src/js/main.js'
     ],
         { ignoreInitial: false },
-        gulp.series('styles', 'scripts', 'dev-pages', 'pages')
+        gulp.series('styles', 'scripts', 'pages')
     );
 };

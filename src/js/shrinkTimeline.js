@@ -18,5 +18,4 @@ function shrinkTimeline() {
         timelineExpanded = false;
         button.innerHTML = 'Show all <i class="fas fa-angle-down"></i>';
     }
-
 }
