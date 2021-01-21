@@ -1,9 +1,10 @@
 {
     "events": [
         {
-            "size": "small",
+            "size": "M",
+            "position": 1,
             "title": "Internship",
-            "date": "01.01.2020"
+            "description": "Intern; Inspire11, North Macedonia"
         }, 
         {
             "size": "medium",
