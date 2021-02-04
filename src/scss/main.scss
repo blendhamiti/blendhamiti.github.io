@@ -1,0 +1,48 @@
+@import "./custom.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+    a {
+        transition: ease-out;
+        transition-duration: .1s;
+    }
+
+    a:hover {
+        transition: ease-out;
+        transition-duration: .1s;
+    }
+}
+
+
+
+.component {
+    padding: 100px 0px;
+    min-height: 700px;
+}
+
+@import "./page-bg.scss";
+
+@import "./header.scss";
+
+@import "./navbar.scss";
+
+@import "./profile-card.scss";
+
+@import "./timeline.scss";
+
+@import "./skills.scss";
+
+@import "./projects.scss";
+
+@import "./certificates.scss";
+
+@import "./contact.scss";
+
+@import "./footer.scss";
+
+
+
