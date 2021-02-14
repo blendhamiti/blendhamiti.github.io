@@ -1,0 +1,21 @@
+import React from 'react';
+
+function Contact() {
+    return (
+        <div class="contact container" data-aos="fade-up" data-aos-once="true">
+            <div class="row justify-content-center pb-3">
+                <div class="col-auto">
+                    <h1>Contact me</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button class="btn btn-secondary" onclick="window.open('mailto:b.hamiti.9@gmail.com');">Shoot me an
+                email</button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Contact;

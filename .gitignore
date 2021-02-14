@@ -1,8 +1,5 @@
 # dependencies
 /node_modules
 
-# configs
-webpack.config.js
-
 # production
 /build

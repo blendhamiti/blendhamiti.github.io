@@ -1,6 +1,6 @@
 @import "./custom.scss";
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap";
 
 html, body {
     max-width: 100%;
@@ -16,8 +16,6 @@ html, body {
         transition-duration: .1s;
     }
 }
-
-
 
 .component {
     padding: 100px 0px;
@@ -43,6 +41,3 @@ html, body {
 @import "./contact.scss";
 
 @import "./footer.scss";
-
-
-
