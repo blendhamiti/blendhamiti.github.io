@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+            "size": "medium",
+            "side": "r",
+            "title": "Internship",
+            "date": "20.01.2021",
+            "desc": "Intern",
+            "location": "Inspire11, North Macedonia",
+            "hidden": false
+        },
+        {
+            "size": "medium",
+            "side": "l",
+            "title": "Internship",
+            "date": "20.01.2021",
+            "desc": "Intern",
+            "location": "Inspire11, North Macedonia",
+            "hidden": false
+        }
+    ]
+}

@@ -18,8 +18,7 @@ html, body {
 }
 
 .component {
-    padding: 100px 0px;
-    min-height: 700px;
+    @extend .my-3;
 }
 
 @import "./page-bg.scss";

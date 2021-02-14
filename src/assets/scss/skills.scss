@@ -1,5 +1,6 @@
 .skills {
     @extend .container;
+    @extend .component;
 
     .entry-skills {
         // @extend .px-md-5;

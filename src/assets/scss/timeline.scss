@@ -1,6 +1,7 @@
 .timeline {
     @extend .container;
-    @extend .pt-3;
+    @extend .component;
+
     
     .line {
         position: relative;

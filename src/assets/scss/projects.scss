@@ -1,5 +1,6 @@
 .projects {
- @extend .container;
+    @extend .container;
+    @extend .component;
 
     .block-entry {
         @extend .row;

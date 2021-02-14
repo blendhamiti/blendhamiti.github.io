@@ -1,4 +1,6 @@
 .certificates {
+    @extend .container;
+    @extend .component;
 
     .img-container {
         @extend .col-sm;

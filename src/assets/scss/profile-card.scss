@@ -1,5 +1,6 @@
 .profile-card {
     @extend .container;
+    @extend .component;
 
     z-index: 0.1; 
 
