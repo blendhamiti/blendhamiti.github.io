@@ -1,5 +1,4 @@
 .profile-card {
-    @extend .container;
     @extend .component;
 
     z-index: 0.1; 
@@ -13,7 +12,6 @@
         background-color: rgba(31, 62, 90, 0.5);
 
         .profile-card-content {
-            @extend .row;
             @extend .justify-content-center;
 
             z-index: 1;

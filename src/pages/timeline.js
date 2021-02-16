@@ -1,27 +1,56 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
-import timelineData from '../assets/misc/json/timeline.json'
+import timelineData from '../assets/config/timeline.json'
 import PageTitle from '../components/pageTitle';
 
 function Timeline() {
     return (
         <div class="timeline container">
             <PageTitle title="Timeline" />
-            <EventList />
+            <EventList data={timelineData} />
         </div>
-
     );
 }
 
 function EventList(props) {
-    const eventList = timelineData.events.map((element) =>
+    const [showAll, setShowAll] = React.useState(false);
+
+    let events = props.data.events;
+    let buttonText = "Show less";
+    if (!showAll) {
+        events = events.filter(element => !element.hidden);
+        buttonText = "Show all";
+    }
+
+    const eventList = events.map((element) =>
         <Event event={element} />
     );
 
     return (
-        <ul className="line">
-            {eventList}
-        </ul>
+        <div>
+            <ul className="line">
+                {eventList}
+            </ul>
+            <div className="row">
+                <div className="col text-center">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="btn btn-primary">
+                        {buttonText}
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col py-2 text-center small">
+                    <a class="lightblue-link" target="_blank" href="https://codepen.io/NilsWe">
+                        Inspired by Nils Wittles
+                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    </a>
+                </div>
+            </div>
+        </div>
     );
 }
 

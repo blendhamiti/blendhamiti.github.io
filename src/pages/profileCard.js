@@ -7,54 +7,57 @@ import PixelatedProfilePicture from '../assets/img/portrait-distorted.JPG'
 
 function ProfileCard() {
     const [mouseOver, setMouseOver] = React.useState(false);
-    let profileImage = PixelatedProfilePicture;
 
+    let profileImage = PixelatedProfilePicture;
     if (mouseOver)
         profileImage = ProfilePicture;
     else
         profileImage = PixelatedProfilePicture;
 
     return (
-        <div className="profile-card">
+        <div className="container profile-card">
             <div className="row justify-content-center">
-                <div className="profile-card-container">
-                    <div className="profile-card-content">
+                <div className="col profile-card-container">
+                    <div className="row profile-card-content">
                         <div className="col-auto my-auto">
                             <img
                                 onMouseOver={() => setMouseOver(true)}
                                 onMouseOut={() => setMouseOver(false)}
                                 className="profile-img"
-                                src={profileImage}></img>
+                                src={profileImage} />
                         </div>
                         <div className="col-md">
                             <div className="row justify-content-center">
                                 <div className="col-auto text-center text-md-left">
                                     <h1>Hi, I am Blend!</h1>
                                     <p>I am an Engineering Technology graduate who has an interest in
-                                    programming. This webiste is meant to showcase my skills and experience.
-                            </p>
+                                    programming. This webiste is meant to showcase my skills and experience.</p>
                                 </div>
                             </div>
                             <div className="row justify-content-center justify-content-md-left">
-                                <div className="col-auto">
-                                    <a href="https://github.com/blendhamiti/" target="_blank">
-                                        <FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                                </div>
-                                <div className="col-auto">
-                                    <a href="https://www.linkedin.com/in/blendhamiti/" target="_blank">
-                                        <FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-                                </div>
-                                <div className="col-auto">
-                                    <a href="https://www.instagram.com/blendhamiti/" target="_blank">
-                                        <FontAwesomeIcon icon={faInstagram} size="2x" /></a>
-                                </div>
+                                <Icon
+                                    link="https://github.com/blendhamiti/"
+                                    icon={faGithub} />
+                                <Icon
+                                    link="https://www.linkedin.com/in/blendhamiti/"
+                                    icon={faLinkedin} />
+                                <Icon
+                                    link="https://www.instagram.com/blendhamiti/"
+                                    icon={faInstagram} />
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+        </div>
+    );
+}
+
+function Icon(props) {
+    return (
+        <div className="col-auto">
+            <a href={props.link} target="_blank">
+                <FontAwesomeIcon icon={props.icon} size="2x" /></a>
         </div>
     );
 }

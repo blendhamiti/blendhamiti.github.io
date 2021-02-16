@@ -1,0 +1,76 @@
+{
+    "skills": [
+        {
+            "category": "Software development",
+            "skills": [
+                {
+                    "name": "JavaE",
+                    "level": 7
+                },
+                {
+                    "name": "C",
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "category": "Web development",
+            "skills": [
+                {
+                    "name": "PHP",
+                    "level": 3
+                },
+                {
+                    "name": "Node.js",
+                    "level": 2
+                },
+                {
+                    "name": "React",
+                    "level": 2
+                },
+                {
+                    "name": "React",
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "category": "Web development",
+            "skills": [
+                {
+                    "name": "PHP",
+                    "level": 3
+                },
+                {
+                    "name": "Node.js",
+                    "level": 2
+                },
+                {
+                    "name": "React",
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "category": "Web development",
+            "skills": [
+                {
+                    "name": "PHP",
+                    "level": 3
+                },
+                {
+                    "name": "Node.js",
+                    "level": 2
+                },
+                {
+                    "name": "React",
+                    "level": 2
+                },
+                {
+                    "name": "React",
+                    "level": 2
+                }
+            ]
+        }
+    ]
+}
