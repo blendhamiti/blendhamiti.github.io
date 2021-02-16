@@ -1,75 +1,68 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import PageTitle from '../components/pageTitle';
 import projectsData from '../assets/config/projects.json'
 
 function Projects() {
     return (
-        <div>
+        <div className="projects container">
             <PageTitle title="Projects" />
             <ProjectList data={projectsData} />
         </div>
     );
 }
 
-function ProjectList() {
+function ProjectList(props) {
     const projects = props.data.projects.map((element) =>
-        
+        <Project data={element} />
     );
 
     return (
-        <div class="block-entry">
-            <div class="block-entry-content">
-                <div class="icon-block">
-                    <span class="icon"><i class="devicon-mysql-plain-wordmark"></i></span>
-                    <span class="icon"><i class="devicon-php-plain"></i></span>
-                    <span class="icon"><i class="devicon-codeigniter-plain-wordmark"></i></span>
-                    <span class="icon"><i class="devicon-bootstrap-plain"></i></span>
-                    <span class="icon"><i class="devicon-sass-original"></i></span>
-                </div>
-                <div class="text-block">
-                    <div class="title">
-                        Digital Planning Board
-                        </div>
-                    <div class="description">
-                        <p>An interactive web app for users to organise their schedule in a
-                                calendar and divide tasks via a tasks board.</p>
-                        <li>Server & DB: Apache, MySQL </li>
-                        <li>Backend: PHP with CodeIgniter framework</li>
-                        <li>Frontend: Bootstrap (Sass)</li>
-                        <li>JS libs used: jQuery, Popper.js, FullCalendar, Moment.js, Muuri.js. </li>
-                    </div>
-                </div>
+        <div className="row">
+            <div className="col">
+                {projects}
             </div>
         </div>
     );
 }
 
-function Project() {
+function Project(props) {
+    const icons = props.data.icons.map((element) =>
+        <span className="icon">
+        </span>
+    );
+    const features = props.data.features.map((element) =>
+        <li>{element}</li>
+    );
+
     return (
-        <div class="block-entry">
-            <div class="block-entry-content">
-                <div class="icon-block">
-                    <span class="icon"><i class="devicon-mysql-plain-wordmark"></i></span>
-                    <span class="icon"><i class="devicon-php-plain"></i></span>
-                    <span class="icon"><i class="devicon-codeigniter-plain-wordmark"></i></span>
-                    <span class="icon"><i class="devicon-bootstrap-plain"></i></span>
-                    <span class="icon"><i class="devicon-sass-original"></i></span>
+        <div className="block-entry">
+            <div className="block-entry-content">
+                <div className="icon-block">
+                    {icons}
                 </div>
-                <div class="text-block">
-                    <div class="title">
-                        Digital Planning Board
-                        </div>
-                    <div class="description">
-                        <p>An interactive web app for users to organise their schedule in a
-                                calendar and divide tasks via a tasks board.</p>
-                        <li>Server & DB: Apache, MySQL </li>
-                        <li>Backend: PHP with CodeIgniter framework</li>
-                        <li>Frontend: Bootstrap (Sass)</li>
-                        <li>JS libs used: jQuery, Popper.js, FullCalendar, Moment.js, Muuri.js. </li>
+                <div className="text-block">
+                    <div className="title">
+                        <span>{props.data.title}</span>
+                        <span> </span>
+                        <span>
+                            <button>
+                                View in GitHub
+                                <span> </span>
+                                <FontAwesomeIcon icon={faGithub} />
+                            </button>
+                        </span>
+                    </div>
+                    <div className="description">
+                        <p>
+                            {props.data.description}
+                        </p>
+                        <ul>
+                            {features}
+                        </ul>
                     </div>
                 </div>
             </div>

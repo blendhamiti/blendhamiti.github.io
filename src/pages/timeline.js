@@ -7,7 +7,7 @@ import PageTitle from '../components/pageTitle';
 
 function Timeline() {
     return (
-        <div class="timeline container">
+        <div className="timeline container">
             <PageTitle title="Timeline" />
             <EventList data={timelineData} />
         </div>
@@ -42,9 +42,9 @@ function EventList(props) {
                     </button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col py-2 text-center small">
-                    <a class="lightblue-link" target="_blank" href="https://codepen.io/NilsWe">
+            <div className="row">
+                <div className="col py-2 text-center small">
+                    <a className="lightblue-link" target="_blank" href="https://codepen.io/NilsWe">
                         Inspired by Nils Wittles
                         <FontAwesomeIcon icon={faExternalLinkAlt} />
                     </a>

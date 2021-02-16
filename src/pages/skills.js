@@ -7,7 +7,7 @@ import PageTitle from '../components/pageTitle'
 
 function Skills() {
     return (
-        <div className="skills">
+        <div className="skills container">
             <PageTitle title="Skills" />
             <SkillsList data={skillsData} />
         </div>
