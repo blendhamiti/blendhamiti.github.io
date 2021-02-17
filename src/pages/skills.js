@@ -7,7 +7,7 @@ import PageTitle from '../components/pageTitle'
 
 function Skills() {
     return (
-        <div className="skills container">
+        <div className="skills container" id="skills">
             <PageTitle title="Skills" />
             <SkillsList data={skillsData} />
         </div>
@@ -15,10 +15,11 @@ function Skills() {
 }
 
 function SkillsList(props) {
-    const tables = props.data.skills.map((element) =>
+    const tables = props.data.skills.map((element, index) =>
         <Table
             title={element.category}
-            content={element.skills} />
+            content={element.skills}
+            key={index} />
     );
 
     return (
@@ -33,10 +34,11 @@ function SkillsList(props) {
 }
 
 function Table(props) {
-    const rows = props.content.map((element) =>
+    const rows = props.content.map((element, index) =>
         <Row
             skill={element.name}
-            level={element.level} />
+            level={element.level}
+            key={index} />
     );
 
     return (
@@ -54,7 +56,7 @@ function Table(props) {
                                     <thead>
                                         <tr>
                                             <th className="pl-sm-3">Skill</th>
-                                            <th className="text-center" colspan="5">
+                                            <th className="text-center" colSpan="5">
                                                 <span className="link-text">Proficiency<sup>[1]</sup></span>
                                             </th>
                                         </tr>
@@ -67,8 +69,8 @@ function Table(props) {
                         </div>
                     </div>
 
-                    <div class="text-block">
-                        <div class="footnote">
+                    <div className="text-block">
+                        <div className="footnote">
                             <a target="_blank"
                                 href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">
                                 <span><sup>[1]</sup>According to the NIH Proficiency Scale.</span>
@@ -83,26 +85,16 @@ function Table(props) {
 }
 
 function Row(props) {
-    const filledStar = (
-        <td className="xp">
-            <span className="xp-star">
-                <FontAwesomeIcon icon={faStar} />
-            </span>
-        </td>
-    );
-    const emptyStar = (
-        <td className="xp">
-            <span className="xp-star invisible">
-                <FontAwesomeIcon icon={faStar} />
-            </span>
-        </td>
-    );
     const stars = [];
     for (let index = 0; index < 5; index++) {
         if (props.level > index)
-            stars.push(filledStar);
+            stars.push(
+                <Star invisible={false} key={index} />
+            );
         else
-            stars.push(emptyStar)
+            stars.push(
+                <Star invisible={true} key={index} />
+            );
     }
 
     return (
@@ -110,6 +102,16 @@ function Row(props) {
             <td className="skill">{props.skill}</td>
             {stars}
         </tr>
+    );
+}
+
+function Star(props) {
+    return (
+        <td className="xp">
+            <span className={(props.invisible) ? "xp-star invisible" : "xp-star"}>
+                <FontAwesomeIcon icon={faStar} />
+            </span>
+        </td>
     );
 }
 

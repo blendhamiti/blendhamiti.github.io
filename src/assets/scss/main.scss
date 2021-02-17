@@ -3,8 +3,7 @@
 @import "bootstrap";
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 
     a {
         transition: ease-out;
@@ -18,7 +17,7 @@ html, body {
 }
 
 .component {
-    @extend .my-3;
+    padding: 60px 0px;
 }
 
 @import "./page-bg.scss";

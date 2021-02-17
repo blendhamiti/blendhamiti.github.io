@@ -11,12 +11,12 @@ function Certificates() {
     const [selectedCert, setSelectedCert] = React.useState(null);
 
     const certs = [courseraMl, neo4j, nasa, infomatrix];
-    const elements = certs.map((element) =>
-        <Certificate cert={element} selectCert={setSelectedCert} />
+    const elements = certs.map((element, index) =>
+        <Certificate cert={element} selectCert={setSelectedCert} key={index} />
     );
 
     return (
-        <div className="certificates container">
+        <div className="certificates container" id="certificates">
             <div
                 id="certificates-overlay"
                 onClick={() => setSelectedCert(null)}

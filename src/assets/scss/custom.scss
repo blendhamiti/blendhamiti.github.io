@@ -9,8 +9,8 @@ $primary-darker:#141A2A;
 $gray-200: #e9ecef;
 
 // Font
-@import 'https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css';
-$font-family-sans-serif: "rawline", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@import 'http://fonts.cdnfonts.com/css/rawline';
+$font-family-sans-serif: Rawline, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 // Body
 $body-bg:                   $primary-dark;

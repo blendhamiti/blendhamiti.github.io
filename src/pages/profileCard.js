@@ -15,7 +15,7 @@ function ProfileCard() {
         profileImage = PixelatedProfilePicture;
 
     return (
-        <div className="container profile-card">
+        <div className="container profile-card" id="profile-card">
             <div className="row justify-content-center">
                 <div className="col profile-card-container">
                     <div className="row profile-card-content">

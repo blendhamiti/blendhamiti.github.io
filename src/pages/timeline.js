@@ -7,7 +7,7 @@ import PageTitle from '../components/pageTitle';
 
 function Timeline() {
     return (
-        <div className="timeline container">
+        <div className="timeline container" id="timeline">
             <PageTitle title="Timeline" />
             <EventList data={timelineData} />
         </div>
@@ -24,8 +24,8 @@ function EventList(props) {
         buttonText = "Show all";
     }
 
-    const eventList = events.map((element) =>
-        <Event event={element} />
+    const eventList = events.map((element, index) =>
+        <Event event={element} key={index} />
     );
 
     return (

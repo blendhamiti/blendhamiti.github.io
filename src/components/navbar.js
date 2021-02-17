@@ -15,7 +15,7 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <a href="">
+                <a href="#">
                     <img className="navbar-brand-img" src={Logo} width="30" height="30" alt="" />
                 </a>
 

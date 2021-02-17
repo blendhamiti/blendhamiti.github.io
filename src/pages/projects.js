@@ -8,7 +8,7 @@ import projectsData from '../assets/config/projects.json'
 
 function Projects() {
     return (
-        <div className="projects container">
+        <div className="projects container" id="projects">
             <PageTitle title="Projects" />
             <ProjectList data={projectsData} />
         </div>
@@ -16,8 +16,8 @@ function Projects() {
 }
 
 function ProjectList(props) {
-    const projects = props.data.projects.map((element) =>
-        <Project data={element} />
+    const projects = props.data.projects.map((element, index) =>
+        <Project data={element} key={index} />
     );
 
     return (
@@ -30,12 +30,12 @@ function ProjectList(props) {
 }
 
 function Project(props) {
-    const icons = props.data.icons.map((element) =>
-        <span className="icon">
+    const icons = props.data.icons.map((element, index) =>
+        <span className="icon" key={index}>
         </span>
     );
-    const features = props.data.features.map((element) =>
-        <li>{element}</li>
+    const features = props.data.features.map((element, index) =>
+        <li key={index}>{element}</li>
     );
 
     return (
@@ -49,11 +49,13 @@ function Project(props) {
                         <span>{props.data.title}</span>
                         <span> </span>
                         <span>
-                            <button>
-                                View in GitHub
+                            <a href={props.data.url} target="_blank" >
+                                <button>
+                                    View in GitHub
                                 <span> </span>
-                                <FontAwesomeIcon icon={faGithub} />
-                            </button>
+                                    <FontAwesomeIcon icon={faGithub} />
+                                </button>
+                            </a>
                         </span>
                     </div>
                     <div className="description">
