@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Logo from '../assets/img/logo.png';
-import Resume from '../assets/misc/doc/resume.pdf';
 
 function Navbar(props) {
     const [collapse, setCollapse] = React.useState(false);
@@ -41,7 +40,7 @@ function Navbar(props) {
                             <Link className="nav-link" name="contact" to="/contact">Contact</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-external" href={Resume} target="_blank">
+                            <a className="nav-link nav-link-external" href="/resume.pdf">
                                 Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
                             </a>
                         </li>

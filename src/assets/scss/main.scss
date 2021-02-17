@@ -1,4 +1,4 @@
-@import "./custom.scss";
+@import "./variables.scss";
 
 @import "bootstrap";
 
@@ -18,24 +18,23 @@ html, body {
 
 .component {
     padding: 60px 0px;
+    min-height: 100vh;
 }
 
-@import "./page-bg.scss";
+@import "./components/background.scss";
 
-@import "./header.scss";
+@import "./components/navbar.scss";
 
-@import "./navbar.scss";
+@import "./components/footer.scss";
 
-@import "./profile-card.scss";
+@import "./pages/profile-card.scss";
 
-@import "./timeline.scss";
+@import "./pages/timeline.scss";
 
-@import "./skills.scss";
+@import "./pages/skills.scss";
 
-@import "./projects.scss";
+@import "./pages/projects.scss";
 
-@import "./certificates.scss";
+@import "./pages/certificates.scss";
 
-@import "./contact.scss";
-
-@import "./footer.scss";
+@import "./pages/contact.scss";
