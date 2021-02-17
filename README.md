@@ -1,7 +1,7 @@
 ## Running the app
 Clone the repository, and create a production build of the website.
 ```
-git clone https://blendhamiti@bitbucket.org/blendhamiti/simple-spa.git
+git clone https://github.com/blendhamiti/portfolio-react.git
 cd portfolio-react
 npm install
 npm run build
