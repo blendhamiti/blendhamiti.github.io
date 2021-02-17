@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Navbar from './components/navbar';
 import ProfileCard from './pages/profileCard';
 import Timeline from './pages/timeline';
 import Skills from './pages/skills';
@@ -13,17 +13,36 @@ import Background from './components/background';
 
 import "./assets/scss/main.scss";
 
+function App() {
+    return (
+        <div>
+            <Background />
+            <Router>
+                <Route exact path="/">
+                    <ProfileCard />
+                </Route>
+                <Route path="/timeline">
+                    <Timeline />
+                </Route>
+                <Route path="/skills">
+                    <Skills />
+                </Route>
+                <Route path="/projects">
+                    <Projects />
+                </Route>
+                <Route path="/certificates" on>
+                    <Certificates />
+                </Route>
+                <Route path="/contact">
+                    <Contact />
+                </Route>
+            </Router>
+            <Footer />
+        </div>
+    );
+}
+
 ReactDOM.render(
-    <div>
-        <Background />
-        <Navbar />
-        <ProfileCard />
-        <Timeline />
-        <Skills />
-        <Projects />
-        <Certificates />
-        <Contact />
-        <Footer />
-    </div>,
+    <App />,
     document.getElementById('root')
 );

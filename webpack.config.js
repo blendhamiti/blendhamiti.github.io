@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: path.resolve(__dirname, "src", "index.js"),
@@ -34,10 +35,19 @@ module.exports = {
         liveReload: true,
         port: 9000,
         open: true,
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "public", "index.html")
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.join(__dirname, "src", "assets", "misc", "doc"),
+                    to: path.join(__dirname, "build")
+                },
+            ],
+        }),
     ],
 };

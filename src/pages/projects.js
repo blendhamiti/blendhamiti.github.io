@@ -3,14 +3,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+import Navbar from '../components/navbar';
 import PageTitle from '../components/pageTitle';
 import projectsData from '../assets/config/projects.json'
 
 function Projects() {
     return (
-        <div className="projects container" id="projects">
-            <PageTitle title="Projects" />
-            <ProjectList data={projectsData} />
+        <div>
+            <Navbar page="projects" />
+            <div className="projects container" id="projects">
+                <PageTitle title="Projects" />
+                <ProjectList data={projectsData} />
+            </div>
         </div>
     );
 }

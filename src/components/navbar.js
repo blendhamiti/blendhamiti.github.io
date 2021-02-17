@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Logo from '../assets/img/logo.png';
 import Resume from '../assets/misc/doc/resume.pdf';
 
-function Navbar() {
+function Navbar(props) {
     const [collapse, setCollapse] = React.useState(false);
 
     return (
@@ -21,23 +22,23 @@ function Navbar() {
 
                 <div className={(collapse) ? "collapse navbar-collapse show" : "collapse navbar-collapse"}>
                     <ul className="navbar-nav mx-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" name="profile-card" href="#profile-card">Introduction</a>
+                        <li className={(props.page === 'profile-card') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="profile-card" to="/">Introduction</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" name="timeline" href="#timeline">Timeline</a>
+                        <li className={(props.page === 'timeline') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="timeline" to="/timeline">Timeline</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" name="skills" href="#skills">Skills</a>
+                        <li className={(props.page === 'skills') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="skills" to="/skills">Skills</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" name="projects" href="#projects">Projects</a>
+                        <li className={(props.page === 'projects') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="projects" to="/projects">Projects</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" name="certificates" href="#certificates">Certificates</a>
+                        <li className={(props.page === 'certificates') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="certificates" to="/certificates">Certificates</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" name="contact" href="#contact">Contact</a>
+                        <li className={(props.page === 'contact') ? "nav-item active" : "nav-item"}>
+                            <Link className="nav-link" name="contact" to="/contact">Contact</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link nav-link-external" href={Resume} target="_blank">

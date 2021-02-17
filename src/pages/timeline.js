@@ -2,14 +2,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
+import Navbar from '../components/navbar';
 import timelineData from '../assets/config/timeline.json'
 import PageTitle from '../components/pageTitle';
 
 function Timeline() {
     return (
-        <div className="timeline container" id="timeline">
-            <PageTitle title="Timeline" />
-            <EventList data={timelineData} />
+        <div>
+            <Navbar page="timeline" />
+            <div className="timeline container" id="timeline">
+                <PageTitle title="Timeline" />
+                <EventList data={timelineData} />
+            </div>
         </div>
     );
 }

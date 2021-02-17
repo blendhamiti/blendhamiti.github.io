@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Navbar from '../components/navbar';
 import PageTitle from '../components/pageTitle'
 
 import courseraMl from '../assets/misc/certs/coursera-ml.png';
@@ -16,16 +17,19 @@ function Certificates() {
     );
 
     return (
-        <div className="certificates container" id="certificates">
-            <div
-                id="certificates-overlay"
-                onClick={() => setSelectedCert(null)}
-                className={(selectedCert) ? "open" : ""}
-                style={{ backgroundImage: `url(${selectedCert})` }}>
+        <div>
+            <Navbar page="certificates" />
+            <div className="certificates container" id="certificates">
+                <div
+                    id="certificates-overlay"
+                    onClick={() => setSelectedCert(null)}
+                    className={(selectedCert) ? "open" : ""}
+                    style={{ backgroundImage: `url(${selectedCert})` }}>
+                </div>
+                <PageTitle title="Certificates" />
+                <div className="row">{elements}</div>
             </div>
-            <PageTitle title="Certificates" />
-            <div className="row">{elements}</div>
-        </div >
+        </div>
     );
 }
 
