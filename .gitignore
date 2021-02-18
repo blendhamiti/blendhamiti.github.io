@@ -4,5 +4,4 @@
 # current version dependencies
 /node_modules
 
-# production
-/build
+# production (do not ignore): publishing directroy: /docs 

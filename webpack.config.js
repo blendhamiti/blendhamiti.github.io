@@ -24,13 +24,13 @@ module.exports = {
         ],
     },
     output: {
-        path: path.resolve(__dirname, "build")
+        path: path.resolve(__dirname, "docs")
     },
     optimization: {
         splitChunks: { chunks: "all" }
     },
     devServer: {
-        contentBase: path.join(__dirname, "build"),
+        contentBase: path.join(__dirname, "docs"),
         compress: true,
         liveReload: true,
         port: 9000,
@@ -45,7 +45,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.join(__dirname, "src", "assets", "misc", "doc"),
-                    to: path.join(__dirname, "build")
+                    to: path.join(__dirname, "docs")
                 },
             ],
         }),
