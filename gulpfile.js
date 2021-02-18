@@ -6,6 +6,8 @@ sass.compiler = require('node-sass');
 const fileinclude = require('gulp-file-include');
 const concat = require('gulp-concat');
 
+const browserSync = require('browser-sync').create();
+
 gulp.task('scripts', function () {
     return gulp.src([
         './src/js/*.js',
@@ -33,8 +35,12 @@ gulp.task('styles', function () {
 });
 
 gulp.task(
-    'dev',
+    'devServer',
     function () {
+        browserSync.init({
+            server: "./"
+        });
+
         gulp.watch([
             './src/*.html',
             './src/scss/*.scss',
@@ -44,6 +50,10 @@ gulp.task(
             { ignoreInitial: false },
             gulp.series('styles', 'scripts', 'pages')
         );
+
+        gulp.watch([
+            './index.html'
+        ]).on('change', browserSync.reload);
     }
 );
 

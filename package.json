@@ -3,17 +3,16 @@
     "main": "index.html",
     "private": true,
     "scripts": {
-        "build": "gulp",
-        "dev": "lite-server",
-        "cbuild": "gulp dev"
+        "dev": "gulp devServer",
+        "build": "gulp"
     },
     "dependencies": {},
     "devDependencies": {
+        "browser-sync": "^2.26.14",
         "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-file-include": "^2.2.2",
         "gulp-sass": "^4.1.0",
-        "lite-server": "^2.6.1",
         "node-sass": "^4.14.1"
     }
 }
