@@ -133,7 +133,9 @@
         </div>
     </div>
 
-    <ul class="line" data-aos="fade-in" data-aos-once="true">
+    <div id="timeline-events">
+    </div>
+    <!-- <ul class="line" data-aos="fade-in" data-aos-once="true">
 
         <li class="size-medium">
             <div class="direction-r" data-aos="fade-left" data-aos-once="true">
@@ -295,7 +297,7 @@
                 </div>
             </div>
         </li>
-    </ul>
+    </ul> -->
 
     <div class="row" data-aos="fade-in" data-aos-once="true">
         <div class="col py-2 text-center small">
@@ -930,6 +932,10 @@
 
     <script src="./src/js/main.js"></script>
 
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="./src/jsx/timeline.js"></script>
+
     <script src="/node_modules/particles.js/particles.js"></script>
     <script src="/node_modules/aos/dist/aos.js"></script>
     <script>
@@ -939,12 +945,6 @@
                 AOS.init();
             })
         });
-    </script>
-
-    <script>
-        // $(document).ready(function () {
-        //     AOS.init();
-        // })
     </script>
 
 </footer>
