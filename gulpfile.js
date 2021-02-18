@@ -6,7 +6,6 @@ sass.compiler = require('node-sass');
 const fileinclude = require('gulp-file-include');
 const concat = require('gulp-concat');
 
-
 gulp.task('scripts', function () {
     return gulp.src([
         './src/js/*.js',
@@ -27,24 +26,28 @@ gulp.task('pages', function () {
         .pipe(gulp.dest('./'));
 });
 
-
 gulp.task('styles', function () {
     return gulp.src('./src/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/css/'));
 });
 
+gulp.task(
+    'dev',
+    function () {
+        gulp.watch([
+            './src/*.html',
+            './src/scss/*.scss',
+            './src/js/*.js',
+            '!./src/js/main.js'
+        ],
+            { ignoreInitial: false },
+            gulp.series('styles', 'scripts', 'pages')
+        );
+    }
+);
 
-// You need to save changes in any file under watch() in order for the includeHTML() to run automatically.
-
-exports.default = function () {
-    gulp.watch([
-        './src/*.html',
-        './src/scss/*.scss',
-        './src/js/*.js',
-        '!./src/js/main.js'
-    ],
-        { ignoreInitial: false },
-        gulp.series('styles', 'scripts', 'pages')
-    );
-};
+gulp.task(
+    'default',
+    gulp.series('styles', 'scripts', 'pages')
+);

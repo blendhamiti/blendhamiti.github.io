@@ -3,31 +3,17 @@
     "main": "index.html",
     "private": true,
     "scripts": {
-        "dev": "lite-server"
+        "build": "gulp",
+        "dev": "lite-server",
+        "cbuild": "gulp dev"
     },
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.14.0",
-        "aos": "^2.3.4",
-        "bootstrap": "^4.5.2",
-        "browserslist": "^4.14.4",
-        "jquery": "^3.5.1",
-        "particles.js": "^2.0.0",
-        "popper.js": "^1.16.1"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "@babel/cli": "^7.12.10",
-        "@babel/core": "^7.12.10",
-        "@babel/preset-react": "^7.12.10",
         "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-file-include": "^2.2.2",
         "gulp-sass": "^4.1.0",
         "lite-server": "^2.6.1",
-        "node-sass": "^4.14.1",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
-    },
-    "browserslist": [
-        "defaults"
-    ]
+        "node-sass": "^4.14.1"
+    }
 }
