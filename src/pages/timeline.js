@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { Fade } from 'react-reveal';
 
 import Navbar from '../components/navbar';
 import timelineData from '../assets/config/timeline.json'
@@ -29,7 +30,9 @@ function EventList(props) {
     }
 
     const eventList = events.map((element, index) =>
-        <Event event={element} key={index} />
+        <Fade key={element.title}>
+            <Event event={element} />
+        </Fade>
     );
 
     return (
@@ -77,7 +80,9 @@ function Event(props) {
             <div className={"direction-" + props.event.side}>
                 <div className="flag-wrapper">
                     <span className="flag">{props.event.title}</span>
-                    <span className="time-wrapper"><span className="time">{props.event.date}</span></span>
+                    <span className="time-wrapper">
+                        <span className="time">{props.event.date}</span>
+                    </span>
                 </div>
                 <div className="desc">
                     {props.event.desc}

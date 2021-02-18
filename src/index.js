@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ import "./assets/scss/main.scss";
 
 function App() {
     return (
-        <div>
+        <div data-aos="fade-zoom-in">
             <Background />
             <Router>
                 <Route exact path="/">

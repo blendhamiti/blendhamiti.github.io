@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import Navbar from '../components/navbar';
 import PageTitle from '../components/pageTitle';
-import projectsData from '../assets/config/projects.json'
+import projectsData from '../assets/config/projects.json';
 
 function Projects() {
     return (
@@ -34,20 +34,26 @@ function ProjectList(props) {
 }
 
 function Project(props) {
-    const icons = props.data.icons.map((element, index) =>
-        <span className="icon" key={index}>
-        </span>
-    );
+    // const devIconStyle = {
+    //     fill: "#e9ecef",
+    //     width: "30px",
+    // }
+    // const icons = props.data.icons.map((element, index) =>
+    //     <span className="icon" key={index} title={element}>
+    //         <DevIcon icon={element} style={devIconStyle} />
+    //     </span>
+    // );
     const features = props.data.features.map((element, index) =>
         <li key={index}>{element}</li>
     );
 
     return (
-        <div className="block-entry">
+
+        <div className="block-entry" data-aos="fade-left">
             <div className="block-entry-content">
-                <div className="icon-block">
+                {/* <div className="icon-block">
                     {icons}
-                </div>
+                </div> */}
                 <div className="text-block">
                     <div className="title">
                         <span>{props.data.title}</span>
