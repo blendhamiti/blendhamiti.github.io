@@ -2,18 +2,14 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-import Navbar from '../components/navbar';
 import skillsData from '../assets/config/skills.json'
 import PageTitle from '../components/pageTitle'
 
 function Skills() {
     return (
-        <div>
-            <Navbar page="skills" />
-            <div className="skills container" id="skills">
-                <PageTitle title="Skills" />
-                <SkillsList data={skillsData} />
-            </div>
+        <div className="skills container" id="skills">
+            <PageTitle title="Skills" />
+            <SkillsList data={skillsData} />
         </div>
     );
 }

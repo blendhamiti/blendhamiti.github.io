@@ -3,20 +3,29 @@
         {
             "size": "medium",
             "side": "r",
-            "title": "Internship2",
-            "date": "20.01.2021",
+            "title": "Internship",
+            "date": "Jan 2021 - present",
             "desc": "Intern",
             "location": "Inspire11, North Macedonia",
-            "hidden": true
+            "hidden": false
+        },
+        {
+            "size": "medium",
+            "side": "r",
+            "title": "Master's degree",
+            "date": "2020 - present",
+            "desc": "Software Engineering",
+            "location": "SEE University, North Macedonia",
+            "hidden": false
         },
         {
             "size": "medium",
             "side": "l",
-            "title": "Internship",
-            "date": "20.01.2021",
-            "desc": "Intern",
-            "location": "Inspire11, North Macedonia",
-            "hidden": false
+            "title": "Bachelor's degree",
+            "date": "2017 - 2020",
+            "desc": "Engineering Technology (w/ specialisation in ICT)",
+            "location": "KU Leuven, Belgium",
+            "hidden": true
         }
     ]
 }

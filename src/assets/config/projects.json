@@ -26,6 +26,19 @@
                 "bootstrap",
                 "sass"
             ]
+        },
+        {
+            "title": "Blend's Portfolio",
+            "url": "https://github.com/blendhamiti/Timers",
+            "description": "Static page.",
+            "features": [
+                "Frontend: React"
+            ],
+            "icons": [
+                "javascript",
+                "bootstrap",
+                "sass"
+            ]
         }
     ]
 }

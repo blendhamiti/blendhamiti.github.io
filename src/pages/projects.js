@@ -3,18 +3,14 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import Navbar from '../components/navbar';
 import PageTitle from '../components/pageTitle';
 import projectsData from '../assets/config/projects.json';
 
 function Projects() {
     return (
-        <div>
-            <Navbar page="projects" />
-            <div className="projects container" id="projects">
-                <PageTitle title="Projects" />
-                <ProjectList data={projectsData} />
-            </div>
+        <div className="projects container" id="projects">
+            <PageTitle title="Projects" />
+            <ProjectList data={projectsData} />
         </div>
     );
 }
@@ -48,7 +44,6 @@ function Project(props) {
     );
 
     return (
-
         <div className="block-entry" data-aos="fade-left">
             <div className="block-entry-content">
                 {/* <div className="icon-block">

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Fade } from 'react-reveal';
 
 import ProfileCard from './pages/profileCard';
 import Timeline from './pages/timeline';
@@ -8,6 +8,7 @@ import Skills from './pages/skills';
 import Projects from './pages/projects';
 import Certificates from './pages/certificates';
 import Contact from './pages/contact';
+import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Background from './components/background';
 
@@ -15,29 +16,22 @@ import "./assets/scss/main.scss";
 
 function App() {
     return (
-        <div data-aos="fade-zoom-in">
-            <Background />
-            <Router>
-                <Route exact path="/">
-                    <ProfileCard />
-                </Route>
-                <Route path="/timeline">
-                    <Timeline />
-                </Route>
-                <Route path="/skills">
-                    <Skills />
-                </Route>
-                <Route path="/projects">
-                    <Projects />
-                </Route>
-                <Route path="/certificates">
-                    <Certificates />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-            </Router>
-            <Footer />
+        <div>
+            <Fade>
+                <Background />
+            </Fade>
+            <Navbar />
+            <Fade>
+                <ProfileCard />
+                <Timeline />
+                <Skills />
+                <Projects />
+                <Certificates />
+                <Contact />
+            </Fade>
+            <Fade up>
+                <Footer />
+            </Fade>
         </div>
     );
 }
