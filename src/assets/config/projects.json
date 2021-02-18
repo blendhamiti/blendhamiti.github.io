@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "title": "Timers",
+            "url": "https://github.com/blendhamiti/Timers",
+            "description": "Timers is an android app that let's you create different timers and connect them “in series”. You are notified as each timer finishes and the next one starts, so you can do your tasks continuously without stopping to set the timer again and again between tasks. It also supports timers templates that can saved and restored easily.",
+            "features": [],
+            "icons": [
+                "android"
+            ]
+        },
+        {
+            "title": "Digital Planning Board",
+            "url": "https://github.com/blendhamiti/Timers",
+            "description": "An interactive web app for users to organise their schedule in a calendar and divide tasks via a tasks board.",
+            "features": [
+                "Server & DB: Apache, MySQL",
+                "Backend: PHP with CodeIgniter framework",
+                "Frontend: Bootstrap (Sass)",
+                "JS libs used: jQuery, Popper.js, FullCalendar, Moment.js, Muuri.js."
+            ],
+            "icons": [
+                "mysql",
+                "php",
+                "codeigniter",
+                "bootstrap",
+                "sass"
+            ]
+        },
+        {
+            "title": "Blend's Portfolio",
+            "url": "https://github.com/blendhamiti/Timers",
+            "description": "Static page.",
+            "features": [
+                "Frontend: React"
+            ],
+            "icons": [
+                "javascript",
+                "bootstrap",
+                "sass"
+            ]
+        }
+    ]
+}

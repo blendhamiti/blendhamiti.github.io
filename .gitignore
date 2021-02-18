@@ -1,1 +1,8 @@
+# v1 dependencies
+/v1/node_modules
+
+# current version dependencies
 /node_modules
+
+# production
+/build

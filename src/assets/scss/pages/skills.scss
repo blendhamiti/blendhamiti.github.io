@@ -1,0 +1,131 @@
+.skills {
+    @extend .container;
+    @extend .component;
+
+    .entry-skills {
+        @extend .justify-content-center;
+    }
+
+    .block-entry {
+        @extend .row;
+        padding: 2%;
+        margin: 2%;
+        background-color: $primary;
+        border-radius: 5px;
+    
+        .block-entry-content {
+            @extend .col-sm; 
+            @extend .text-center; 
+            @extend .text-sm-left;
+            @extend .my-auto;
+
+            .icon-block {
+                @extend h3;
+            }
+
+            .text-block {
+                @extend .row;
+
+                button {
+                    @extend .btn; 
+                    @extend .btn-secondary;
+                }
+
+                .title {
+                    @extend .col;
+                    @extend h3;
+                    @extend .pb-2;
+                    @extend .pl-sm-4;
+                }
+
+                .description {
+                }
+
+                .footnote {
+                    @extend .col;
+                    @extend .pl-4;
+
+                    a {
+                        font-size: small;
+                        color: $gray-200;
+                    }
+
+                    a:hover {
+                        color: $link-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            button {
+                vertical-align: top !important;
+            }
+
+            table {
+                border: 0;
+
+                th, td {
+                    border-color: darken($primary, 10%);
+                    vertical-align: middle;
+                }
+
+                th {
+                    background-color: darken($primary, 10%);
+                    width: 50%;
+
+                    a {
+                        color: $gray-200;
+
+                        svg {
+                            color: $link-color;
+                        }
+                    }
+
+                    a:hover {
+                        color: $link-color;
+                        text-decoration: none;
+                    }
+
+                    .link-text {
+                        // text-decoration: underline;
+                    }
+                }
+
+                .xp {
+                    @extend .text-center;
+
+                    .invisible {
+                        color: transparent;
+                    }
+                }
+
+                .skill-group-entry {
+                    background-color: darken($primary, 5%);
+                }
+
+                .skill-padded {
+                    padding-left: 2em;
+                }
+
+                .skill-double-padded {
+                    padding-left: 4em;
+                }
+            }
+        }
+    }
+
+    .block-entry-skills {
+    }
+
+    @media (max-width: 576px) {     
+        .block-entry {
+            margin-top: 4.5%;
+            margin-bottom: 4.5%;
+        }
+    
+        .block-img {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
