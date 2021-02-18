@@ -24,10 +24,8 @@ function SkillsList(props) {
 
     return (
         <div className="row entry-skills">
-            <div className="col">
-                <div className="row">
-                    {tables}
-                </div>
+            <div className="col-6">
+                {tables}
             </div>
         </div>
     );
@@ -42,43 +40,41 @@ function Table(props) {
     );
 
     return (
-        <div className="col-lg-6">
-            <div className="block-entry block-entry-skills">
-                <div className="block-entry-content">
-                    <div className="text-block">
-                        <div className="title">{props.title}</div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col">
-                            <div className="table-responsive">
-                                <table className="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th className="pl-sm-3">Skill</th>
-                                            <th className="text-center" colSpan="5">
-                                                <span className="link-text">Proficiency<sup>[1]</sup></span>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {rows}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="text-block">
-                        <div className="footnote">
-                            <a target="_blank"
-                                href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">
-                                <span><sup>[1]</sup>According to the NIH Proficiency Scale.</span>
-                            </a>
-                        </div>
-                    </div>
-
+        <div className="block-entry block-entry-skills">
+            <div className="block-entry-content">
+                <div className="text-block">
+                    <div className="title">{props.title}</div>
                 </div>
+
+                <div className="row">
+                    <div className="col">
+                        <div className="table-responsive">
+                            <table className="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th className="pl-sm-3">Skill</th>
+                                        <th className="text-center" colSpan="5">
+                                            <span className="link-text">Proficiency<sup>[1]</sup></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {rows}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="text-block">
+                    <div className="footnote">
+                        <a target="_blank"
+                            href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">
+                            <span><sup>[1]</sup>According to the NIH Proficiency Scale.</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
