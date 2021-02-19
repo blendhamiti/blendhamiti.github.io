@@ -4,6 +4,7 @@
 
     .block-entry {
         @extend .row;
+
         padding: 2%;
         margin: 2%;
         background-color: $primary;
@@ -12,8 +13,8 @@
         .block-entry-content {
             @extend .col-sm; 
             // @extend .col-sm-4; 
-            @extend .text-center; 
-            @extend .text-sm-left;
+            // @extend .text-center; 
+            // @extend .text-sm-left;
             @extend .my-auto;
 
             .icon-block {
@@ -28,7 +29,17 @@
                 }
 
                 .title {
-                    @extend h3;
+                    @extend .row;
+                    @extend .justify-content-start;
+
+                    .title-text {
+                        @extend .col-md-auto;
+                        @extend h3;
+                    }
+
+                    .title-button {
+                        @extend .col-md-auto;
+                    }
                 }
 
                 .description {
@@ -38,57 +49,7 @@
             button {
                 vertical-align: top !important;
             }
-
-            table {
-                border: 0;
-
-                th, td {
-                    border-color: darken($primary, 10%);
-                    vertical-align: middle;
-                }
-
-                th {
-                    background-color: darken($primary, 10%);
-                    width: 50%;
-
-                    a {
-                        color: $gray-200;
-
-                        svg {
-                            color: $link-color;
-                        }
-                    }
-
-                    a:hover {
-                        color: $link-color;
-                        text-decoration: none;
-                    }
-                }
-
-                .xp {
-                    @extend .text-center;
-
-                    .invisible {
-                        color: transparent;
-                    }
-                }
-
-                .skill-group-entry {
-                    background-color: darken($primary, 5%);
-                }
-
-                .skill-padded {
-                    padding-left: 2em;
-                }
-
-                .skill-double-padded {
-                    padding-left: 4em;
-                }
-            }
         }
-    }
-
-    .block-entry-skills {
     }
 
     @media (max-width: 576px) {     

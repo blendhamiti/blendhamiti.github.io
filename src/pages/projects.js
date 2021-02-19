@@ -65,9 +65,8 @@ function Project(props) {
                 </div> */}
                 <div className="text-block">
                     <div className="title">
-                        <span>{props.data.title}</span>
-                        <span> </span>
-                        {linkButton()}
+                        <div className="title-text">{props.data.title}</div>
+                        <div className="title-button">{linkButton()}</div>
                     </div>
                     <div className="description">
                         <p>
