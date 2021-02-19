@@ -48,6 +48,10 @@ module.exports = {
                     from: path.join(__dirname, "src", "assets", "misc", "doc"),
                     to: path.join(__dirname, "docs")
                 },
+                {
+                    from: path.join(__dirname, "src", "assets", "misc", "certs"),
+                    to: path.join(__dirname, "docs", "certs")
+                }
             ],
         }),
     ],

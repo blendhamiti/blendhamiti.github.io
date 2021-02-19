@@ -42,6 +42,20 @@ function Project(props) {
     const features = props.data.features.map((element, index) =>
         <li key={index}>{element}</li>
     );
+    const linkButton = function () {
+        if (props.data.url)
+            return (
+                <span>
+                    <a href={props.data.url} target="_blank" >
+                        <button>
+                            View in GitHub
+                                <span> </span>
+                            <FontAwesomeIcon icon={faGithub} />
+                        </button>
+                    </a>
+                </span>
+            );
+    }
 
     return (
         <div className="block-entry" data-aos="fade-left">
@@ -53,15 +67,7 @@ function Project(props) {
                     <div className="title">
                         <span>{props.data.title}</span>
                         <span> </span>
-                        <span>
-                            <a href={props.data.url} target="_blank" >
-                                <button>
-                                    View in GitHub
-                                <span> </span>
-                                    <FontAwesomeIcon icon={faGithub} />
-                                </button>
-                            </a>
-                        </span>
+                        {linkButton()}
                     </div>
                     <div className="description">
                         <p>

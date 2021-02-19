@@ -13,7 +13,7 @@ function Contact() {
                     <a href="mailto:b.hamiti.9@gmail.com">
                         <button className="btn btn-secondary">
                             Shoot me an email
-                    </button>
+                            </button>
                     </a>
                 </div>
             </div>

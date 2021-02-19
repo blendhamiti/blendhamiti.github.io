@@ -11,7 +11,6 @@
         },
         {
             "title": "Digital Planning Board",
-            "url": "https://github.com/blendhamiti/Timers",
             "description": "An interactive web app for users to organise their schedule in a calendar and divide tasks via a tasks board.",
             "features": [
                 "Server & DB: Apache, MySQL",
@@ -23,19 +22,6 @@
                 "mysql",
                 "php",
                 "codeigniter",
-                "bootstrap",
-                "sass"
-            ]
-        },
-        {
-            "title": "Blend's Portfolio",
-            "url": "https://github.com/blendhamiti/Timers",
-            "description": "Static page.",
-            "features": [
-                "Frontend: React"
-            ],
-            "icons": [
-                "javascript",
                 "bootstrap",
                 "sass"
             ]

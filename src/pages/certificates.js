@@ -1,18 +1,18 @@
 import React from 'react';
+import { Zoom } from 'react-reveal';
 
-import PageTitle from '../components/pageTitle'
-
-import courseraMl from '../assets/misc/certs/coursera-ml.png';
-import neo4j from '../assets/misc/certs/neo4j.png';
-import nasa from '../assets/misc/certs/nasa.jpg';
-import infomatrix from '../assets/misc/certs/infomatrix.jpg';
+import PageTitle from '../components/pageTitle';
+import certsData from '../assets/config/certificates.json';
 
 function Certificates() {
     const [selectedCert, setSelectedCert] = React.useState(null);
 
-    const certs = [courseraMl, neo4j, nasa, infomatrix];
-    const elements = certs.map((element, index) =>
-        <Certificate cert={element} selectCert={setSelectedCert} key={index} />
+    const elements = certsData.certificates.map((element, index) =>
+        <Certificate
+            title={element.title}
+            url={element.url}
+            selectCert={setSelectedCert}
+            key={index} />
     );
 
     return (
@@ -32,9 +32,14 @@ function Certificates() {
 function Certificate(props) {
     return (
         <div
-            onClick={() => props.selectCert(props.cert)}
-            className="img-container">
-            <img className="img-fluid certificates-thumbnail" src={props.cert} alt="certificate" />
+            className="img-container"
+            onClick={() => props.selectCert(props.url)}>
+            <Zoom>
+                <img
+                    className="img-fluid certificates-thumbnail"
+                    src={props.url}
+                    alt={props.title} />
+            </Zoom>
         </div>
     );
 }

@@ -21,14 +21,12 @@ function App() {
                 <Background />
             </Fade>
             <Navbar />
-            <Fade>
-                <ProfileCard />
-                <Timeline />
-                <Skills />
-                <Projects />
-                <Certificates />
-                <Contact />
-            </Fade>
+            <ProfileCard />
+            <Timeline />
+            <Skills />
+            <Projects />
+            <Certificates />
+            <Contact />
             <Fade up>
                 <Footer />
             </Fade>

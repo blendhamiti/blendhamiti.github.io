@@ -1,12 +1,20 @@
 {
     "certificates": [
         {
-            "title": "",
-            "url": ""
+            "title": "Coursera - Machine Learning",
+            "url": "/certs/coursera-ml.png"
         },
         {
-            "title": "",
-            "url": ""
+            "title": "Neo4j - Online Course",
+            "url": "/certs/neo4j.png"
+        },
+        {
+            "title": "Infomatrix",
+            "url": "/certs/infomatrix.jpg"
+        },
+        {
+            "title": "NASA Space Apps Challenge",
+            "url": "/certs/nasa.jpg"
         }
     ]
 }

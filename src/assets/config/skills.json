@@ -13,10 +13,27 @@
                 },
                 {
                     "name": "JavaScript (ES6)",
-                    "level": 2
+                    "level": 3
                 },
                 {
                     "name": "C",
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "category": "Data Processing",
+            "skills": [
+                {
+                    "name": "SQL",
+                    "level": 4
+                },
+                {
+                    "name": "Python",
+                    "level": 2
+                },
+                {
+                    "name": "Apache Spark \\ Scala",
                     "level": 2
                 }
             ]
@@ -47,23 +64,6 @@
                 {
                     "name": "Bootstrap (SASS)",
                     "level": 3
-                }
-            ]
-        },
-        {
-            "category": "Data Processing",
-            "skills": [
-                {
-                    "name": "SQL",
-                    "level": 4
-                },
-                {
-                    "name": "Python",
-                    "level": 2
-                },
-                {
-                    "name": "Apache Spark \\ Scala",
-                    "level": 2
                 }
             ]
         }
