@@ -7,41 +7,68 @@ import PageTitle from '../components/pageTitle';
 import projectsData from '../assets/config/projects.json';
 
 function Projects() {
+    const [error, setError] = React.useState(null);
+    const [isLoaded, setIsLoaded] = React.useState(false);
+    const [projects, setProjects] = React.useState(projectsData.projects);
+
+    React.useEffect(() => {
+        fetch("https://api.github.com/users/blendhamiti/repos")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setIsLoaded(true);
+                    const githubProjects = result.map(project => {
+                        return {
+                            "title": project.name,
+                            "description": project.description,
+                            "url": project.html_url
+                        }
+                    })
+                    const updatedData = [...projects, ...githubProjects]
+                    setProjects(updatedData);
+                },
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
+    }, [])
+
     return (
         <div className="projects container" id="projects">
             <PageTitle title="Projects" />
-            <ProjectList data={projectsData} />
+            <ProjectList data={projects} />
         </div>
     );
 }
 
 function ProjectList(props) {
-    const projects = props.data.projects.map((element, index) =>
+    const projects = props.data.map((element, index) =>
         <Project data={element} key={index} />
     );
 
     return (
         <div className="row">
-            <div className="col">
-                {projects}
-            </div>
+            {projects}
         </div>
     );
 }
 
 function Project(props) {
-    // const devIconStyle = {
-    //     fill: "#e9ecef",
-    //     width: "30px",
-    // }
-    // const icons = props.data.icons.map((element, index) =>
-    //     <span className="icon" key={index} title={element}>
-    //         <DevIcon icon={element} style={devIconStyle} />
-    //     </span>
-    // );
-    const features = props.data.features.map((element, index) =>
-        <li key={index}>{element}</li>
-    );
+    const features = function () {
+        if (props.data.features) {
+            const featureList = props.data.features.map((element, index) =>
+                <li key={index}>{element}</li>
+            );
+            return (
+                <ul>
+                    {featureList}
+                </ul>
+            );
+        }
+        return;
+    }
+
     const linkButton = function () {
         if (props.data.url)
             return (
@@ -58,24 +85,19 @@ function Project(props) {
     }
 
     return (
-        <div className="block-entry" data-aos="fade-left">
+        <div className="block-entry">
             <div className="block-entry-content">
-                {/* <div className="icon-block">
-                    {icons}
-                </div> */}
                 <div className="text-block">
                     <div className="title">
                         <div className="title-text">{props.data.title}</div>
-                        <div className="title-button">{linkButton()}</div>
                     </div>
                     <div className="description">
                         <p>
                             {props.data.description}
                         </p>
-                        <ul>
-                            {features}
-                        </ul>
+                        {features()}
                     </div>
+                    <div className="button">{linkButton()}</div>
                 </div>
             </div>
         </div>

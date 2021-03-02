@@ -3,19 +3,15 @@
     @extend .component;
 
     .block-entry {
-        @extend .row;
-
-        padding: 2%;
-        margin: 2%;
-        background-color: $primary;
-        border-radius: 5px;
+        @extend .col-lg-4;
+        @extend .p-2;
     
         .block-entry-content {
-            @extend .col-sm; 
-            // @extend .col-sm-4; 
-            // @extend .text-center; 
-            // @extend .text-sm-left;
-            @extend .my-auto;
+            @extend .h-100;
+            @extend .p-4;
+            
+            background-color: $primary;
+            border-radius: 5px;
 
             .icon-block {
                 @extend h3;
@@ -35,10 +31,6 @@
                     .title-text {
                         @extend .col-md-auto;
                         @extend h3;
-                    }
-
-                    .title-button {
-                        @extend .col-md-auto;
                     }
                 }
 
