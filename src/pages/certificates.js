@@ -2,15 +2,25 @@ import React from 'react';
 import { Zoom } from 'react-reveal';
 
 import PageTitle from '../components/pageTitle';
-import certsData from '../assets/config/certificates.json';
 
 function Certificates() {
+    const [certificates, setCertificates] = React.useState([]);
     const [selectedCert, setSelectedCert] = React.useState(null);
 
-    const elements = certsData.certificates.map((element, index) =>
+    React.useEffect(() => {
+        fetch("/api/certificates.json")
+            .then(response => response.json())
+            .then(
+                result => setCertificates(result.certificates),
+                error => console.log(error)
+            )
+    }, []);
+
+
+    const elements = certificates.map((element, index) =>
         <Certificate
-            title={element.title}
-            url={element.url}
+            name={element.name}
+            path={element.path}
             selectCert={setSelectedCert}
             key={index} />
     );
@@ -33,12 +43,12 @@ function Certificate(props) {
     return (
         <div
             className="img-container"
-            onClick={() => props.selectCert(props.url)}>
+            onClick={() => props.selectCert(props.path)}>
             <Zoom>
                 <img
                     className="img-fluid certificates-thumbnail"
-                    src={props.url}
-                    alt={props.title} />
+                    src={props.path}
+                    alt={props.name} />
             </Zoom>
         </div>
     );

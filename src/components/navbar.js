@@ -3,8 +3,6 @@ import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import Logo from '../assets/img/logo.png';
-
 function Navbar(props) {
     const [collapse, setCollapse] = React.useState(false);
 
@@ -19,7 +17,7 @@ function Navbar(props) {
                     </button>
 
                     <a href="#">
-                        <img className="navbar-brand-img" src={Logo} width="30" height="30" alt="" />
+                        <img className="navbar-brand-img" src="/assets/images/logo.png" width="30" height="30" alt="" />
                     </a>
 
                     <div className={(collapse) ? "collapse navbar-collapse show" : "collapse navbar-collapse"}>
@@ -43,7 +41,7 @@ function Navbar(props) {
                                 <a className="nav-link" href="#contact">Contact</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link nav-link-external" href="/resume.pdf">
+                                <a className="nav-link nav-link-external" href="/assets/resume.pdf">
                                     Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
                                 </a>
                             </li>

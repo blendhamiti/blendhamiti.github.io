@@ -1,0 +1,31 @@
+{
+    "events": [
+        {
+            "size": 2,
+            "active": true,
+            "title": "Internship",
+            "date": "Jan 2021 - present",
+            "descr": "Intern",
+            "location": "Inspire11, North Macedonia",
+            "hidden": false
+        },
+        {
+            "size": 2,
+            "active": true,
+            "title": "Master's degree",
+            "date": "2020 - present",
+            "descr": "Software Engineering",
+            "location": "SEE University, North Macedonia",
+            "hidden": false
+        },
+        {
+            "size": 2,
+            "active": false,
+            "title": "Bachelor's degree",
+            "date": "2017 - 2020",
+            "descr": "Engineering Technology (w/ specialisation in ICT)",
+            "location": "KU Leuven, Belgium",
+            "hidden": true
+        }
+    ]
+}

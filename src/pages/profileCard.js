@@ -2,18 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-import ProfilePicture from '../assets/img/portrait.JPG'
-import PixelatedProfilePicture from '../assets/img/portrait-distorted.JPG'
-
 function ProfileCard() {
-    const [mouseOver, setMouseOver] = React.useState(false);
-
-    let profileImage = PixelatedProfilePicture;
-    if (mouseOver)
-        profileImage = ProfilePicture;
-    else
-        profileImage = PixelatedProfilePicture;
-
     return (
         <div className="container profile-card" id="profile-card">
             <div className="row justify-content-center">
@@ -21,10 +10,9 @@ function ProfileCard() {
                     <div className="row profile-card-content">
                         <div className="col-auto my-auto">
                             <img
-                                onMouseOver={() => setMouseOver(true)}
-                                onMouseOut={() => setMouseOver(false)}
                                 className="profile-img"
-                                src={profileImage} />
+                                src="/assets/images/portrait.jpg"
+                            />
                         </div>
                         <div className="col-md">
                             <div className="row justify-content-center">

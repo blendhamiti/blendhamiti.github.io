@@ -16,19 +16,14 @@ module.exports = {
             {
                 test: /\.scss$/i,
                 use: ["style-loader", "css-loader", "sass-loader"],
-            },
-            {
-                test: /\.(png|svg|jpg)$/i,
-                type: 'asset/resource',
-            },
+            }
         ],
     },
     output: {
-        path: path.resolve(__dirname, "docs")
+        path: path.resolve(__dirname, "docs"),
+        filename: "bundle.js"
     },
-    optimization: {
-        splitChunks: { chunks: "all" }
-    },
+    devtool: "source-map",
     devServer: {
         contentBase: path.join(__dirname, "docs"),
         compress: true,
@@ -45,12 +40,12 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.join(__dirname, "src", "assets", "misc", "doc"),
-                    to: path.join(__dirname, "docs")
+                    from: path.join(__dirname, "src", "assets"),
+                    to: path.join(__dirname, "docs", "assets")
                 },
                 {
-                    from: path.join(__dirname, "src", "assets", "misc", "certs"),
-                    to: path.join(__dirname, "docs", "certs")
+                    from: path.join(__dirname, "src", "api"),
+                    to: path.join(__dirname, "docs", "api")
                 }
             ],
         }),

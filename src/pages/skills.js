@@ -2,23 +2,43 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-import skillsData from '../assets/config/skills.json'
 import PageTitle from '../components/pageTitle'
 
 function Skills() {
+    const [skills, setSkills] = React.useState([]);
+    const [categories, setCategories] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch("/api/skills.json")
+            .then(response => response.json())
+            .then(
+                result => setSkills(result.skills),
+                error => console.log(error)
+            )
+    }, []);
+
+    React.useEffect(() => {
+        fetch("/api/skills_categories.json")
+            .then(response => response.json())
+            .then(
+                result => setCategories(result.categories),
+                error => console.log(error)
+            )
+    }, []);
+
     return (
         <div className="skills container" id="skills">
             <PageTitle title="Skills" />
-            <SkillsList data={skillsData} />
+            <SkillsList categories={categories} skills={skills} />
         </div>
     );
 }
 
 function SkillsList(props) {
-    const tables = props.data.skills.map((element, index) =>
+    const tables = props.categories.map((category, index) =>
         <Table
-            title={element.category}
-            content={element.skills}
+            title={category.name}
+            content={props.skills.filter((skill) => skill.category.name === category.name)}
             key={index} />
     );
 
@@ -30,10 +50,10 @@ function SkillsList(props) {
 }
 
 function Table(props) {
-    const rows = props.content.map((element, index) =>
+    const rows = props.content.map((skill, index) =>
         <Row
-            skill={element.name}
-            level={element.level}
+            name={skill.name}
+            level={skill.level}
             key={index} />
     );
 
@@ -97,7 +117,7 @@ function Row(props) {
 
     return (
         <tr className="skill-entry">
-            <td className="skill">{props.skill}</td>
+            <td className="skill">{props.name}</td>
             {stars}
         </tr>
     );

@@ -14,7 +14,11 @@
             border-radius: 5px;
 
             .icon-block {
-                @extend h3;
+                @extend p;
+
+                .icon {
+                    @extend .px-1;
+                }
             }
 
             .text-block {

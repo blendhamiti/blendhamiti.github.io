@@ -3,14 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from 'react-reveal';
 
-import timelineData from '../assets/config/timeline.json'
 import PageTitle from '../components/pageTitle';
 
 function Timeline() {
+    const [events, setEvents] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch("/api/timeline.json")
+            .then(response => response.json())
+            .then(
+                result => setEvents(result.events),
+                error => console.log(error)
+            )
+    }, []);
+
     return (
         <div className="timeline container" id="timeline">
             <PageTitle title="Timeline" />
-            <EventList data={timelineData} />
+            <EventList events={events} />
         </div>
     );
 }
@@ -18,7 +28,7 @@ function Timeline() {
 function EventList(props) {
     const [showAll, setShowAll] = React.useState(false);
 
-    let events = props.data.events;
+    let events = props.events;
     let buttonText = "Show less";
     if (!showAll) {
         events = events.filter(element => !element.hidden);
@@ -60,20 +70,24 @@ function EventList(props) {
 function Event(props) {
     function getSize(size) {
         switch (size) {
-            case 's':
+            case 1:
                 return 'small'
-            case 'm':
+            case 2:
                 return 'medium'
-            case 'l':
+            case 3:
                 return 'large'
             default:
                 return 'medium'
         }
     }
 
+    function getSide(active) {
+        return (active) ? 'r' : 'l';
+    }
+
     return (
-        <li className={"size-" + props.event.size}>
-            <div className={"direction-" + props.event.side}>
+        <li className={"size-" + getSize(props.event.size)}>
+            <div className={"direction-" + getSide(props.event.active)}>
                 <div className="flag-wrapper">
                     <span className="flag">{props.event.title}</span>
                     <span className="time-wrapper">
@@ -81,7 +95,7 @@ function Event(props) {
                     </span>
                 </div>
                 <div className="desc">
-                    {props.event.desc}
+                    {props.event.descr}
                     <br />
                     {props.event.location}
                 </div>
