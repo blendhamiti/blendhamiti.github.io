@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>API - Blend's Portfolio</title>
+</head>
+
+<body>
+    <script>
+        // function getURL(path) {
+        //     return window.location.protocol + "//" + window.location.host + path;
+        // }
+
+        const endpoints = {
+            "endpoints": [
+                {
+                    "name": "certificates",
+                    "path": "/api/certificates.json"
+                },
+                {
+                    "name": "projects",
+                    "path": "/api/projects.json"
+                },
+                {
+                    "name": "skills",
+                    "path": "/api/skills.json"
+                },
+                {
+                    "name": "timeline",
+                    "path": "/api/timeline.json"
+                },
+            ]
+        }
+
+        document.body.innerHTML = JSON.stringify(endpoints);
+    </script>
+</body>
+
+</html>

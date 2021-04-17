@@ -1,0 +1,12 @@
+{
+    "icons": [
+        {
+            "name": "mysql",
+            "path": "/assets/icons/mysql.svg"
+        },
+        {
+            "name": "php",
+            "path": "/assets/icons/php.svg"
+        }
+    ]
+}
