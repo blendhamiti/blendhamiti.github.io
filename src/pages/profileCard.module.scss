@@ -1,10 +1,17 @@
 @import "@styles/colors.scss";
 
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+}
+
 .container {
     background-color: rgba($dark, 0.5);
     border-radius: 0.75rem;
-    margin: 10% 20%;
     padding: 1rem;
+    width: 60%;
 }
 
 .content {
