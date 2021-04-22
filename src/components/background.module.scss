@@ -1,6 +1,8 @@
-.page-bg {
+@import "@styles/colors.scss";
+
+.background {
+    background-color: $darker;
     position: fixed;
-    height: 100%;
     width: 100%;
-    z-index: 0.5;
+    height: 100%;
 }

@@ -2,39 +2,34 @@
 
 nav {
     background-color: $dark;
-    box-shadow: 0px 0px 10px 5px $dark;
+    font-size: 1em;
+    position: sticky;
+}
 
-    .navbar-brand {
-        padding: 0px;
-        height: 30px;
-        width: 30px;
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    padding: 1em 0.5em;
+
+    a {
+        color: darken($light, 20%) !important;
+        text-decoration: none;
     }
 
-    .navbar-brand-img {
-        transition: ease-out;
-        transition-duration: 0.2s;
+    a:hover {
+        color: $light !important;
     }
 
-    .navbar-brand-img:hover {
-        transition: ease-out;
-        transition-duration: 0.2s;
-        box-shadow: 0px 0px 5px lighten($secondary, 10%);
+    .active {
+        color: darken($light, 10%) !important;
     }
 
-    button {
-        vertical-align: top;
-    }
-
-    .nav-link-external {
-        transition: ease-out;
-        transition-duration: 0.2s;
-        color: lighten($secondary, 10%);
-        font-weight: bold;
-    }
-
-    .nav-link-external:hover {
-        transition: ease-out;
-        transition-duration: 0.2s;
-        color: lighten($secondary, 20%);
+    .resume {
+        color: lighten($secondary, 20%) !important;
     }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { Fade } from "react-reveal";
 
 import PageTitle from "../components/pageTitle";
 
@@ -35,11 +34,7 @@ function EventList(props) {
         buttonText = "Show all";
     }
 
-    const eventList = events.map((element, index) => (
-        <Fade key={element.title}>
-            <Event event={element} />
-        </Fade>
-    ));
+    const eventList = events.map((element, index) => <Event event={element} />);
 
     return (
         <div>
