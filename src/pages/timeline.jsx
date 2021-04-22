@@ -1,20 +1,20 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { Fade } from 'react-reveal';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { Fade } from "react-reveal";
 
-import PageTitle from '../components/pageTitle';
+import PageTitle from "../components/pageTitle";
 
 function Timeline() {
     const [events, setEvents] = React.useState([]);
 
     React.useEffect(() => {
         fetch("/api/timeline.json")
-            .then(response => response.json())
+            .then((response) => response.json())
             .then(
-                result => setEvents(result.events),
-                error => console.log(error)
-            )
+                (result) => setEvents(result.events),
+                (error) => console.log(error)
+            );
     }, []);
 
     return (
@@ -31,33 +31,36 @@ function EventList(props) {
     let events = props.events;
     let buttonText = "Show less";
     if (!showAll) {
-        events = events.filter(element => !element.hidden);
+        events = events.filter((element) => !element.hidden);
         buttonText = "Show all";
     }
 
-    const eventList = events.map((element, index) =>
+    const eventList = events.map((element, index) => (
         <Fade key={element.title}>
             <Event event={element} />
         </Fade>
-    );
+    ));
 
     return (
         <div>
-            <ul className="line">
-                {eventList}
-            </ul>
+            <ul className="line">{eventList}</ul>
             <div className="row">
                 <div className="col text-center">
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className="btn btn-primary">
+                        className="btn btn-primary"
+                    >
                         {buttonText}
                     </button>
                 </div>
             </div>
             <div className="row">
                 <div className="col py-2 text-center small">
-                    <a className="lightblue-link" target="_blank" href="https://codepen.io/NilsWe">
+                    <a
+                        className="lightblue-link"
+                        target="_blank"
+                        href="https://codepen.io/NilsWe"
+                    >
                         Inspired by Nils Wittles
                         <FontAwesomeIcon icon={faExternalLinkAlt} />
                     </a>
@@ -71,18 +74,18 @@ function Event(props) {
     function getSize(size) {
         switch (size) {
             case 1:
-                return 'small'
+                return "small";
             case 2:
-                return 'medium'
+                return "medium";
             case 3:
-                return 'large'
+                return "large";
             default:
-                return 'medium'
+                return "medium";
         }
     }
 
     function getSide(active) {
-        return (active) ? 'r' : 'l';
+        return active ? "r" : "l";
     }
 
     return (

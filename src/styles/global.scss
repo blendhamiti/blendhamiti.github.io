@@ -1,0 +1,19 @@
+html,
+body {
+    max-width: 100%;
+    scroll-behavior: smooth;
+
+    a {
+        transition: ease-out;
+        transition-duration: 0.1s;
+    }
+
+    a:hover {
+        transition: ease-out;
+        transition-duration: 0.1s;
+    }
+}
+
+.component {
+    padding: 60px 0px;
+}

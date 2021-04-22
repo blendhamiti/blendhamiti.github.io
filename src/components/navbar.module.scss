@@ -1,6 +1,8 @@
+@import "@styles/colors.scss";
+
 nav {
-    background-color: $primary-dark;
-    box-shadow: 0px 0px 10px 5px $primary-dark;
+    background-color: $dark;
+    box-shadow: 0px 0px 10px 5px $dark;
 
     .navbar-brand {
         padding: 0px;
@@ -10,32 +12,29 @@ nav {
 
     .navbar-brand-img {
         transition: ease-out;
-        transition-duration: .2s;
+        transition-duration: 0.2s;
     }
 
     .navbar-brand-img:hover {
         transition: ease-out;
-        transition-duration: .2s;
+        transition-duration: 0.2s;
         box-shadow: 0px 0px 5px lighten($secondary, 10%);
     }
 
     button {
-        @extend .btn; 
-        @extend .btn-primary;
-
-        vertical-align: top !important;
+        vertical-align: top;
     }
 
     .nav-link-external {
         transition: ease-out;
-        transition-duration: .2s;
-        color: lighten($secondary, 10%) !important;
+        transition-duration: 0.2s;
+        color: lighten($secondary, 10%);
         font-weight: bold;
     }
 
     .nav-link-external:hover {
         transition: ease-out;
-        transition-duration: .2s;
-        color: lighten($secondary, 20%) !important;
+        transition-duration: 0.2s;
+        color: lighten($secondary, 20%);
     }
 }
