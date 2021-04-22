@@ -17,7 +17,7 @@ export default function App() {
         <div>
             <Background />
             <Navbar />
-            {/* <ProfileCard /> */}
+            <ProfileCard />
             {/* <Timeline /> */}
             {/* <Skills /> */}
             {/* <Projects /> */}

@@ -1,57 +1,67 @@
-.profile-card {
-    @extend .component;
+@import "@styles/colors.scss";
 
-    z-index: 0.1; 
+.container {
+    background-color: rgba($dark, 0.5);
+    border-radius: 0.75rem;
+    margin: 10% 20%;
+    padding: 1rem;
+}
 
-    .profile-card-container {
-        @extend .col-xl-6;
-        @extend .col-md-9;
-        @extend .p-3;
+.content {
+    display: grid;
+    grid-template:
+        "pic title"
+        "pic description"
+        "pic links";
+    gap: 1rem;
+}
 
-        border-radius: 10px;
-        background-color: rgba(31, 62, 90, 0.5);
+.pic {
+    grid-area: pic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        .profile-card-content {
-            @extend .justify-content-center;
+    img {
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 0.35em;
+        border-color: $secondary;
+    }
+}
 
-            z-index: 1;
+.title {
+    grid-area: title;
 
-            a {
-                color: $gray-200;
-                transition: ease-out;
-                transition-duration: .2s
-            }
+    h1 {
+        font-size: 2.5em;
+        font-weight: 500;
+        margin: 0;
+    }
+}
 
-            a:hover {
-                color: #3972A7;
-                transition: ease-out;
-                transition-duration: .2s
-            }
+.description {
+    grid-area: description;
 
-            p {
-                font-size: larger;
-            }
+    p {
+        font-size: 1.2em;
+        margin: 0;
+    }
+}
 
-            .profile-img {
-                height: 160px; 
-                width: 160px;
-                border: $secondary;
-                border-radius: 50%;
-                border-style: solid;
-                border-width: 5px;
-                transition: ease-out;
-                transition-duration: .2s;
-            }
+.links {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            .profile-img:hover {
-                border: lighten($secondary, 10%);
-                border-radius: 50%;
-                border-style: solid;
-                border-width: 5px;
-                transition: ease-out;
-                transition-duration: .2s;
-            }
+    a {
+        color: $light;
+        padding: 0 1em;
+    }
 
-        }        
+    a:hover {
+        transition-duration: 0.2s;
+        padding: 0 1em;
     }
 }

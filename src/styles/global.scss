@@ -4,8 +4,10 @@
 html,
 body {
     font-family: $font-family-sans-serif;
+    color: $light;
 
     max-width: 100%;
+    margin: 0;
     scroll-behavior: smooth;
 
     a {
