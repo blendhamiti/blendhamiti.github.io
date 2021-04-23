@@ -19,7 +19,7 @@ function Timeline() {
     }, []);
 
     return (
-        <div id='timeline' className={styles.container}>
+        <div id="timeline" className={styles.container}>
             <PageTitle title={"Timeline"} />
             <EventList events={events} />
         </div>
@@ -51,7 +51,7 @@ function EventList(props) {
             </div>
             <div>
                 <div>
-                    <a target='_blank' href='https://codepen.io/NilsWe'>
+                    <a target="_blank" href="https://codepen.io/NilsWe">
                         Inspired by Nils Wittles
                         <FontAwesomeIcon icon={faExternalLinkAlt} />
                     </a>

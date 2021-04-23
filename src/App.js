@@ -19,12 +19,12 @@ export default function App() {
             <Navbar />
             <main>
                 <ProfileCard />
-                <Timeline />
+                {/* <Timeline /> */}
                 {/* <Skills /> */}
                 {/* <Projects /> */}
-                {/* <Certificates /> */}
-                {/* <Contact /> */}
-                {/* <Footer /> */}
+                <Certificates />
+                <Contact />
+                <Footer />
             </main>
         </>
     );

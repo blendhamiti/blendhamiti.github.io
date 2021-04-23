@@ -1,6 +1,9 @@
 import React from "react";
+import clsx from "clsx";
 
 import PageTitle from "../components/pageTitle";
+
+import styles from "./certificates.module.scss";
 
 function Certificates() {
     const [certificates, setCertificates] = React.useState([]);
@@ -25,15 +28,15 @@ function Certificates() {
     ));
 
     return (
-        <div className="certificates container" id="certificates">
+        <div className={styles.container} id="certificates">
+            <PageTitle title="Certificates" />
+            <div className={styles.content}>{elements}</div>
             <div
-                id="certificates-overlay"
+                className={styles.overlay}
                 onClick={() => setSelectedCert(null)}
-                className={selectedCert ? "open" : ""}
+                className={clsx(selectedCert && styles.open)}
                 style={{ backgroundImage: `url(${selectedCert})` }}
             ></div>
-            <PageTitle title="Certificates" />
-            <div className="row">{elements}</div>
         </div>
     );
 }
@@ -41,7 +44,7 @@ function Certificates() {
 function Certificate(props) {
     return (
         <div
-            className="img-container"
+            className={styles.item}
             onClick={() => props.selectCert(props.path)}
         >
             <img

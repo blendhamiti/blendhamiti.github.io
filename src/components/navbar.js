@@ -11,8 +11,8 @@ function Navbar() {
     return (
         <nav className={styles.nav}>
             <div>
-                {/* <button onClick={() => setCollapse(!collapse)}>Toggler</button>
-                <a href='#'>
+                {/* <button onClick={() => setCollapse(!collapse)}>Toggler</button> */}
+                {/* <a href='#'>
                     <img
                         src='/assets/images/logo.png'
                         width='30'

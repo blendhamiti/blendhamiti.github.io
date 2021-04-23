@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+
+import styles from "./pageTitle.module.scss";
 
 function PageTitle(props) {
     return (
-        <div className="row pb-3">
-            <div className="col">
-                <h2>{props.title}</h2>
-            </div>
+        <div className={styles.container}>
+            <h2>{props.title}</h2>
         </div>
     );
 }
