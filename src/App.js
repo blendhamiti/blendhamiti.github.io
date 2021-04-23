@@ -14,16 +14,18 @@ import "@styles/global.scss";
 
 export default function App() {
     return (
-        <div>
+        <>
             <Background />
             <Navbar />
-            <ProfileCard />
-            {/* <Timeline /> */}
-            {/* <Skills /> */}
-            {/* <Projects /> */}
-            {/* <Certificates /> */}
-            {/* <Contact /> */}
-            {/* <Footer /> */}
-        </div>
+            <main>
+                <ProfileCard />
+                <Timeline />
+                {/* <Skills /> */}
+                {/* <Projects /> */}
+                {/* <Certificates /> */}
+                {/* <Contact /> */}
+                {/* <Footer /> */}
+            </main>
+        </>
     );
 }

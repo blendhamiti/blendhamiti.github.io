@@ -1,5 +1,6 @@
 @import "@styles/fonts.scss";
 @import "@styles/colors.scss";
+@import "@styles/sizing.scss";
 
 html,
 body {
@@ -9,20 +10,25 @@ body {
     max-width: 100%;
     margin: 0;
     scroll-behavior: smooth;
-
-    a {
-        color: $link;
-        transition: ease-out;
-        transition-duration: 0.1s;
-    }
-
-    a:hover {
-        color: lighten($link, 20%);
-        transition: ease-out;
-        transition-duration: 0.1s;
-    }
 }
 
-.component {
-    padding: 60px 0px;
+main {
+    margin: auto;
+    max-width: $componentMaxWidth;
+}
+
+main > div {
+    margin: 7.5rem 0;
+}
+
+a {
+    color: $link;
+    transition: ease-out;
+    transition-duration: 0.1s;
+}
+
+a:hover {
+    color: lighten($link, 10%);
+    transition: ease-out;
+    transition-duration: 0.1s;
 }

@@ -118,7 +118,7 @@ function Background() {
 
     return (
         <div className={styles.background}>
-            <Particles params={config} height={window.outerHeight} />
+            {/* <Particles params={config} height={window.outerHeight} /> */}
         </div>
     );
 }

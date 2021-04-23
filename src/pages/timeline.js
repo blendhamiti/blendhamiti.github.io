@@ -4,6 +4,8 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import PageTitle from "../components/pageTitle";
 
+import styles from "./timeline.module.scss";
+
 function Timeline() {
     const [events, setEvents] = React.useState([]);
 
@@ -17,8 +19,8 @@ function Timeline() {
     }, []);
 
     return (
-        <div className="timeline container" id="timeline">
-            <PageTitle title="Timeline" />
+        <div id='timeline' className={styles.container}>
+            <PageTitle title={"Timeline"} />
             <EventList events={events} />
         </div>
     );
@@ -29,6 +31,7 @@ function EventList(props) {
 
     let events = props.events;
     let buttonText = "Show less";
+
     if (!showAll) {
         events = events.filter((element) => !element.hidden);
         buttonText = "Show all";
@@ -38,24 +41,17 @@ function EventList(props) {
 
     return (
         <div>
-            <ul className="line">{eventList}</ul>
-            <div className="row">
-                <div className="col text-center">
-                    <button
-                        onClick={() => setShowAll(!showAll)}
-                        className="btn btn-primary"
-                    >
+            <ul>{eventList}</ul>
+            <div>
+                <div>
+                    <button onClick={() => setShowAll(!showAll)}>
                         {buttonText}
                     </button>
                 </div>
             </div>
-            <div className="row">
-                <div className="col py-2 text-center small">
-                    <a
-                        className="lightblue-link"
-                        target="_blank"
-                        href="https://codepen.io/NilsWe"
-                    >
+            <div>
+                <div>
+                    <a target='_blank' href='https://codepen.io/NilsWe'>
                         Inspired by Nils Wittles
                         <FontAwesomeIcon icon={faExternalLinkAlt} />
                     </a>
@@ -84,15 +80,15 @@ function Event(props) {
     }
 
     return (
-        <li className={"size-" + getSize(props.event.size)}>
-            <div className={"direction-" + getSide(props.event.active)}>
-                <div className="flag-wrapper">
-                    <span className="flag">{props.event.title}</span>
-                    <span className="time-wrapper">
-                        <span className="time">{props.event.date}</span>
+        <li>
+            <div>
+                <div>
+                    <span>{props.event.title}</span>
+                    <span>
+                        <span>{props.event.date}</span>
                     </span>
                 </div>
-                <div className="desc">
+                <div>
                     {props.event.descr}
                     <br />
                     {props.event.location}
