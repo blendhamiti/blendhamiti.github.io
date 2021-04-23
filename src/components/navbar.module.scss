@@ -1,0 +1,42 @@
+@import "@styles/colors.scss";
+
+nav {
+    background-color: $dark;
+    font-size: 1em;
+    position: sticky;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding: 1em 0.5em;
+
+    a {
+        color: darken($light, 20%) !important;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $light !important;
+    }
+
+    a.active {
+        color: darken($light, 10%) !important;
+    }
+
+    a.resume {
+        font-weight: bold;
+        color: lighten($secondary, 10%) !important;
+    }
+
+    a.resume:hover {
+        color: lighten($secondary, 20%) !important;
+    }
+}

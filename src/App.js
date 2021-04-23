@@ -1,5 +1,4 @@
 import React from "react";
-import { Fade } from "react-reveal";
 
 import ProfileCard from "@pages/profileCard";
 import Timeline from "@pages/timeline";
@@ -16,19 +15,15 @@ import "@styles/global.scss";
 export default function App() {
     return (
         <div>
-            <Fade>
-                <Background />
-            </Fade>
+            <Background />
             <Navbar />
             <ProfileCard />
-            <Timeline />
-            <Skills />
-            <Projects />
-            <Certificates />
-            <Contact />
-            <Fade up>
-                <Footer />
-            </Fade>
+            {/* <Timeline /> */}
+            {/* <Skills /> */}
+            {/* <Projects /> */}
+            {/* <Certificates /> */}
+            {/* <Contact /> */}
+            {/* <Footer /> */}
         </div>
     );
 }

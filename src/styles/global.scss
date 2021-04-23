@@ -1,0 +1,28 @@
+@import "@styles/fonts.scss";
+@import "@styles/colors.scss";
+
+html,
+body {
+    font-family: $font-family-sans-serif;
+    color: $light;
+
+    max-width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    a {
+        color: $link;
+        transition: ease-out;
+        transition-duration: 0.1s;
+    }
+
+    a:hover {
+        color: lighten($link, 20%);
+        transition: ease-out;
+        transition-duration: 0.1s;
+    }
+}
+
+.component {
+    padding: 60px 0px;
+}

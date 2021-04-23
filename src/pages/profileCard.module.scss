@@ -1,0 +1,74 @@
+@import "@styles/colors.scss";
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+}
+
+.container {
+    background-color: rgba($dark, 0.5);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    width: 60%;
+}
+
+.content {
+    display: grid;
+    grid-template:
+        "pic title"
+        "pic description"
+        "pic links";
+    gap: 1rem;
+}
+
+.pic {
+    grid-area: pic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 0.35em;
+        border-color: $secondary;
+    }
+}
+
+.title {
+    grid-area: title;
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.description {
+    grid-area: description;
+
+    p {
+        font-size: 1.2em;
+        margin: 0;
+    }
+}
+
+.links {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: $light;
+        padding: 0 1em;
+    }
+
+    a:hover {
+        transition-duration: 0.2s;
+        padding: 0 1em;
+    }
+}

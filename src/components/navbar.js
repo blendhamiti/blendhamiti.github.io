@@ -1,58 +1,58 @@
-import React from 'react';
-import { Fade } from 'react-reveal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import clsx from "clsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
-function Navbar(props) {
+import styles from "./navbar.module.scss";
+
+function Navbar() {
     const [collapse, setCollapse] = React.useState(false);
 
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
-
-            <Fade down>
-
-                <div className="container">
-                    <button className="navbar-toggler" onClick={() => setCollapse(!collapse)}>
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <a href="#">
-                        <img className="navbar-brand-img" src="/assets/images/logo.png" width="30" height="30" alt="" />
-                    </a>
-
-                    <div className={(collapse) ? "collapse navbar-collapse show" : "collapse navbar-collapse"}>
-                        <ul className="navbar-nav mx-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Introduction</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#timeline">Timeline</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#skills">Skills</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#projects">Projects</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#certificates">Certificates</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#contact">Contact</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link nav-link-external" href="/assets/resume.pdf">
-                                    Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
+        <nav className={styles.nav}>
+            <div>
+                {/* <button onClick={() => setCollapse(!collapse)}>Toggler</button>
+                <a href='#'>
+                    <img
+                        src='/assets/images/logo.png'
+                        width='30'
+                        height='30'
+                        alt='logo'
+                    />
+                </a> */}
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#'>Introduction</a>
+                        </li>
+                        <li>
+                            <a href='#timeline'>Timeline</a>
+                        </li>
+                        <li>
+                            <a href='#skills'>Skills</a>
+                        </li>
+                        <li>
+                            <a href='#projects'>Projects</a>
+                        </li>
+                        <li>
+                            <a href='#certificates'>Certificates</a>
+                        </li>
+                        <li>
+                            <a href='#contact'>Contact</a>
+                        </li>
+                        <li>
+                            <a
+                                href='/assets/resume.pdf'
+                                className={styles.resume}
+                            >
+                                Resume{" "}
+                                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-
-            </Fade>
-
-        </nav >
+            </div>
+        </nav>
     );
 }
 

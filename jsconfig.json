@@ -8,5 +8,5 @@
             "@assets/*": ["./src/assets/*"]
         }
     },
-    "exclude": ["node_modules", "build"]
+    "exclude": ["node_modules", "build", "v1", "v2"]
 }
