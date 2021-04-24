@@ -21,7 +21,9 @@ function Timeline() {
     return (
         <div id="timeline" className={styles.container}>
             <PageTitle title={"Timeline"} />
-            <EventList events={events} />
+            <div className={styles.content}>
+                <EventList events={events} />
+            </div>
         </div>
     );
 }
@@ -41,44 +43,13 @@ function EventList(props) {
 
     return (
         <div>
-            <ul>{eventList}</ul>
-            <div>
-                <div>
-                    <button onClick={() => setShowAll(!showAll)}>
-                        {buttonText}
-                    </button>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <a target="_blank" href="https://codepen.io/NilsWe">
-                        Inspired by Nils Wittles
-                        <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    </a>
-                </div>
-            </div>
+            <ul className={styles.events}>{eventList}</ul>
+            <button onClick={() => setShowAll(!showAll)}>{buttonText}</button>
         </div>
     );
 }
 
 function Event(props) {
-    function getSize(size) {
-        switch (size) {
-            case 1:
-                return "small";
-            case 2:
-                return "medium";
-            case 3:
-                return "large";
-            default:
-                return "medium";
-        }
-    }
-
-    function getSide(active) {
-        return active ? "r" : "l";
-    }
-
     return (
         <li>
             <div>

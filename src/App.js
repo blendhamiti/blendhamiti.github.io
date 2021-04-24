@@ -19,9 +19,9 @@ export default function App() {
             <Navbar />
             <main>
                 <ProfileCard />
-                {/* <Timeline /> */}
-                {/* <Skills /> */}
-                {/* <Projects /> */}
+                <Timeline />
+                <Skills />
+                <Projects />
                 <Certificates />
                 <Contact />
                 <Footer />
