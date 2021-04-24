@@ -23,26 +23,26 @@ function Navbar() {
                 <div>
                     <ul>
                         <li>
-                            <a href='#'>Introduction</a>
+                            <a href="#">Introduction</a>
                         </li>
                         <li>
-                            <a href='#timeline'>Timeline</a>
+                            <a href="#timeline">Timeline</a>
                         </li>
                         <li>
-                            <a href='#skills'>Skills</a>
+                            <a href="#skills">Skills</a>
                         </li>
                         <li>
-                            <a href='#projects'>Projects</a>
+                            <a href="#projects">Projects</a>
                         </li>
                         <li>
-                            <a href='#certificates'>Certificates</a>
+                            <a href="#certificates">Certificates</a>
                         </li>
                         <li>
-                            <a href='#contact'>Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                         <li>
                             <a
-                                href='/assets/resume.pdf'
+                                href="/assets/resume.pdf"
                                 className={styles.resume}
                             >
                                 Resume{" "}
