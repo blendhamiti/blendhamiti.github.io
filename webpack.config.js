@@ -4,37 +4,29 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-    entry: path.resolve(__dirname, "src", "index.js"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
-                loader: "babel-loader",
-                options: {
-                    presets: ["@babel/preset-env", "@babel/preset-react"],
-                },
+                test: /\.tsx$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
             },
             {
                 test: /\.scss$/i,
                 use: [
-                    {
-                        loader: "style-loader",
-                    },
+                    "style-loader",
                     {
                         loader: "css-loader",
-                    },
-                    {
-                        loader: "postcss-loader",
                         options: {
-                            postcssOptions: {
-                                plugins: [require("autoprefixer")],
+                            modules: {
+                                localIdentName:
+                                    "[name]__[local]___[hash:base64:4]",
+                                exportLocalsConvention: "camelCase",
                             },
                         },
                     },
-                    {
-                        loader: "sass-loader",
-                    },
+                    "sass-loader",
                 ],
             },
         ],
@@ -50,8 +42,9 @@ module.exports = {
             "@styles": path.resolve(__dirname, "src", "styles"),
             "@assets": path.resolve(__dirname, "src", "assets"),
         },
+        extensions: [".tsx", ".ts", ".js"],
     },
-    devtool: "source-map",
+    devtool: "inline-source-map",
     devServer: {
         contentBase: path.join(__dirname, "docs"),
         compress: true,

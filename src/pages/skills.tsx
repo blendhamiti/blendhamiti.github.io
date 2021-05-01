@@ -71,7 +71,7 @@ function Table(props) {
                                     <thead>
                                         <tr>
                                             <th>Skill</th>
-                                            <th colSpan="5">
+                                            <th colSpan={5}>
                                                 <span>
                                                     Proficiency<sup>[1]</sup>
                                                 </span>

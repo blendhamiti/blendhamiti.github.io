@@ -15,8 +15,10 @@ import "@styles/global.scss";
 export default function App() {
     return (
         <>
-            <Background />
-            <Navbar />
+            <header>
+                <Background />
+                <Navbar />
+            </header>
             <main>
                 <ProfileCard />
                 <Timeline />
@@ -24,8 +26,10 @@ export default function App() {
                 <Projects />
                 <Certificates />
                 <Contact />
-                <Footer />
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </>
     );
 }
