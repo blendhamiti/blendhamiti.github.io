@@ -1,7 +1,7 @@
 {
-  "categories": [
+  "skills": [
     {
-      "name": "Software development",
+      "category": "Software development",
       "skills": [
         {
           "name": "Java",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "name": "Data processing",
+      "category": "Data processing",
       "skills": [
         {
           "name": "SQL",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "name": "Web development",
+      "category": "Web development",
       "skills": [
         {
           "name": "PHP \\ CodeIgniter",

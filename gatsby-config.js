@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/data/`,
+        name: `api`,
+        path: `${__dirname}/data/api/`,
       },
     },
     `gatsby-transformer-json`,

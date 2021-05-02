@@ -14,7 +14,10 @@ import Timeline from '../components/Timeline';
 import '../styles/global.scss';
 
 export default function App({ data }) {
-  console.log(data);
+  const certificates = data.allApiJson.edges[0].node.certificates;
+  const projects = data.allApiJson.edges[1].node.projects;
+  const events = data.allApiJson.edges[2].node.events;
+  const skills = data.allApiJson.edges[3].node.skills;
 
   return (
     <>
@@ -24,10 +27,10 @@ export default function App({ data }) {
       </header>
       <main>
         <ProfileCard />
-        <Timeline />
-        {/* <Skills /> */}
-        {/* <Projects /> */}
-        {/* <Certificates /> */}
+        <Timeline data={events} />
+        <Skills data={skills} />
+        <Projects data={projects} />
+        <Certificates data={certificates} />
         <Contact />
       </main>
       <footer>
@@ -38,13 +41,32 @@ export default function App({ data }) {
 }
 
 export const query = graphql`
-  query GetTimelineEvents {
-    allDataJson {
+  query MyQuery {
+    allApiJson {
       edges {
         node {
           skills {
-            level
+            category
+            skills {
+              level
+              name
+            }
+          }
+          certificates {
+            filename
             name
+          }
+          events {
+            date
+            description
+            location
+            title
+          }
+          projects {
+            description
+            icons
+            name
+            title
           }
         }
       }

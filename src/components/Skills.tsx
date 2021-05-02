@@ -7,53 +7,22 @@ import PageTitle from '../components/PageTitle';
 
 import * as styles from './Skills.module.scss';
 
-function Skills() {
-  const [skills, setSkills] = React.useState([]);
-  const [categories, setCategories] = React.useState([]);
-
-  React.useEffect(() => {
-    fetch('/api/skills.json')
-      .then((response) => response.json())
-      .then(
-        (result) => setSkills(result.skills),
-        (error) => console.log(error)
-      );
-  }, []);
-
-  React.useEffect(() => {
-    fetch('/api/skills_categories.json')
-      .then((response) => response.json())
-      .then(
-        (result) => setCategories(result.categories),
-        (error) => console.log(error)
-      );
-  }, []);
+function Skills({ data }) {
+  const categories = data.map((category, index) => (
+    <Table category={category} key={index} />
+  ));
 
   return (
     <div className={styles.container} id="skills">
       <PageTitle title="Skills" />
-      <SkillsList categories={categories} skills={skills} />
+      <div className={styles.content}>{categories}</div>
     </div>
   );
 }
 
-function SkillsList(props) {
-  const tables = props.categories.map((category, index) => (
-    <Table
-      title={category.name}
-      content={props.skills.filter(
-        (skill) => skill.category.name === category.name
-      )}
-      key={index}
-    />
-  ));
-
-  return <div className={styles.tables}>{tables}</div>;
-}
-
-function Table(props) {
-  const rows = props.content.map((skill, index) => (
-    <Row name={skill.name} level={skill.level} key={index} />
+function Table({ category }) {
+  const rows = category.skills.map((skill, index) => (
+    <Row skill={skill} key={index} />
   ));
 
   return (
@@ -61,7 +30,7 @@ function Table(props) {
       <div>
         <div>
           <div>
-            <div>{props.title}</div>
+            <div>{category.category}</div>
           </div>
 
           <div>
@@ -102,25 +71,25 @@ function Table(props) {
   );
 }
 
-function Row(props) {
+function Row({ skill }) {
   const stars = [];
   for (let index = 0; index < 5; index++) {
-    if (props.level > index) stars.push(<Star invisible={false} key={index} />);
-    else stars.push(<Star invisible={true} key={index} />);
+    if (skill.level > index) stars.push(<Star invisible={false} />);
+    else stars.push(<Star invisible={true} />);
   }
 
   return (
     <tr>
-      <td>{props.name}</td>
+      <td>{skill.name}</td>
       {stars}
     </tr>
   );
 }
 
-function Star(props) {
+function Star({ invisible }) {
   return (
     <td>
-      <span className={clsx(props.invisible && styles.invisible)}>
+      <span className={clsx(invisible && styles.invisible)}>
         <FontAwesomeIcon icon={faStar} />
       </span>
     </td>

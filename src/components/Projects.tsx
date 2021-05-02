@@ -6,36 +6,29 @@ import PageTitle from '../components/PageTitle';
 
 import * as styles from './Projects.module.scss';
 
-function Projects() {
-  const [localProjects, setLocalProjects] = React.useState([]);
-  const [ghProjects, setGhProjects] = React.useState([]);
-  const projects = [...localProjects, ...ghProjects];
+function Projects({ data }) {
+  const githubProjects = [];
+  const allProjects = [...data, ...githubProjects];
 
-  React.useEffect(() => {
-    fetch('/api/projects.json')
-      .then((response) => response.json())
-      .then(
-        (result) => setLocalProjects(result.projects),
-        (error) => console.log(error)
-      );
-  }, []);
+  const projects = allProjects.map((project, index) => (
+    <Project project={project} key={index} />
+  ));
 
   React.useEffect(() => {
     fetch('https://api.github.com/users/blendhamiti/repos')
       .then((response) => response.json())
       .then(
-        (result) =>
-          setGhProjects(
-            result.map((project) => {
-              return {
-                name: project.name,
-                title: project.name,
-                description: project.description,
-                path: project.html_url,
-                icons: [],
-              };
-            })
-          ),
+        (result) => {
+          result.forEach((project) => {
+            githubProjects.push({
+              name: project.name,
+              title: project.name,
+              description: project.description,
+              path: project.html_url,
+              icons: [],
+            });
+          });
+        },
         (error) => console.log(error)
       );
   }, []);
@@ -43,29 +36,21 @@ function Projects() {
   return (
     <div id="projects">
       <PageTitle title="Projects" />
-      <ProjectList projects={projects} />
+      <div className={styles.projects}>{projects}</div>;
     </div>
   );
 }
 
-function ProjectList(props) {
-  const projects = props.projects.map((project) => (
-    <Project data={project} key={project.name} />
-  ));
-
-  return <div className={styles.projects}>{projects}</div>;
-}
-
-function Project(props) {
-  const icons = props.data.icons.map((icon) => (
-    <img src={icon.path} height="25px" alt={icon.name} key={icon.name} />
+function Project({ project }) {
+  const icons = project.icons.map((icon) => (
+    <img src={icon} height="25px" alt={icon} key={icon} />
   ));
 
   const linkButton = function () {
-    if (props.data.path)
+    if (project.path)
       return (
         <span>
-          <a href={props.data.path} target="_blank">
+          <a href={project.path} target="_blank">
             <button>
               View in GitHub <FontAwesomeIcon icon={faGithub} />
             </button>
@@ -80,10 +65,10 @@ function Project(props) {
         <div>{icons}</div>
         <div>
           <div>
-            <div>{props.data.title}</div>
+            <div>{project.title}</div>
           </div>
           <div>
-            <p>{props.data.description}</p>
+            <p>{project.description}</p>
           </div>
           <div>{linkButton()}</div>
         </div>
