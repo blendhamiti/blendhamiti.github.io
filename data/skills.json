@@ -1,95 +1,71 @@
 {
-    "skills": [
+  "categories": [
+    {
+      "name": "Software development",
+      "skills": [
         {
-            "name": "Java",
-            "level": 4,
-            "category": {
-                "name": "Software development"
-            }
+          "name": "Java",
+          "level": 4
         },
         {
-            "name": "Android w/ Java",
-            "level": 3,
-            "category": {
-                "name": "Software development"
-            }
+          "name": "Android w/ Java",
+          "level": 3
         },
         {
-            "name": "JavaScript (ES6)",
-            "level": 3,
-            "category": {
-                "name": "Software development"
-            }
+          "name": "JavaScript (ES6)",
+          "level": 3
         },
         {
-            "name": "C",
-            "level": 2,
-            "category": {
-                "name": "Software development"
-            }
-        },
-        {
-            "name": "SQL",
-            "level": 4,
-            "category": {
-                "name": "Data processing"
-            }
-        },
-        {
-            "name": "Python",
-            "level": 2,
-            "category": {
-                "name": "Data processing"
-            }
-        },
-        {
-            "name": "Apache Spark \\ Scala",
-            "level": 2,
-            "category": {
-                "name": "Data processing"
-            }
-        },
-        {
-            "name": "PHP \\ CodeIgniter",
-            "level": 3,
-            "category": {
-                "name": "Web development"
-            }
-        },
-        {
-            "name": "Node.js",
-            "level": 2,
-            "category": {
-                "name": "Web development"
-            }
-        },
-        {
-            "name": "HTML5",
-            "level": 4,
-            "category": {
-                "name": "Web development"
-            }
-        },
-        {
-            "name": "CSS3",
-            "level": 3,
-            "category": {
-                "name": "Web development"
-            }
-        },
-        {
-            "name": "React",
-            "level": 3,
-            "category": {
-                "name": "Web development"
-            }
-        },
-        {
-            "name": "Bootstrap (SASS)",
-            "level": 3,
-            "category": {
-                "name": "Web development"
-            }
+          "name": "C",
+          "level": 2
         }
-    ]
+      ]
+    },
+    {
+      "name": "Data processing",
+      "skills": [
+        {
+          "name": "SQL",
+          "level": 4
+        },
+        {
+          "name": "Python",
+          "level": 2
+        },
+        {
+          "name": "Apache Spark \\ Scala",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "name": "Web development",
+      "skills": [
+        {
+          "name": "PHP \\ CodeIgniter",
+          "level": 3
+        },
+        {
+          "name": "Node.js",
+          "level": 2
+        },
+        {
+          "name": "HTML5",
+          "level": 4
+        },
+        {
+          "name": "CSS3",
+          "level": 3
+        },
+        {
+          "name": "React",
+          "level": 3
+        },
+        {
+          "name": "Bootstrap (SASS)",
+          "level": 3
+        }
+      ]
+    }
+  ]
 }

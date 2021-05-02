@@ -1,19 +1,10 @@
 {
-    "projects": [
-        {
-            "name": "digital-planning-board",
-            "title": "Digital Planning Board",
-            "description": "An interactive web app for users to organise their schedule in a calendar and divide tasks via a tasks board",
-            "icons": [
-                {
-                    "name": "mysql",
-                    "path": "/assets/icons/mysql.svg"
-                },
-                {
-                    "name": "php",
-                    "path": "/assets/icons/php.svg"
-                }
-            ]
-        }
-    ]
+  "projects": [
+    {
+      "name": "digital-planning-board",
+      "title": "Digital Planning Board",
+      "description": "An interactive web app for users to organise their schedule in a calendar and divide tasks via a tasks board",
+      "icons": ["mysql", "php"]
+    }
+  ]
 }

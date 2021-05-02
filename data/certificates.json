@@ -1,20 +1,20 @@
 {
-    "certificates": [
-        {
-            "name": "Coursera - Machine Learning",
-            "path": "/assets/certificates/coursera-ml.png"
-        },
-        {
-            "name": "Neo4j - Online Course",
-            "path": "/assets/certificates/neo4j.png"
-        },
-        {
-            "name": "Infomatrix",
-            "path": "/assets/certificates/infomatrix.jpg"
-        },
-        {
-            "name": "NASA Space Apps Challenge",
-            "path": "/assets/certificates/nasa.jpg"
-        }
-    ]
+  "certificates": [
+    {
+      "name": "Coursera - Machine Learning",
+      "filename": "coursera-ml.png"
+    },
+    {
+      "name": "Neo4j - Online Course",
+      "filename": "neo4j.png"
+    },
+    {
+      "name": "Infomatrix",
+      "filename": "infomatrix.jpg"
+    },
+    {
+      "name": "NASA Space Apps Challenge",
+      "filename": "nasa.jpg"
+    }
+  ]
 }
