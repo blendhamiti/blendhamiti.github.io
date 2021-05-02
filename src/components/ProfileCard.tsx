@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -14,10 +15,13 @@ function ProfileCard() {
       <div id="profile-card" className={styles.container}>
         <div className={styles.content}>
           <div className={styles.pic}>
-            <img
-              src="/assets/images/portrait.jpg"
-              width="160px"
-              height="160px"
+            <StaticImage
+              src="../images/portrait.jpg"
+              alt="portrait"
+              placeholder="blurred"
+              layout="fixed"
+              width={160}
+              height={160}
             />
           </div>
           <div className={styles.title}>

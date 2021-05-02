@@ -5,24 +5,25 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import PageTitle from '../components/PageTitle';
 
 import * as styles from './Timeline.module.scss';
+import { graphql } from 'gatsby';
 
 function Timeline() {
   const [events, setEvents] = React.useState([]);
 
-  React.useEffect(() => {
-    fetch('/api/timeline.json')
-      .then((response) => response.json())
-      .then(
-        (result) => setEvents(result.events),
-        (error) => console.log(error)
-      );
-  }, []);
+  // React.useEffect(() => {
+  //   fetch('/api/timeline.json')
+  //     .then((response) => response.json())
+  //     .then(
+  //       (result) => setEvents(result.events),
+  //       (error) => console.log(error)
+  //     );
+  // }, []);
 
   return (
     <div id="timeline" className={styles.container}>
       <PageTitle title={'Timeline'} />
       <div className={styles.content}>
-        <EventList events={events} />
+        {/* <EventList events={events} /> */}
       </div>
     </div>
   );

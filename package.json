@@ -1,38 +1,43 @@
 {
-    "name": "blend-portfolio",
-    "version": "3.0.0",
-    "description": "Pre-built portfolio with Gatsby",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/blendhamiti/blendhamiti.github.io.git"
-    },
-    "author": "Blend Hamiti",
-    "license": "ISC",
-    "private": true,
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^1.2.34",
-        "@fortawesome/free-brands-svg-icons": "^5.15.2",
-        "@fortawesome/free-solid-svg-icons": "^5.15.2",
-        "@fortawesome/react-fontawesome": "^0.1.14",
-        "clsx": "^1.1.1",
-        "gatsby": "^3.4.0",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-particles-js": "^3.4.1",
-        "react-helmet": "^6.1.0"
-    },
-    "devDependencies": {
-        "gatsby-plugin-sass": "^4.4.0",
-        "prettier": "2.2.1",
-        "sass": "^1.32.12"
-    }
+  "name": "blend-portfolio",
+  "version": "3.0.0",
+  "description": "Pre-built portfolio with Gatsby",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blendhamiti/blendhamiti.github.io.git"
+  },
+  "author": "Blend Hamiti",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "clsx": "^1.1.1",
+    "gatsby": "^3.4.0",
+    "gatsby-plugin-image": "^1.4.0",
+    "gatsby-plugin-sass": "^4.4.0",
+    "gatsby-plugin-sharp": "^3.4.0",
+    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-transformer-json": "^3.4.0",
+    "gatsby-transformer-sharp": "^3.4.0",
+    "sass": "^1.32.12",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-particles-js": "^3.4.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
 }

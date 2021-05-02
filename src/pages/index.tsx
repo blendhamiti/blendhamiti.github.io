@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import Background from '../components/Background';
@@ -12,7 +13,9 @@ import Timeline from '../components/Timeline';
 
 import '../styles/global.scss';
 
-export default function App() {
+export default function App({ data }) {
+  console.log(data);
+
   return (
     <>
       <header>
@@ -21,7 +24,7 @@ export default function App() {
       </header>
       <main>
         <ProfileCard />
-        {/* <Timeline /> */}
+        <Timeline />
         {/* <Skills /> */}
         {/* <Projects /> */}
         {/* <Certificates /> */}
@@ -33,3 +36,18 @@ export default function App() {
     </>
   );
 }
+
+export const query = graphql`
+  query GetTimelineEvents {
+    allDataJson {
+      edges {
+        node {
+          skills {
+            level
+            name
+          }
+        }
+      }
+    }
+  }
+`;
