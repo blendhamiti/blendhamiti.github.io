@@ -1,7 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby`,
+        title: `Blend's Portfolio`,
         siteUrl: `https://blendhamiti.github.io`,
-        description: `Blend's Portfolio`,
+        description: `Portfolio website`,
     },
+    plugins: [`gatsby-plugin-sass`],
 };
