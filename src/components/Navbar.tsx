@@ -41,7 +41,7 @@ function Navbar() {
               <a href="#contact">Contact</a>
             </li>
             <li>
-              <a href="/assets/resume.pdf" className={styles.resume}>
+              <a href="/resume.pdf" className={styles.resume}>
                 Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
               </a>
             </li>
