@@ -14,10 +14,13 @@ import Timeline from '../components/Timeline';
 import '../styles/global.scss';
 
 export default function App({ data }) {
-  const certificates = data.allApiJson.edges[0].node.certificates;
-  const projects = data.allApiJson.edges[1].node.projects;
-  const skills = data.allApiJson.edges[2].node.skills;
-  const events = data.allApiJson.edges[3].node.events;
+  const getData = (entity) =>
+    data.allApiJson.edges.filter((edge) => edge.node[entity])[0].node[entity];
+
+  const certificates = getData('certificates');
+  const projects = getData('projects');
+  const skills = getData('skills');
+  const events = getData('events');
 
   return (
     <>

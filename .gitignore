@@ -2,6 +2,7 @@
 /node_modules
 
 # gatsby
+/public
 .cache
 
 # production (do not ignore): publishing directroy: /docs 
