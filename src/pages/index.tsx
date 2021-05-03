@@ -14,7 +14,6 @@ import Timeline from '../components/Timeline';
 import '../styles/global.scss';
 
 export default function App({ data }) {
-  console.log(data);
   const certificates = data.allApiJson.edges[0].node.certificates;
   const projects = data.allApiJson.edges[1].node.projects;
   const skills = data.allApiJson.edges[2].node.skills;

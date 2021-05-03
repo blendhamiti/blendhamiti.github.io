@@ -7,7 +7,8 @@ import PageTitle from '../components/PageTitle';
 import * as styles from './Projects.module.scss';
 
 function Projects({ data }) {
-  const githubProjects = [];
+  const [githubProjects, setGithubProjects] = React.useState([]);
+
   const allProjects = [...data, ...githubProjects];
 
   const projects = allProjects.map((project, index) => (
@@ -19,15 +20,17 @@ function Projects({ data }) {
       .then((response) => response.json())
       .then(
         (result) => {
-          result.forEach((project) => {
-            githubProjects.push({
-              name: project.name,
-              title: project.name,
-              description: project.description,
-              path: project.html_url,
-              icons: [],
-            });
-          });
+          setGithubProjects(
+            result.map((project) => {
+              return {
+                name: project.name,
+                title: project.name,
+                description: project.description,
+                path: project.html_url,
+                icons: [],
+              };
+            })
+          );
         },
         (error) => console.log(error)
       );
@@ -43,7 +46,12 @@ function Projects({ data }) {
 
 function Project({ project }) {
   const icons = project.icons.map((icon) => (
-    <img src={icon} height="25px" alt={icon} key={icon} />
+    <img
+      src={`../images/icons/${icon}.svg`}
+      alt={icon}
+      width={25}
+      height={25}
+    />
   ));
 
   const linkButton = function () {

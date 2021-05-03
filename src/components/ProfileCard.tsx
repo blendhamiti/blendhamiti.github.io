@@ -16,7 +16,7 @@ function ProfileCard() {
         <div className={styles.content}>
           <div className={styles.pic}>
             <StaticImage
-              src="../images/portrait.jpg"
+              src="../images/profile/portrait.jpg"
               alt="portrait"
               placeholder="blurred"
               layout="fixed"
