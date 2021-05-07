@@ -19,6 +19,13 @@ module.exports = {
         icon: `src/images/profile/logo.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://blendhamiti.github.io`,
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

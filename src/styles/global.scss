@@ -1,34 +1,36 @@
-@import "./fonts";
-@import "./colors";
-@import "./sizing";
+@import './fonts';
+@import './colors';
+@import './sizing';
 
 html,
 body {
-    font-family: $font-family-sans-serif;
-    color: $light;
+  font-family: $font-family-sans-serif;
+  font-display: swap;
 
-    max-width: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
+  color: $light;
+
+  max-width: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 main {
-    margin: auto;
-    max-width: $componentMaxWidth;
+  margin: auto;
+  max-width: $componentMaxWidth;
 }
 
 main > div {
-    margin: 7.5rem 0;
+  margin: 7.5rem 0;
 }
 
 a {
-    color: $link;
-    transition: ease-out;
-    transition-duration: 0.1s;
+  color: $link;
+  transition: ease-out;
+  transition-duration: 0.1s;
 }
 
 a:hover {
-    color: lighten($link, 10%);
-    transition: ease-out;
-    transition-duration: 0.1s;
+  color: lighten($link, 10%);
+  transition: ease-out;
+  transition-duration: 0.1s;
 }

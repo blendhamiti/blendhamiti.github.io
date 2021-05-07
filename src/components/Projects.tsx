@@ -58,7 +58,7 @@ function Project({ project }) {
     if (project.path)
       return (
         <span>
-          <a href={project.path} target="_blank">
+          <a href={project.path} target="_blank" rel="noreferrer">
             <button>
               View in GitHub <FontAwesomeIcon icon={faGithub} />
             </button>

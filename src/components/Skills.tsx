@@ -57,6 +57,7 @@ function Table({ category }) {
             <div>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale"
               >
                 <span>

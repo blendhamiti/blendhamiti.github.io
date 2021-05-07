@@ -34,7 +34,11 @@ export default function App({ data }) {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: 'en',
+        }}
+      >
         <meta charSet="utf-8" />
         <title>{siteMetadata.title}</title>
         <meta name="description" content={siteMetadata.description} />

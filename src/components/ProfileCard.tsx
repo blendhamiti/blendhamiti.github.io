@@ -35,14 +35,20 @@ function ProfileCard() {
             </p>
           </div>
           <div className={styles.links}>
-            <Icon link="https://github.com/blendhamiti/" icon={faGithub} />
+            <Icon
+              link="https://github.com/blendhamiti/"
+              icon={faGithub}
+              title={'Go to my GitHub profile.'}
+            />
             <Icon
               link="https://www.linkedin.com/in/blendhamiti/"
               icon={faLinkedin}
+              title={'Go to my LinkedIn profile.'}
             />
             <Icon
               link="https://www.instagram.com/blendhamiti/"
               icon={faInstagram}
+              title={'Go to my Instagram profile.'}
             />
           </div>
         </div>
@@ -54,7 +60,7 @@ function ProfileCard() {
 function Icon(props) {
   return (
     <div>
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noreferrer" title={props.title}>
         <FontAwesomeIcon icon={props.icon} size="2x" />
       </a>
     </div>
