@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Particles from 'react-particles-js';
+import Particles, { IParticlesParams } from 'react-particles-js';
 
 import * as styles from './Background.module.scss';
 
 function Background() {
-  const config = {
+  const config: IParticlesParams = {
     particles: {
       number: {
         value: 160,
@@ -61,7 +61,7 @@ function Background() {
       },
       move: {
         enable: true,
-        speed: 1,
+        speed: 0.5,
         direction: 'none',
         random: true,
         straight: false,
@@ -75,7 +75,7 @@ function Background() {
       },
     },
     interactivity: {
-      detect_on: 'canvas',
+      detect_on: 'window',
       events: {
         onhover: {
           enable: false,
@@ -99,11 +99,11 @@ function Background() {
           size: 0,
           duration: 2,
           opacity: 0,
-          speed: 3,
         },
         repulse: {
           distance: 400,
           duration: 0.4,
+          speed: 3,
         },
         push: {
           particles_nb: 4,
@@ -118,7 +118,7 @@ function Background() {
 
   return (
     <div className={styles.background}>
-      {/* <Particles params={config} height={window.outerHeight} /> */}
+      <Particles params={config} height={'100%'} />
     </div>
   );
 }
