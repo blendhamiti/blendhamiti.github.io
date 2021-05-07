@@ -1,5 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import Background from '../components/Background';
 import Certificates from '../components/Certificates';
@@ -22,8 +23,23 @@ export default function App({ data }) {
   const skills = getData('skills');
   const events = getData('events');
 
+  const certificateImages = data.allImageSharp.edges.map((edge) => {
+    return {
+      filename: edge.node.gatsbyImageData.images.fallback.src.split('/')[4],
+      gatsbyImageData: edge.node.gatsbyImageData,
+    };
+  });
+
+  const siteMetadata = data.site.siteMetadata;
+
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{siteMetadata.title}</title>
+        <meta name="description" content={siteMetadata.description} />
+        <link rel="canonical" href={siteMetadata.siteUrl} />
+      </Helmet>
       <header>
         <Background />
         <Navbar />
@@ -33,7 +49,10 @@ export default function App({ data }) {
         <Timeline data={events} />
         <Skills data={skills} />
         <Projects data={projects} />
-        <Certificates data={certificates} />
+        <Certificates
+          data={certificates}
+          certificateImages={certificateImages}
+        />
         <Contact />
       </main>
       <footer>
@@ -45,6 +64,13 @@ export default function App({ data }) {
 
 export const query = graphql`
   query MyQuery {
+    site {
+      siteMetadata {
+        description
+        siteUrl
+        title
+      }
+    }
     allApiJson {
       edges {
         node {
@@ -71,6 +97,13 @@ export const query = graphql`
             name
             title
           }
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          gatsbyImageData(placeholder: DOMINANT_COLOR, width: 1200)
         }
       }
     }

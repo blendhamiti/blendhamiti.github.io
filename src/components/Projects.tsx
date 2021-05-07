@@ -47,7 +47,7 @@ function Projects({ data }) {
 function Project({ project }) {
   const icons = project.icons.map((icon) => (
     <img
-      src={`../images/icons/${icon}.svg`}
+      src={require(`../images/icons/${icon}.svg`).default}
       alt={icon}
       width={25}
       height={25}

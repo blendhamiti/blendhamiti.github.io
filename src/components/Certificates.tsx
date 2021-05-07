@@ -1,13 +1,22 @@
 import React from 'react';
-import clsx from 'clsx';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import PageTitle from '../components/PageTitle';
 
 import * as styles from './Certificates.module.scss';
 
-function Certificates({ data }) {
+function Certificates({ data, certificateImages }) {
+  const getCertificateImage = (filename) =>
+    certificateImages.find(
+      (certificateImage) => certificateImage.filename === filename
+    );
+
   const certificates = data.map((certificate, index) => (
-    <Certificate certificate={certificate} key={index} />
+    <Certificate
+      certificate={certificate}
+      certificateImage={getCertificateImage(certificate.filename)}
+      key={index}
+    />
   ));
 
   return (
@@ -18,13 +27,12 @@ function Certificates({ data }) {
   );
 }
 
-function Certificate({ certificate }) {
+function Certificate({ certificate, certificateImage }) {
   return (
     <div className={styles.item}>
-      <img
-        className={styles.thumbnail}
-        src={certificate.filename}
-        alt={certificate.name}
+      <GatsbyImage
+        image={certificateImage.gatsbyImageData}
+        alt={certificateImage.filename.split('.')[0]}
       />
     </div>
   );

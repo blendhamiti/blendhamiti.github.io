@@ -5,16 +5,39 @@ module.exports = {
     description: `Portfolio website`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Blend's Portfolio`,
+        short_name: `Blend's Portfolio`,
+        lang: `en`,
+        start_url: `/`,
+        background_color: `#1f3e5a`,
+        theme_color: `#145051`,
+        display: `standalone`,
+        icon: `src/images/profile/logo.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `api`,
-        path: `${__dirname}/api/`,
+        path: `${__dirname}/data/api/`,
       },
     },
-    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/data/images/`,
+      },
+    },
   ],
 };
