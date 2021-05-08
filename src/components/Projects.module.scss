@@ -1,4 +1,15 @@
+@import '../styles/colors';
+
 .projects {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  margin: 1em 0;
+
+  button {
+    padding: 0.25em;
+    font-size: small;
+  }
 }

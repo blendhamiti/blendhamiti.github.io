@@ -1,3 +1,19 @@
+@import '../styles/colors';
+
 .contact {
-    padding: 300px 0px;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    font-size: medium;
+  }
+}
+
+.contact > div {
+  margin: 0.75em auto;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 700;
 }

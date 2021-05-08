@@ -15,7 +15,18 @@ function Skills({ data }) {
   return (
     <div className={styles.container} id="skills">
       <PageTitle title="Skills" />
-      <div className={styles.content}>{categories}</div>
+      <div className={styles.content}>
+        <div className={styles.tables}>{categories}</div>
+        <div className={styles.linkContainer}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale"
+          >
+            <sup>[1]</sup>According to the NIH Proficiency Scale.
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
@@ -26,48 +37,19 @@ function Table({ category }) {
   ));
 
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>{category.category}</div>
-          </div>
-
-          <div>
-            <div>
-              <div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Skill</th>
-                      <th colSpan={5}>
-                        <span>
-                          Proficiency<sup>[1]</sup>
-                        </span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>{rows}</tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale"
-              >
-                <span>
-                  <sup>[1]</sup>According to the NIH Proficiency Scale.
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className={styles.table}>
+      <div className={styles.title}>{category.category}</div>
+      <table>
+        <thead>
+          <tr>
+            <th className={styles.skill}>Skill</th>
+            <th colSpan={5}>
+              Proficiency<sup>[1]</sup>
+            </th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
     </div>
   );
 }

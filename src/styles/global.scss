@@ -4,8 +4,7 @@
 
 html,
 body {
-  font-family: $font-family-sans-serif;
-  font-display: swap;
+  font-family: $font-family-rawline;
 
   color: $light;
 
@@ -28,10 +27,27 @@ a {
   color: $link;
   transition: ease-out;
   transition-duration: 0.1s;
+
+  &:hover {
+    color: lighten($link, 10%);
+    transition: ease-out;
+    transition-duration: 0.1s;
+  }
 }
 
-a:hover {
-  color: lighten($link, 10%);
+button {
+  background-color: $secondary;
   transition: ease-out;
   transition-duration: 0.1s;
+
+  border: 0.125em solid $secondary;
+  color: $light;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($secondary, 5%);
+    transition: ease-out;
+    transition-duration: 0.1s;
+  }
 }

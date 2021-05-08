@@ -68,19 +68,12 @@ function Project({ project }) {
   };
 
   return (
-    <div>
-      <div>
-        <div>{icons}</div>
-        <div>
-          <div>
-            <div>{project.title}</div>
-          </div>
-          <div>
-            <p>{project.description}</p>
-          </div>
-          <div>{linkButton()}</div>
-        </div>
-      </div>
+    <div className={styles.project}>
+      <div>{icons}</div>
+      <p>
+        <strong>{project.title}</strong>
+      </p>
+      <p>{project.description}</p> {linkButton()}
     </div>
   );
 }

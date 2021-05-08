@@ -1,13 +1,39 @@
-@import "../styles/colors";
+@import '../styles/colors';
+@import '../styles/fonts';
 
 .container {
 }
 
 .tables {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  div {
+    margin: 0.5em 1.5em;
+  }
+}
+
+.table {
+  .title {
+    font-size: large;
+    font-weight: 700;
+  }
+
+  th.skill {
+    text-align: left;
+  }
+}
+
+.linkContainer {
+  margin: 1em 0;
+
+  a {
+    color: $light;
+    font-size: small;
+  }
 }
 
 .invisible {
-    color: transparent;
+  color: transparent;
 }

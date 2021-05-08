@@ -27,12 +27,8 @@ function Event({ event }) {
     <li>
       <div>
         <div>
-          <span>{event.title}</span>
-          <span>
-            <span>{event.date}</span>
-          </span>
-        </div>
-        <div>
+          <strong>{event.title}</strong> {event.date}
+          <br />
           {event.description}
           <br />
           {event.location}
