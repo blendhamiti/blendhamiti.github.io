@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
   faLinkedin,
   faInstagram,
+  IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 
 import * as styles from './ProfileCard.module.scss';
 
-function ProfileCard() {
+interface IconProps {
+  link: string;
+  icon: IconDefinition;
+  title: string;
+}
+
+const ProfileCard: FC<{}> = () => {
   return (
     <div className={styles.parent}>
       <div id="profile-card" className={styles.container}>
@@ -55,16 +62,16 @@ function ProfileCard() {
       </div>
     </div>
   );
-}
+};
 
-function Icon(props) {
+const Icon: FC<IconProps> = ({ link, icon, title }) => {
   return (
     <div>
-      <a href={props.link} target="_blank" rel="noreferrer" title={props.title}>
-        <FontAwesomeIcon icon={props.icon} size="2x" />
+      <a href={link} target="_blank" rel="noreferrer" title={title}>
+        <FontAwesomeIcon icon={icon} size="2x" />
       </a>
     </div>
   );
-}
+};
 
 export default ProfileCard;

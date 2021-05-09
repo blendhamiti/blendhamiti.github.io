@@ -5,9 +5,10 @@ import { Helmet } from 'react-helmet';
 import Background from '../components/Background';
 
 import * as styles from './404.module.scss';
+import { getSiteMetadata } from '../util/graphql';
 
 export default function ErrorPage({ data }) {
-  const siteMetadata = data.site.siteMetadata;
+  const siteMetadata = getSiteMetadata(data);
 
   return (
     <>

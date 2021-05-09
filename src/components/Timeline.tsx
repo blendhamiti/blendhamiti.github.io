@@ -1,41 +1,52 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import PageTitle from '../components/PageTitle';
+import { TEvent } from '../util/types';
 
 import * as styles from './Timeline.module.scss';
 
-function Timeline({ data }) {
-  const eventList = data.map((event, index) => (
-    <Event event={event} key={index} />
+interface TimelineProps {
+  apiData: TEvent[];
+}
+
+const Timeline: FC<TimelineProps> = ({ apiData }) => {
+  const events = apiData.map((event, index) => (
+    <Event
+      title={event.title}
+      date={event.date}
+      description={event.description}
+      location={event.location}
+      key={index}
+    />
   ));
 
   return (
     <div id="timeline" className={styles.container}>
       <PageTitle title={'Timeline'} />
       <div className={styles.content}>
-        <ul className={styles.events}>{eventList}</ul>
+        <ul className={styles.events}>{events}</ul>
       </div>
     </div>
   );
-}
+};
 
-function Event({ event }) {
+const Event: FC<TEvent> = ({ title, date, description, location }) => {
   return (
     <li>
       <div>
         <div>
-          <strong>{event.title}</strong> {event.date}
+          <strong>{title}</strong> {date}
           <br />
-          {event.description}
+          {description}
           <br />
-          {event.location}
+          {location}
         </div>
       </div>
     </li>
   );
-}
+};
 
 export default Timeline;

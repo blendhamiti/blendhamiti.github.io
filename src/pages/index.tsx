@@ -11,29 +11,23 @@ import ProfileCard from '../components/ProfileCard';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Timeline from '../components/Timeline';
-import { TCertificate, TCertificateImage } from '../util/types';
+import {
+  getApiData,
+  getCertificateImages,
+  getSiteMetadata,
+} from '../util/graphql';
 
 import '../styles/global.scss';
 
 export default function App({ data }) {
-  const getData: (entity: string) => any = (entity) =>
-    data.allApiJson.edges.filter((edge) => edge.node[entity])[0].node[entity];
+  const siteMetadata = getSiteMetadata(data);
 
-  const certificates = getData('certificates');
-  const projects = getData('projects');
-  const skills = getData('skills');
-  const events = getData('events');
+  const certificates = getApiData(data, 'certificates');
+  const projects = getApiData(data, 'projects');
+  const skills = getApiData(data, 'skills');
+  const events = getApiData(data, 'events');
 
-  const certificateImages: TCertificateImage[] = data.allImageSharp.edges.map(
-    (edge): TCertificateImage => {
-      return {
-        filename: edge.node.gatsbyImageData.images.fallback.src.split('/')[4],
-        image: edge.node.gatsbyImageData,
-      };
-    }
-  );
-
-  const siteMetadata = data.site.siteMetadata;
+  const certificateImages = getCertificateImages(data);
 
   return (
     <>
@@ -53,8 +47,8 @@ export default function App({ data }) {
       </header>
       <main>
         <ProfileCard />
-        <Timeline data={events} />
-        <Skills data={skills} />
+        <Timeline apiData={events} />
+        <Skills apiData={skills} />
         <Projects apiData={projects} />
         <Certificates apiData={certificates} images={certificateImages} />
         <Contact />
@@ -66,7 +60,7 @@ export default function App({ data }) {
   );
 }
 
-export const query = graphql`
+export const getAllData = graphql`
   query MyQuery {
     site {
       siteMetadata {

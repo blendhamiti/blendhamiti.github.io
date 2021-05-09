@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import Particles, { IParticlesParams } from 'react-particles-js';
 
 import * as styles from './Background.module.scss';
 
-function Background() {
+const Background: FC<{}> = () => {
   const config: IParticlesParams = {
     particles: {
       number: {
@@ -121,6 +121,6 @@ function Background() {
       <Particles params={config} height={'100vh'} width={'100vw'} />
     </div>
   );
-}
+};
 
 export default Background;

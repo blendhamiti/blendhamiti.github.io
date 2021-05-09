@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { FC } from 'react';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import PageTitle from '../components/PageTitle';
+import { TSkill, TSkills } from '../util/types';
 
 import * as styles from './Skills.module.scss';
 
-function Skills({ data }) {
-  const categories = data.map((category, index) => (
-    <Table category={category} key={index} />
+interface SkillsProps {
+  apiData: TSkills[];
+}
+
+interface CategoryProps {
+  name: TSkills['category'];
+  skills: TSkills['skills'];
+}
+
+interface StarProps {
+  invisible: boolean;
+}
+
+const Skills: FC<SkillsProps> = ({ apiData }) => {
+  const categories = apiData.map((category, index) => (
+    <Category name={category.category} skills={category.skills} key={index} />
   ));
 
   return (
@@ -29,16 +43,16 @@ function Skills({ data }) {
       </div>
     </div>
   );
-}
+};
 
-function Table({ category }) {
-  const rows = category.skills.map((skill, index) => (
-    <Row skill={skill} key={index} />
+const Category: FC<CategoryProps> = ({ name, skills }) => {
+  const skillsList = skills.map((skill, index) => (
+    <Skill name={skill.name} level={skill.level} key={index} />
   ));
 
   return (
     <div className={styles.table}>
-      <div className={styles.title}>{category.category}</div>
+      <div className={styles.title}>{name}</div>
       <table>
         <thead>
           <tr>
@@ -48,28 +62,28 @@ function Table({ category }) {
             </th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        <tbody>{skillsList}</tbody>
       </table>
     </div>
   );
-}
+};
 
-function Row({ skill }) {
+const Skill: FC<TSkill> = ({ name, level }) => {
   const stars = [];
   for (let index = 0; index < 5; index++) {
-    if (skill.level > index) stars.push(<Star invisible={false} key={index} />);
+    if (level > index) stars.push(<Star invisible={false} key={index} />);
     else stars.push(<Star invisible={true} key={index} />);
   }
 
   return (
     <tr>
-      <td>{skill.name}</td>
+      <td>{name}</td>
       {stars}
     </tr>
   );
-}
+};
 
-function Star({ invisible }) {
+const Star: FC<StarProps> = ({ invisible }) => {
   return (
     <td>
       <span className={clsx(invisible && styles.invisible)}>
@@ -77,6 +91,6 @@ function Star({ invisible }) {
       </span>
     </td>
   );
-}
+};
 
 export default Skills;

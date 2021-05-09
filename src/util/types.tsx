@@ -19,3 +19,20 @@ export interface TProject {
   icons?: string[];
   path?: string;
 }
+
+export interface TSkills {
+  category: string;
+  skills: TSkill[];
+}
+
+export interface TSkill {
+  name: string;
+  level: number;
+}
+
+export interface TEvent {
+  title: string;
+  date: string;
+  description: string;
+  location: string;
+}
