@@ -118,7 +118,7 @@ function Background() {
 
   return (
     <div className={styles.background}>
-      <Particles params={config} height={'100%'} />
+      <Particles params={config} height={'100vh'} width={'100vw'} />
     </div>
   );
 }
