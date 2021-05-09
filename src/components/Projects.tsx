@@ -1,35 +1,45 @@
-import React from 'react';
+import React, { FC, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import PageTitle from '../components/PageTitle';
 
 import * as styles from './Projects.module.scss';
+import { TProject } from '../util/types';
 
-function Projects({ data }) {
-  const [githubProjects, setGithubProjects] = React.useState([]);
+interface ProjectsProps {
+  apiData: TProject[];
+}
 
-  const allProjects = [...data, ...githubProjects];
+interface ProjectProps {
+  project: TProject;
+}
+
+const Projects: FC<ProjectsProps> = ({ apiData }) => {
+  const [githubProjects, setGithubProjects] = React.useState<TProject[]>([]);
+
+  const allProjects = [...apiData, ...githubProjects];
 
   const projects = allProjects.map((project, index) => (
     <Project project={project} key={index} />
   ));
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch('https://api.github.com/users/blendhamiti/repos')
       .then((response) => response.json())
       .then(
         (result) => {
           setGithubProjects(
-            result.map((project) => {
-              return {
-                name: project.name,
-                title: project.name,
-                description: project.description,
-                path: project.html_url,
-                icons: [],
-              };
-            })
+            result.map(
+              (project): TProject => {
+                return {
+                  name: project.name,
+                  title: project.name,
+                  description: project.description,
+                  path: project.html_url,
+                };
+              }
+            )
           );
         },
         (error) => console.log(error)
@@ -42,30 +52,31 @@ function Projects({ data }) {
       <div className={styles.projects}>{projects}</div>;
     </div>
   );
-}
+};
 
-function Project({ project }) {
-  const icons = project.icons.map((icon) => (
-    <img
-      src={require(`../images/icons/${icon}.svg`).default}
-      alt={icon}
-      width={25}
-      height={25}
-    />
-  ));
+const Project: FC<ProjectProps> = ({ project }) => {
+  const icons =
+    project.icons &&
+    project.icons.map((icon, index) => (
+      <img
+        src={require(`../images/icons/${icon}.svg`).default}
+        alt={icon}
+        width={25}
+        height={25}
+        key={index}
+      />
+    ));
 
-  const linkButton = function () {
-    if (project.path)
-      return (
-        <span>
-          <a href={project.path} target="_blank" rel="noreferrer">
-            <button>
-              View in GitHub <FontAwesomeIcon icon={faGithub} />
-            </button>
-          </a>
-        </span>
-      );
-  };
+  const linkButton = () =>
+    project.path && (
+      <span>
+        <a href={project.path} target="_blank" rel="noreferrer">
+          <button>
+            View in GitHub <FontAwesomeIcon icon={faGithub} />
+          </button>
+        </a>
+      </span>
+    );
 
   return (
     <div className={styles.project}>
@@ -76,6 +87,6 @@ function Project({ project }) {
       <p>{project.description}</p> {linkButton()}
     </div>
   );
-}
+};
 
 export default Projects;

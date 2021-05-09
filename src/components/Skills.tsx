@@ -57,8 +57,8 @@ function Table({ category }) {
 function Row({ skill }) {
   const stars = [];
   for (let index = 0; index < 5; index++) {
-    if (skill.level > index) stars.push(<Star invisible={false} />);
-    else stars.push(<Star invisible={true} />);
+    if (skill.level > index) stars.push(<Star invisible={false} key={index} />);
+    else stars.push(<Star invisible={true} key={index} />);
   }
 
   return (

@@ -11,11 +11,12 @@ import ProfileCard from '../components/ProfileCard';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Timeline from '../components/Timeline';
+import { TCertificate, TCertificateImage } from '../util/types';
 
 import '../styles/global.scss';
 
 export default function App({ data }) {
-  const getData = (entity) =>
+  const getData: (entity: string) => any = (entity) =>
     data.allApiJson.edges.filter((edge) => edge.node[entity])[0].node[entity];
 
   const certificates = getData('certificates');
@@ -23,12 +24,14 @@ export default function App({ data }) {
   const skills = getData('skills');
   const events = getData('events');
 
-  const certificateImages = data.allImageSharp.edges.map((edge) => {
-    return {
-      filename: edge.node.gatsbyImageData.images.fallback.src.split('/')[4],
-      gatsbyImageData: edge.node.gatsbyImageData,
-    };
-  });
+  const certificateImages: TCertificateImage[] = data.allImageSharp.edges.map(
+    (edge): TCertificateImage => {
+      return {
+        filename: edge.node.gatsbyImageData.images.fallback.src.split('/')[4],
+        image: edge.node.gatsbyImageData,
+      };
+    }
+  );
 
   const siteMetadata = data.site.siteMetadata;
 
@@ -52,11 +55,8 @@ export default function App({ data }) {
         <ProfileCard />
         <Timeline data={events} />
         <Skills data={skills} />
-        <Projects data={projects} />
-        <Certificates
-          data={certificates}
-          certificateImages={certificateImages}
-        />
+        <Projects apiData={projects} />
+        <Certificates apiData={certificates} images={certificateImages} />
         <Contact />
       </main>
       <footer>
