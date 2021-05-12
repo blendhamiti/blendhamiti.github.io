@@ -41,10 +41,8 @@ export default function App({ data }) {
         <meta name="description" content={siteMetadata.description} />
         <link rel="canonical" href={siteMetadata.siteUrl} />
       </Helmet>
-      <header>
-        <Background />
-        <Navbar />
-      </header>
+      <Background />
+      <Navbar />
       <main>
         <ProfileCard />
         <Timeline apiData={events} />

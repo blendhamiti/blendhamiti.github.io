@@ -18,8 +18,8 @@ interface IconProps {
 
 const ProfileCard: FC<{}> = () => {
   return (
-    <div className={styles.parent}>
-      <div id="profile-card" className={styles.container}>
+    <div id="profile-card" className={styles.parent}>
+      <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.pic}>
             <StaticImage

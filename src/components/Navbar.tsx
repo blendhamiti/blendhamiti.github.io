@@ -23,7 +23,7 @@ function Navbar() {
         <div>
           <ul>
             <li>
-              <a href="#">Introduction</a>
+              <a href="#profile-card">Introduction</a>
             </li>
             <li>
               <a href="#timeline">Timeline</a>
