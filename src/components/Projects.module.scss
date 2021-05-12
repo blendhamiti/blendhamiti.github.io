@@ -1,12 +1,10 @@
 @import '../styles/colors';
 
 .projects {
-  display: flex;
-  flex-direction: column;
-}
-
-.project {
-  margin: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 2em;
+  justify-content: space-evenly;
 
   button {
     padding: 0.25em;

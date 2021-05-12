@@ -21,7 +21,7 @@ main {
 
 main > div {
   margin-top: calc($componentMargin - $navbarMinHeight);
-  margin-bottom: calc($componentMargin);
+  margin-bottom: $componentMargin;
   padding-top: $navbarMinHeight;
 }
 

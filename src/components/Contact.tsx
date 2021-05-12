@@ -6,14 +6,12 @@ import * as styles from './Contact.module.scss';
 
 const Contact: FC<{}> = () => {
   return (
-    <div id="contact">
-      <div className={styles.contact}>
-        <div className={styles.title}>Contact me</div>
-        <div>
-          <a href="mailto:b.hamiti.9@gmail.com">
-            <button>Shoot me an email</button>
-          </a>
-        </div>
+    <div id="contact" className={styles.contact}>
+      <div className={styles.title}>Contact me</div>
+      <div>
+        <a href="mailto:b.hamiti.9@gmail.com">
+          <button>Shoot me an email</button>
+        </a>
       </div>
     </div>
   );
