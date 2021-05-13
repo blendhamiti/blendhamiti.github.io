@@ -4,10 +4,29 @@
 nav {
   background-color: $dark;
   font-size: 1em;
+  min-height: $navbarMinHeight;
 
   position: sticky;
   top: 0;
   z-index: 1020;
+
+  display: flex;
+
+  div {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto 1em;
+
+    button {
+      font-size: x-large;
+
+      svg {
+        display: block;
+      }
+    }
+  }
 
   ul {
     display: flex;
@@ -15,7 +34,7 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 0;
+    margin: auto;
   }
 
   li {
@@ -42,6 +61,16 @@ nav {
 
     a.resume:hover {
       color: lighten($secondary, 20%) !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div {
+      display: flex;
+    }
+
+    ul {
+      display: none;
     }
   }
 }
