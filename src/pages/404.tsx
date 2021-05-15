@@ -1,14 +1,13 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import Background from '../components/Background';
 
 import * as styles from './404.module.scss';
-import { getSiteMetadata } from '../util/graphql';
 
 export default function ErrorPage({ data }) {
-  const siteMetadata = getSiteMetadata(data);
+  const siteMetadata = data.site.siteMetadata;
 
   return (
     <>
@@ -33,10 +32,12 @@ export default function ErrorPage({ data }) {
   );
 }
 
-export const query = graphql`
-  query MyOtherQuery {
+export const getSiteMetadata = graphql`
+  query get404PageData {
     site {
       siteMetadata {
+        description
+        siteUrl
         title
       }
     }
