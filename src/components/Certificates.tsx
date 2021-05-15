@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 import PageTitle from '../components/PageTitle';
-import { TCertificateImage } from '../util/types';
+import { TCertificate, TCertificateImage } from '../util/types';
 import { getImage } from '../util/graphql';
 
 import * as styles from './Certificates.module.scss';
@@ -17,33 +17,30 @@ const Certificates: FC<{}> = () => {
   const getCertificatesResult = useStaticQuery(graphql`
     query getCertificates {
       allApiJson {
-        edges {
-          node {
-            certificates {
-              filename
-              name
-            }
+        nodes {
+          certificates {
+            filename
+            name
           }
         }
       }
       allImageSharp {
-        edges {
-          node {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, width: 1200)
-          }
+        nodes {
+          gatsbyImageData(placeholder: DOMINANT_COLOR, width: 1200)
         }
       }
     }
   `);
 
-  const certificates =
-    getCertificatesResult.allApiJson.edges[0].node.certificates;
+  const certificates: TCertificate[] = getCertificatesResult.allApiJson.nodes.find(
+    (node) => node.certificates
+  ).certificates;
 
-  const certificateImages = getCertificatesResult.allImageSharp.edges.map(
-    (edge): TCertificateImage => {
+  const certificateImages: TCertificateImage[] = getCertificatesResult.allImageSharp.nodes.map(
+    (node): TCertificateImage => {
       return {
-        filename: edge.node.gatsbyImageData.images.fallback.src.split('/')[4],
-        image: edge.node.gatsbyImageData,
+        filename: node.gatsbyImageData.images.fallback.src.split('/')[4],
+        image: node.gatsbyImageData,
       };
     }
   );

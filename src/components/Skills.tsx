@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -7,10 +8,6 @@ import PageTitle from '../components/PageTitle';
 import { TSkill, TSkills } from '../util/types';
 
 import * as styles from './Skills.module.scss';
-
-interface SkillsProps {
-  apiData: TSkills[];
-}
 
 interface CategoryProps {
   name: TSkills['category'];
@@ -21,8 +18,28 @@ interface StarProps {
   invisible: boolean;
 }
 
-const Skills: FC<SkillsProps> = ({ apiData }) => {
-  const categories = apiData.map((category, index) => (
+const Skills: FC<{}> = () => {
+  const getSkillsResult = useStaticQuery(graphql`
+    query getSkills {
+      allApiJson {
+        nodes {
+          skills {
+            category
+            skills {
+              level
+              name
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const skills: TSkills[] = getSkillsResult.allApiJson.nodes.find(
+    (node) => node.skills
+  ).skills;
+
+  const categories = skills.map((category, index) => (
     <Category name={category.category} skills={category.skills} key={index} />
   ));
 

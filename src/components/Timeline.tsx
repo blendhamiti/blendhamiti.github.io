@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,12 +8,27 @@ import { TEvent } from '../util/types';
 
 import * as styles from './Timeline.module.scss';
 
-interface TimelineProps {
-  apiData: TEvent[];
-}
+const Timeline: FC<{}> = () => {
+  const getEventsResult = useStaticQuery(graphql`
+    query getEvents {
+      allApiJson {
+        nodes {
+          events {
+            date
+            description
+            location
+            title
+          }
+        }
+      }
+    }
+  `);
 
-const Timeline: FC<TimelineProps> = ({ apiData }) => {
-  const events = apiData.map((event, index) => (
+  const events: TEvent[] = getEventsResult.allApiJson.nodes.find(
+    (node) => node.events
+  ).events;
+
+  const eventList = events.map((event, index) => (
     <Event
       title={event.title}
       date={event.date}
@@ -27,7 +42,7 @@ const Timeline: FC<TimelineProps> = ({ apiData }) => {
     <div id="timeline" className={styles.container}>
       <PageTitle title={'Timeline'} />
       <div className={styles.content}>
-        <ul className={styles.events}>{events}</ul>
+        <ul className={styles.events}>{eventList}</ul>
       </div>
     </div>
   );

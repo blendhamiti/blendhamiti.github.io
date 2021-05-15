@@ -1,26 +1,42 @@
 import React, { FC, useEffect } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import PageTitle from '../components/PageTitle';
-
-import * as styles from './Projects.module.scss';
 import { TProject } from '../util/types';
 
-interface ProjectsProps {
-  apiData: TProject[];
-}
+import * as styles from './Projects.module.scss';
 
 interface ProjectProps {
   project: TProject;
 }
 
-const Projects: FC<ProjectsProps> = ({ apiData }) => {
+const Projects: FC<{}> = () => {
+  const getProjectsResult = useStaticQuery(graphql`
+    query getProjects {
+      allApiJson {
+        nodes {
+          projects {
+            description
+            icons
+            name
+            title
+          }
+        }
+      }
+    }
+  `);
+
+  const projects: TProject[] = getProjectsResult.allApiJson.nodes.find(
+    (node) => node.projects
+  ).projects;
+
   const [githubProjects, setGithubProjects] = React.useState<TProject[]>([]);
 
-  const allProjects = [...apiData, ...githubProjects];
+  const allProjects = [...projects, ...githubProjects];
 
-  const projects = allProjects.map((project, index) => (
+  const projectList = allProjects.map((project, index) => (
     <Project project={project} key={index} />
   ));
 
@@ -49,7 +65,7 @@ const Projects: FC<ProjectsProps> = ({ apiData }) => {
   return (
     <div id="projects">
       <PageTitle title="Projects" />
-      <div className={styles.projects}>{projects}</div>;
+      <div className={styles.projects}>{projectList}</div>;
     </div>
   );
 };

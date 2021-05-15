@@ -33,9 +33,9 @@ export default function App({ data }) {
       <Navbar />
       <main>
         <ProfileCard />
-        {/* <Timeline apiData={events} />
-        <Skills apiData={skills} />
-        <Projects apiData={projects} /> */}
+        <Timeline />
+        <Skills />
+        <Projects />
         <Certificates />
         <Contact />
       </main>
