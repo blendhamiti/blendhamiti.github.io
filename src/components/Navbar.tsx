@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import * as styles from './Navbar.module.scss';
 
-function Navbar() {
+const Navbar: FC<{}> = () => {
   const [collapse, setCollapse] = React.useState(false);
 
   return (
@@ -42,6 +42,6 @@ function Navbar() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
