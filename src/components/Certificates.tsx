@@ -5,9 +5,9 @@ import PageTitle from '../components/PageTitle';
 import { TCertificate, TCertificateImage } from '../util/types';
 
 import * as styles from './Certificates.module.scss';
+import { getCertificates } from '../util/queries';
 
 interface CertificatesProps {
-  apiData: TCertificate[];
   images: TCertificateImage[];
 }
 
@@ -16,11 +16,11 @@ interface CertificateProps {
   image: IGatsbyImageData;
 }
 
-const Certificates: FC<CertificatesProps> = ({ apiData, images }) => {
+const Certificates: FC<CertificatesProps> = ({ images }) => {
   const getImage: (filename: string) => TCertificateImage = (filename) =>
     images.find((image: TCertificateImage) => image.filename === filename);
 
-  const certificates = apiData.map((certificate, index) => (
+  const certificates = getCertificates().map((certificate, index) => (
     <Certificate
       name={certificate.name}
       image={getImage(certificate.filename).image}

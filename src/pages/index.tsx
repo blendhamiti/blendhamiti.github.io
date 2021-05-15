@@ -22,11 +22,6 @@ import '../styles/global.scss';
 export default function App({ data }) {
   const siteMetadata = getSiteMetadata(data);
 
-  const certificates = getApiData(data, 'certificates');
-  const projects = getApiData(data, 'projects');
-  const skills = getApiData(data, 'skills');
-  const events = getApiData(data, 'events');
-
   const certificateImages = getCertificateImages(data);
 
   return (
@@ -45,10 +40,10 @@ export default function App({ data }) {
       <Navbar />
       <main>
         <ProfileCard />
-        <Timeline apiData={events} />
+        {/* <Timeline apiData={events} />
         <Skills apiData={skills} />
-        <Projects apiData={projects} />
-        <Certificates apiData={certificates} images={certificateImages} />
+        <Projects apiData={projects} /> */}
+        <Certificates images={certificateImages} />
         <Contact />
       </main>
       <footer>
@@ -65,35 +60,6 @@ export const getAllData = graphql`
         description
         siteUrl
         title
-      }
-    }
-    allApiJson {
-      edges {
-        node {
-          skills {
-            category
-            skills {
-              level
-              name
-            }
-          }
-          certificates {
-            filename
-            name
-          }
-          events {
-            date
-            description
-            location
-            title
-          }
-          projects {
-            description
-            icons
-            name
-            title
-          }
-        }
       }
     }
     allImageSharp {
