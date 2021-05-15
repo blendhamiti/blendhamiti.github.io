@@ -1,47 +1,17 @@
 import React, { FC } from 'react';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
-import PageTitle from '../components/PageTitle';
-import { TCertificate, TCertificateImage } from '../util/types';
+import { getCertificates } from '../util/queries';
 
 import * as styles from './Certificates.module.scss';
 
-interface CertificatesProps {
-  apiData: TCertificate[];
-  images: TCertificateImage[];
-}
+const Certificates: FC<{}> = () => {
+  const certificates = getCertificates();
 
-interface CertificateProps {
-  name: string;
-  image: IGatsbyImageData;
-}
-
-const Certificates: FC<CertificatesProps> = ({ apiData, images }) => {
-  const getImage: (filename: string) => TCertificateImage = (filename) =>
-    images.find((image: TCertificateImage) => image.filename === filename);
-
-  const certificates = apiData.map((certificate, index) => (
-    <Certificate
-      name={certificate.name}
-      image={getImage(certificate.filename).image}
-      key={index}
-    />
+  const certificateElements = certificates.map((certificate) => (
+    <h1>{certificate.name}</h1>
   ));
 
-  return (
-    <div className={styles.container} id="certificates">
-      <PageTitle title="Certificates" />
-      <div className={styles.content}>{certificates}</div>
-    </div>
-  );
-};
-
-const Certificate: FC<CertificateProps> = ({ name, image }) => {
-  return (
-    <div className={styles.item}>
-      <GatsbyImage image={image} alt={name} />
-    </div>
-  );
+  return <div>{certificateElements}</div>;
 };
 
 export default Certificates;
