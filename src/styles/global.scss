@@ -1,0 +1,56 @@
+@import './fonts';
+@import './colors';
+@import './sizing';
+
+html,
+body {
+  font-family: $font-family-rawline;
+
+  color: $light;
+
+  max-width: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: auto;
+  min-height: 100vh;
+  max-width: $componentMaxWidth;
+}
+
+main > div {
+  margin-top: calc($componentMargin - $navbarMinHeight);
+  margin-bottom: $componentMargin;
+  padding-top: $navbarMinHeight;
+}
+
+a {
+  color: $link;
+  transition: ease-out;
+  transition-duration: 0.1s;
+
+  &:hover {
+    color: lighten($link, 10%);
+    transition: ease-out;
+    transition-duration: 0.1s;
+  }
+}
+
+button {
+  background-color: $secondary;
+  transition: ease-out;
+  transition-duration: 0.1s;
+
+  border: 0.125em solid $secondary;
+  border-radius: 0.25em;
+  color: $light;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($secondary, 5%);
+    transition: ease-out;
+    transition-duration: 0.1s;
+  }
+}

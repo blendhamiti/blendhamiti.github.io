@@ -1,7 +1,8 @@
-# v1 dependencies
-/v1/node_modules
-
-# current version dependencies
+# dependencies
 /node_modules
+
+# gatsby
+/public
+.cache
 
 # production (do not ignore): publishing directroy: /docs 

@@ -1,0 +1,13 @@
+@import '../styles/colors';
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 2em;
+  justify-content: space-evenly;
+
+  button {
+    padding: 0.25em;
+    font-size: small;
+  }
+}

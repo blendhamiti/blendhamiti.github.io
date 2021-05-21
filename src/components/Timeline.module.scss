@@ -1,0 +1,16 @@
+@import '../styles/colors';
+
+.container {
+}
+
+.content {
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    margin: 0.5em 0;
+  }
+}

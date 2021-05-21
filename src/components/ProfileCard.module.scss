@@ -1,0 +1,92 @@
+@import '../styles/colors';
+@import '../styles/sizing';
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba($primary, 0.5);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 60%;
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template:
+    'pic title'
+    'pic description'
+    'pic links';
+  gap: 1rem;
+
+  @media screen and (max-width: $mobile) {
+    grid-template:
+      'pic'
+      'title'
+      'description'
+      'links';
+  }
+}
+
+.pic {
+  grid-area: pic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.35em;
+    border-color: $secondary;
+    transition: 0.2s;
+  }
+
+  div:hover {
+    transition: 0.2s;
+    border-color: lighten($secondary, 10%);
+  }
+}
+
+.title {
+  grid-area: title;
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.description {
+  grid-area: description;
+
+  p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+}
+
+.links {
+  grid-area: links;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: $light;
+    padding: 0 1em;
+    transition-duration: 0.2s;
+  }
+
+  a:hover {
+    transition-duration: 0.2s;
+  }
+}
