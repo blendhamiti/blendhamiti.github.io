@@ -11,95 +11,66 @@ nav {
   z-index: 1020;
 
   display: flex;
-  align-items: center;
 
-  .container {
+  div {
     display: none;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
-    width: 100%;
     margin: auto 1em;
-  }
 
-  .toggleButton {
-    display: none;
-    font-size: x-large;
-    height: 1.5em;
+    button {
+      font-size: x-large;
 
-    margin: calc((#{$navbarMinHeight} - 1.5em) / 2) 0;
-
-    svg {
-      display: block;
+      svg {
+        display: block;
+      }
     }
   }
 
-  .links {
+  ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 
     margin: auto;
-    padding: 0;
+  }
 
-    li {
-      list-style: none;
-      padding: 1em 0.5em;
+  li {
+    list-style: none;
+    padding: 1em 0.5em;
 
-      a {
-        color: darken($light, 20%) !important;
-        text-decoration: none;
-      }
+    a {
+      color: darken($light, 20%) !important;
+      text-decoration: none;
+    }
 
-      a:hover {
-        color: $light !important;
-      }
+    a:hover {
+      color: $light !important;
+    }
 
-      a.active {
-        color: darken($light, 10%) !important;
-      }
+    a.active {
+      color: darken($light, 10%) !important;
+    }
 
-      a.resume {
-        font-weight: bold;
-        color: lighten($secondary, 10%) !important;
-      }
+    a.resume {
+      font-weight: bold;
+      color: lighten($secondary, 10%) !important;
+    }
 
-      a.resume:hover {
-        color: lighten($secondary, 20%) !important;
-      }
+    a.resume:hover {
+      color: lighten($secondary, 20%) !important;
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-
-    .container {
+  @media screen and (max-width: 768px) {
+    div {
       display: flex;
     }
 
-    .toggleButton {
-      display: block !important;
-    }
-
-    .links {
+    ul {
       display: none;
-
-      flex-direction: column;
-      align-items: flex-start;
-
-      margin: 0 1em;
-
-      li {
-        padding: 0.75em 0.5em;
-      }
-    }
-
-    .links.showDropdown {
-      display: flex;
     }
   }
 }
