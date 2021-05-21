@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import Particles, { IParticlesParams } from 'react-particles-js';
+import Particles, { ISourceOptions } from 'react-tsparticles';
 
 import * as styles from './Background.module.scss';
 
 const Background: FC<{}> = () => {
-  const config: IParticlesParams = {
+  const config: ISourceOptions = {
     particles: {
       number: {
         value: 160,
