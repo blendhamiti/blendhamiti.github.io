@@ -12,8 +12,6 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Timeline from '../components/Timeline';
 
-import '../styles/global.scss';
-
 export default function App({ data }) {
   const siteMetadata = data.site.siteMetadata;
 
