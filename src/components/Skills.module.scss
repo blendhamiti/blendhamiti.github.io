@@ -1,5 +1,6 @@
 @import '../styles/colors';
 @import '../styles/fonts';
+@import '../styles/sizing';
 
 .container {
 }
@@ -21,10 +22,12 @@
   }
 
   table {
+    width: 280px;
     border-spacing: 0.2em;
   }
 
-  th.skill {
+  th {
+    width: 170px;
     text-align: left;
   }
 }

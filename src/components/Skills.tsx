@@ -73,7 +73,7 @@ const Category: FC<CategoryProps> = ({ name, skills }) => {
       <table>
         <thead>
           <tr>
-            <th className={styles.skill}>Skill</th>
+            <th>Skill</th>
             <th colSpan={5}>
               Proficiency<sup>[1]</sup>
             </th>

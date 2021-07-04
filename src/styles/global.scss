@@ -17,12 +17,14 @@ main {
   margin: auto;
   min-height: 100vh;
   max-width: $componentMaxWidth;
-}
 
-main > div {
-  margin-top: calc(#{$componentMargin} - #{$navbarMinHeight});
-  margin-bottom: $componentMargin;
-  padding-top: $navbarMinHeight;
+  & > div {
+    margin-top: calc(#{$componentMargin} - #{$navbarMinHeight});
+    margin-bottom: $componentMargin;
+    padding-top: $navbarMinHeight;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 a {
