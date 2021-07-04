@@ -1,8 +1,14 @@
 {
   "events": [
     {
+      "title": "Software development",
+      "date": "Jul 2021 - present",
+      "description": "Junior Developer",
+      "location": "Inspire11, North Macedonia"
+    },
+    {
       "title": "Internship",
-      "date": "Jan 2021 - present",
+      "date": "Jan 2021 - Jul 2021",
       "description": "Intern",
       "location": "Inspire11, North Macedonia"
     },
