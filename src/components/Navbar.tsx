@@ -13,6 +13,11 @@ const Navbar: FC<{}> = () => {
         <button onClick={() => setCollapse(!collapse)}>
           <FontAwesomeIcon icon={faBars} />
         </button>
+        <li>
+          <a href="/resume.pdf" className={styles.resume}>
+            Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
+        </li>
       </div>
       <ul>
         <li>

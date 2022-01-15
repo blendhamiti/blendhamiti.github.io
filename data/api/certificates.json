@@ -1,20 +1,24 @@
 {
   "certificates": [
     {
-      "name": "Coursera - Machine Learning",
-      "filename": "coursera-ml.png"
-    },
-    {
-      "name": "Neo4j - Online Course",
-      "filename": "neo4j.png"
-    },
-    {
       "name": "Infomatrix",
       "filename": "infomatrix.jpg"
     },
     {
       "name": "NASA Space Apps Challenge",
       "filename": "nasa.jpg"
+    },
+    {
+      "name": "Neo4j - Online Course",
+      "filename": "neo4j.png"
+    },
+    {
+      "name": "Coursera - Machine Learning",
+      "filename": "coursera-ml.png"
+    },
+    {
+      "name": "AFT Leuven",
+      "filename": "aft-leuven.png"
     }
   ]
 }
