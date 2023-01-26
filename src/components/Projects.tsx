@@ -22,6 +22,7 @@ const Projects: FC<{}> = () => {
             icons
             name
             title
+            path
           }
         }
       }

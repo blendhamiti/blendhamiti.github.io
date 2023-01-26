@@ -9,7 +9,7 @@ const Contact: FC<{}> = () => {
     <div id="contact" className={styles.contact}>
       <div className={styles.title}>Contact me</div>
       <div>
-        <a href="mailto:b.hamiti.9@gmail.com">
+        <a href="mailto:blendhamiti2@gmail.com">
           <button>Shoot me an email</button>
         </a>
       </div>

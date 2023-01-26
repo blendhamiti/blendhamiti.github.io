@@ -17,28 +17,54 @@
       "category": "Web development",
       "skills": [
         {
-          "name": "JavaScript",
-          "level": 4
-        },
-        {
           "name": "React",
           "level": 4
         },
         {
           "name": "Node.js",
-          "level": 3
+          "level": 4
         },
         {
-          "name": "Java",
-          "level": 2
+          "name": "Java Spring Boot",
+          "level": 3
         },
         {
           "name": "PHP",
           "level": 2
+        }
+      ]
+    },
+    {
+      "category": "DevOps",
+      "skills": [
+        {
+          "name": "Linux",
+          "level": 3
         },
+        {
+          "name": "Docker",
+          "level": 3
+        },
+        {
+          "name": "Terraform",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "category": "Data Engineering",
+      "skills": [
         {
           "name": "SQL",
           "level": 4
+        },
+        {
+          "name": "Python",
+          "level": 3
+        },
+        {
+          "name": "Apache Airflow",
+          "level": 2
         }
       ]
     }
