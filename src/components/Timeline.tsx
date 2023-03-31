@@ -7,6 +7,7 @@ import PageTitle from '../components/PageTitle';
 import { TEvent } from '../util/types';
 
 import * as styles from './Timeline.module.scss';
+import clsx from 'clsx';
 
 const Timeline: FC<{}> = () => {
   const getEventsResult = useStaticQuery(graphql`
@@ -18,6 +19,8 @@ const Timeline: FC<{}> = () => {
             description
             location
             title
+            details
+            logo
           }
         }
       }
@@ -34,6 +37,8 @@ const Timeline: FC<{}> = () => {
       date={event.date}
       description={event.description}
       location={event.location}
+      logo={event.logo}
+      details={event.details}
       key={index}
     />
   ));
@@ -48,16 +53,19 @@ const Timeline: FC<{}> = () => {
   );
 };
 
-const Event: FC<TEvent> = ({ title, date, description, location }) => {
+const Event: FC<TEvent> = ({ title, date, description, location, logo, details }) => {
   return (
     <li>
-      <div>
+      <div className={styles.event}>
+        <img src={require(`../images/logos/${logo}`).default} alt={location} className={clsx(["seeu.png"].includes(logo) && styles.withBg)} />
         <div>
           <strong>{title}</strong> {date}
           <br />
           {description}
           <br />
           {location}
+          <br />
+          <div dangerouslySetInnerHTML={{__html: details || ""}} />
         </div>
       </div>
     </li>

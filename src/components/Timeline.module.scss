@@ -12,5 +12,19 @@
 
   li {
     margin: 0.5em 0;
+
+    .event {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  img {
+    height: 30px;
+  
+    &.withBg {
+      background-color: $light;
+    }
   }
 }

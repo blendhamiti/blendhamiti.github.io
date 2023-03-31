@@ -4,25 +4,30 @@
       "title": "Software development",
       "date": "Jul 2021 - present",
       "description": "Software development",
-      "location": "Inspire11, North Macedonia"
+      "location": "Inspire11, North Macedonia",
+      "logo": "i11.png"
     },
     {
       "title": "Internship",
       "date": "Jan 2021 - Jul 2021",
       "description": "Software development",
-      "location": "Inspire11, North Macedonia"
+      "location": "Inspire11, North Macedonia",
+      "logo": "i11.png"
     },
     {
       "title": "Master's degree",
       "date": "2020 - 2023",
       "description": "Software Engineering",
-      "location": "SEE University, North Macedonia"
+      "location": "SEE University, North Macedonia",
+      "logo": "seeu.png",
+      "details": "Thesis: <a href=\"/masters_thesis/thesis.pdf\">Function-as-a-Serivce Performance Evaluation with Application-level Workflows</a>; <a href=\"/masters_thesis/presentation.pdf\">Presentation</a>"
     },
     {
       "title": "Bachelor's degree",
       "date": "2017 - 2020",
       "description": "Engineering Technology (w/ specialisation in ICT)",
-      "location": "KU Leuven, Belgium"
+      "location": "KU Leuven, Belgium",
+      "logo": "kul.png"
     }
   ]
 }

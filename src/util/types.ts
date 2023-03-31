@@ -35,4 +35,6 @@ export interface TEvent {
   date: string;
   description: string;
   location: string;
+  details?: string;
+  logo: string;
 }
